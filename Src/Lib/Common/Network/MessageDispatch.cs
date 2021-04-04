@@ -5,6 +5,7 @@ namespace Network
 {
     public class MessageDispatch<T> : Singleton<MessageDispatch<T>>
     {
+        //Responses are handled on clients
         public void Dispatch(T sender, SkillBridge.Message.NetMessageResponse message)
         {
             if (message.userRegister != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.userRegister); }
@@ -17,6 +18,7 @@ namespace Network
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }   
         }
 
+        //Requests are handled on the server
         public void Dispatch(T sender, SkillBridge.Message.NetMessageRequest message)
         {
             if (message.userRegister != null) { MessageDistributer<T>.Instance.RaiseEvent(sender,message.userRegister); }
@@ -27,7 +29,7 @@ namespace Network
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }
             if (message.mapTeleport != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapTeleport); }
-            
+            if (message.FirstRequest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.FirstRequest); }
         }
     }
 }
