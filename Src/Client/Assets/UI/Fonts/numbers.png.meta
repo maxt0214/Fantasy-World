@@ -1,20 +1,21 @@
 fileFormatVersion: 2
-guid: 8db347d9d2873ea4e8aaa37f4c9769f7
+guid: e8ac5f319dc85e747ae0a74d89f11a49
 TextureImporter:
   fileIDToRecycleName:
-    21300000: RedButton_Active
-    21300002: Bow
-    21300004: Wand
-    21300006: Health_Potion
-    21300008: Poison_Potion
-    21300010: Skull
-    21300012: Cloth_Bag
-    21300014: Book
-    21300016: MP_Potion
-    21300018: Script
-    21300020: Wand
-    21300022: Sword
-    21300024: RedButton_Inactive
+    21300000: 0
+    21300002: 2
+    21300004: 3
+    21300006: 4
+    21300008: 5
+    21300010: 6
+    21300012: 7
+    21300014: 9
+    21300016: percent
+    21300018: apostrophe
+    21300020: plus
+    21300022: cross
+    21300024: 1
+    21300026: 8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -49,7 +50,7 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -97,241 +98,281 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedButton_Active
+      name: 0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1650
-        width: 1310
-        height: 382
+        x: 1
+        y: 4
+        width: 27
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8510dba1c6311304582127781055f960
+      spriteID: df6481161f7ae9544a03df062fbb1fdd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow
+      name: 2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 55
+        y: 3
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a98e8b81abffab49b5cf9929edbcc37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f52feb82642e354190d1207a9a04386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 3
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8824b8ed75255d54aa5aab5104ab1d81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5
+      rect:
+        serializedVersion: 2
+        x: 129
         y: 1
-        width: 434
-        height: 535
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d252d22d5974a2b4dba88cfc36dd59d2
+      spriteID: f12fa76d715ef7947b5dff3f63cb244b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Health_Potion
+      name: 6
       rect:
         serializedVersion: 2
-        x: 1220
-        y: 306
-        width: 388
-        height: 500
+        x: 151
+        y: 2
+        width: 23
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53e395e00ca556442a30b5dcdc0f9588
+      spriteID: b8e3282b16f65444bb474161ce7016dd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Poison_Potion
+      name: 7
       rect:
         serializedVersion: 2
-        x: 1608
-        y: 308
-        width: 388
-        height: 500
+        x: 175
+        y: 1
+        width: 22
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c5f2df0bbdf6743a2424cb345023df
+      spriteID: 7ba811dd50614bd4b8476ce6fa381a19
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skull
+      name: 9
       rect:
         serializedVersion: 2
-        x: 825
-        y: 327
-        width: 395
-        height: 481
+        x: 225
+        y: 2
+        width: 23
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e09e79cd8fe64924badaaba2076c1ff2
+      spriteID: ce175bcca41f741419021d5cdee067f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cloth_Bag
+      name: percent
       rect:
         serializedVersion: 2
-        x: 824
-        y: 809
-        width: 413
-        height: 459
+        x: 249
+        y: 1
+        width: 34
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1aeec81fc5311342ba149808e4b7515
+      spriteID: ac7842c9a491d1b4bb13ab5fec43cbb9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Book
+      name: apostrophe
       rect:
         serializedVersion: 2
-        x: 1312
-        y: 1080
-        width: 514
-        height: 487
+        x: 289
+        y: 10
+        width: 10
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a70700211c62ff40a63709eb2aec492
+      spriteID: 87d33bcdbf9be44428c6563930b82ee7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MP_Potion
+      name: plus
       rect:
         serializedVersion: 2
-        x: 436
-        y: 580
-        width: 388
-        height: 500
+        x: 302
+        y: 3
+        width: 19
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddb5c9fc99cfd764c844c79dfdc29679
+      spriteID: 8a72a29773050e4418550152cdaa6901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Script
+      name: cross
       rect:
         serializedVersion: 2
-        x: 1312
-        y: 1566
-        width: 554
-        height: 465
+        x: 322
+        y: 4
+        width: 18
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d801cbdc815db3642844ef2d2d6a1c5a
+      spriteID: 5934f7d43ece6c84eb9d3acf2b23dd78
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wand
+      name: 1
       rect:
         serializedVersion: 2
-        x: 433
-        y: 0
-        width: 386
-        height: 536
+        x: 31
+        y: 5
+        width: 17
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45282f1fabba6f74cb616d3420ffe0c2
+      spriteID: 54a4311a31ea8a94b87c54dfc5db9201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword
+      name: 8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 535
-        width: 437
-        height: 544
+        x: 198
+        y: 1
+        width: 23
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d33551abd2c51344d8b51eec7e367223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedButton_Inactive
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1268
-        width: 1311
-        height: 382
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5066ae6ac26176a45959ecbf4cf0cbdb
+      spriteID: bc6faff9e51a01440aa42b793862585f
       vertices: []
       indices: 
       edges: []
@@ -339,7 +380,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 548100d141c8aca47b51dd87ca82b813
+    spriteID: 3e182d88ce27ceb48828113cc89a5cdf
     vertices: []
     indices: 
     edges: []
