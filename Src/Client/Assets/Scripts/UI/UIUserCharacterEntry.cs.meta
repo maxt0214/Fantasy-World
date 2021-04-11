@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6742ce20dc0c20845a0a31c11a03929f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Empty: {fileID: 2800000, guid: e8db87d4f190eed4ca9fa0216a2cf03e, type: 3}
+  - Warrior: {fileID: 2800000, guid: d8891853d62111e46bb1e1ca62690ef4, type: 3}
+  - Wizard: {instanceID: 0}
+  - Archor: {instanceID: 0}
+  - characterLevel: {instanceID: 0}
+  - characterNickName: {instanceID: 0}
+  - characterImage: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

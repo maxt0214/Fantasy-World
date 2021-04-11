@@ -18,7 +18,7 @@ namespace Models
 
         public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
         {
-            this.userInfo = info;
+            userInfo = info;
         }
 
         public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }

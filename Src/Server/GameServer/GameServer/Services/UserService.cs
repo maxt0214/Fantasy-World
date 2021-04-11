@@ -48,6 +48,19 @@ namespace GameServer.Services
                 {
                     message.Response.userLogin.Result = Result.Success;
                     message.Response.userLogin.Errormsg = "None";
+                    //Retrieve user info
+                    message.Response.userLogin.Userinfo = new NUserInfo();
+                    message.Response.userLogin.Userinfo.Id = 1;
+                    message.Response.userLogin.Userinfo.Player = new NPlayerInfo();
+                    message.Response.userLogin.Userinfo.Player.Id = user.Player.ID;
+                    foreach (var character in user.Player.Characters) 
+                    {
+                        NCharacterInfo cInfo = new NCharacterInfo();
+                        cInfo.Id = character.ID;
+                        cInfo.Name = character.Name;
+                        cInfo.Class = (CharacterClass)character.Class;
+                        message.Response.userLogin.Userinfo.Player.Characters.Add(cInfo);
+                    }
                 }
             }
             //Send message to client

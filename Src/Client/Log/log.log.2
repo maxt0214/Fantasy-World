@@ -1,14 +1,23 @@
-2021-04-10 09:41:23,541 [ 1] INFO  Unity: Loading Manager Awake
-2021-04-10 09:42:35,951 [ 1] INFO  Unity: Pass: Bz9!
-2021-04-10 09:42:46,187 [ 1] INFO  Unity: Pass: Bz9/
-2021-04-10 09:42:56,178 [ 1] INFO  Unity: Pass: Bz9:
-2021-04-10 09:43:10,259 [ 1] INFO  Unity: Pass: Bz9@
-2021-04-10 09:43:21,293 [ 1] INFO  Unity: Pass: Bz9[
-2021-04-10 09:43:30,570 [ 1] INFO  Unity: Pass: Bz9`
-2021-04-10 09:43:43,558 [ 1] INFO  Unity: Pass: Bz9{
-2021-04-10 09:43:53,117 [ 1] INFO  Unity: Pass: Bz9~
-2021-04-10 09:43:56,618 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-04-10 09:43:56,619 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-04-10 23:36:53,646 [ 1] INFO  Unity: Loading Manager Awake
+2021-04-10 23:37:06,399 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-04-10 23:37:06,401 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-04-10 23:37:06,406 [ 1] INFO  Unity: DoConnect
+2021-04-10 23:37:06,408 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-04-10 23:37:06,414 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2021-04-10 23:37:06,422 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-04-10 23:37:09,145 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-04-10 23:37:09,146 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-04-10 23:37:09,148 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at UILoginPage.OnLogin (Result res, System.String errMsg) [0x00043] in C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Client\Assets\Scripts\UI\UILoginPage.cs:51 
+  at Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) [0x00063] in C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Client\Assets\Scripts\Services\UserService.cs:126 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) [0x00044] in D:\Projects\ExtremeWorld\project-z\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2021-04-10 23:37:09,150 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UILoginPage.OnLogin (Result res, System.String errMsg) (at Assets/Scripts/UI/UILoginPage.cs:51)
+Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) (at Assets/Scripts/Services/UserService.cs:126)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) (at D:/Projects/ExtremeWorld/project-z/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2021-04-10 23:37:12,329 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-04-10 23:37:12,330 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

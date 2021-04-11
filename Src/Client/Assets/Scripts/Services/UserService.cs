@@ -116,6 +116,11 @@ namespace Services
         {
             Debug.LogFormat("OnUserLogin:{0} [{1}]", response.Result, response.Errormsg);
 
+            if(response.Result == Result.Success) //Success. Retrieve user character info
+            {
+                Models.User.Instance.SetupUserInfo(response.Userinfo);
+            }
+
             if (OnLogin != null)
             {
                 OnLogin(response.Result, response.Errormsg);

@@ -40,14 +40,14 @@ public class UILoginPage : MonoBehaviour {
 
 	public void OnLogin(SkillBridge.Message.Result res, string errMsg)
 	{
-		Debug.LogFormat("Login State: {0}, Error: {1}", res.ToString(), errMsg);
-
 		if (res == SkillBridge.Message.Result.Failed)
 		{
 			MessageBox.Show(errMsg + " Login Failed.");
 			return;
 		}
 
-		//TODO: Log User In
+		//Character creation
+		Debug.Log("Login Succeed! Tranferring to character creation scene!");
+		SceneManager.Instance.LoadScene("CharacterCreation");
 	}
 }
