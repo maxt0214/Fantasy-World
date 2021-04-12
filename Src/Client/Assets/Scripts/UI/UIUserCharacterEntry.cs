@@ -1,47 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Text;
+﻿using SkillBridge.Message;
 using UnityEngine;
 using UnityEngine.UI;
-using SkillBridge.Message;
 
 public class UIUserCharacterEntry : MonoBehaviour {
-	[Header("Character Image")]
-	public Material Empty;
-	public Material Warrior;
-	public Material Wizard;
-	public Material Archer;
-
 	[Header("Entry Element")]
 	public Text characterLevel;
 	public Text characterNickName;
 	public Image selectButtonBG;
 
 	public CharacterClass currClass { get; private set; }
-	
+
+	private Sprite inactiveBtn;
+	private Sprite activeBtn;
+
 	/// <summary>
 	/// Initate character entry.
 	/// </summary>
-	public void Init(NCharacterInfo charaInfo)
+	public void Init(NCharacterInfo charaInfo, Sprite inactive, Sprite active = null)
 	{
 		characterLevel.text = "LEVEL " + charaInfo.Level.ToString();
 		characterNickName.text = string.IsNullOrEmpty(charaInfo.Name) ? "New Character" : charaInfo.Name;
 		currClass = charaInfo.Class;
 
-		switch (currClass)
-        {
-			case CharacterClass.None:
-				selectButtonBG.material = Empty;
-				break;
-			case CharacterClass.Warrior:
-				selectButtonBG.material = Warrior;
-				break;
-			case CharacterClass.Wizard:
-				selectButtonBG.material = Wizard;
-				break;
-			case CharacterClass.Archer:
-				selectButtonBG.material = Archer;
-				break;
-		}
+		inactiveBtn = inactive;
+		activeBtn = active;
+
+		selectButtonBG.overrideSprite = inactiveBtn;
+	}
+
+	public void SetButtonActive(bool ifActive)
+	{
+		if (!inactiveBtn || !activeBtn)
+			return;
+
+		selectButtonBG.overrideSprite = (ifActive) ? activeBtn : inactiveBtn;
 	}
 }

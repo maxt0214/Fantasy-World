@@ -6,20 +6,46 @@ using Models;
 using SkillBridge.Message;
 
 public class UICharacterSelectionView : MonoBehaviour {
+	public GameObject UICharaCreatePanel;
+	public UICharacterView charaView;
 	[Header("User Info")]
 	public Text playerLevel;
 	public Text playerNickName;
 
 	[Header("Character Entries")]
-	private List<NCharacterInfo> charaInfos;
 	public UIUserCharacterEntry[] characterEntries;
+	private List<NCharacterInfo> charaInfos;
+
+	private int _currSelected;
+	public int currSelected
+    {
+		get
+        {
+			return _currSelected;
+		}
+		set
+        {
+			_currSelected = value;
+			OnButtonClick();
+		}
+    }
+
+	[Header("Button Sprites")]
+	public Sprite empty;
+	public Sprite warriorAct;
+	public Sprite warriorInact;
+	public Sprite wizardAct;
+	public Sprite wizardInact;
+	public Sprite archerAct;
+	public Sprite archerInact;
 
 	void Start() {
-		if(User.Instance == null)
+		if(User.Instance.Info == null)
         {
 			var chara = new NCharacterInfo();
+			chara.Class = CharacterClass.Archer;
 			for (int i = 0; i < characterEntries.Length; i++)
-				characterEntries[i].Init(chara);
+				characterEntries[i].Init(chara, archerAct, archerInact);
 			return;
 		}
 
@@ -28,30 +54,41 @@ public class UICharacterSelectionView : MonoBehaviour {
 		charaInfos = User.Instance.Info.Player.Characters;
 		for (int i = 0; i < characterEntries.Length; i++)
         {
-			characterEntries[i].Init(charaInfos[i]);
+			Sprite act = null, inact = null;
+			switch(charaInfos[i].Class)
+            {
+				case CharacterClass.None:
+					act = empty;
+					break;
+				case CharacterClass.Warrior:
+					act = warriorAct;
+					inact = warriorInact;
+					break;
+				case CharacterClass.Wizard:
+					act = wizardAct;
+					inact = wizardInact;
+					break;
+				case CharacterClass.Archer:
+					act = archerAct;
+					inact = archerInact;
+					break;
+			}
+			characterEntries[i].Init(charaInfos[i], inact, act);
 		}
 	}
 
-	/// <summary>
-	/// Will 
-	/// </summary>
-	/// <param name="index">Index of character entry</param>
-	public void OnCharacterButtonClick(int index)
+	private void OnButtonClick()
     {
-        switch (characterEntries[index].currClass) 
-		{
-			case CharacterClass.None:
-
-				break;
-			case CharacterClass.Warrior:
-
-				break;
-			case CharacterClass.Wizard:
-
-				break;
-			case CharacterClass.Archer:
-
-				break;
+		if(characterEntries[_currSelected].currClass == CharacterClass.None)
+        {
+			UICharaCreatePanel.SetActive(true);
+			gameObject.SetActive(false);
+			return;
 		}
-    }
+
+		for (int i = 0; i < characterEntries.Length; i++)
+        {
+			characterEntries[i].SetButtonActive(_currSelected == i);
+		}
+	}
 }

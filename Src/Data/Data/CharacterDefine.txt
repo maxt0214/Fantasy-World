@@ -1,34 +1,37 @@
 {
   "1": {
     "TID": 1,
-    "Name": "战士",
+    "Name": "Warrior",
     "Type": "Normal",
     "Class": "WARRIOR",
     "Resource": "Character/Warrior",
+    "Description": "Warriors are perfect for close-range battles. Their bulk shield and shard blade shall teach those who dare to chanllege them a harsh lesson.",
     "InitLevel": 1,
     "Speed": 300
   },
   "2": {
     "TID": 2,
-    "Name": "法师",
+    "Name": "Wizard",
     "Type": "Normal",
     "Class": "WIZARD",
     "Resource": "Character/Wizard",
+    "Description": "In whatever circumstance, wise wizards always exhaust their knowledge to deal with their enemies. If you encounter a wizard. Watch your surrondings carefully! There might be a finely contrived spell awaiting for you.",
     "InitLevel": 1,
     "Speed": 300
   },
   "3": {
     "TID": 3,
-    "Name": "弓箭手",
+    "Name": "Archer",
     "Type": "Normal",
     "Class": "ARCHER",
     "Resource": "Character/Archer",
+    "Description": "Good archers are hunters. They will wait for their prey to fall in their finely designed traps. If you feel something around you. It might be an archer aimming at you.",
     "InitLevel": 1,
     "Speed": 300
   },
   "1001": {
     "TID": 1001,
-    "Name": "恶鬼",
+    "Name": "Demon",
     "Type": "Normal",
     "Class": "WARRIOR",
     "Resource": "Monster/M1001",
