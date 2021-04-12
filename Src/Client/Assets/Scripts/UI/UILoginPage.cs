@@ -15,9 +15,10 @@ public class UILoginPage : MonoBehaviour {
 	void Start () {
 		UserService.Instance.OnLogin += OnLogin;
 	}
-	
-	void Update () {
-		
+
+	private void OnDisable()
+	{
+		UserService.Instance.OnLogin -= OnLogin;
 	}
 
 	//Will take care of user log in
@@ -46,7 +47,6 @@ public class UILoginPage : MonoBehaviour {
 			return;
 		}
 
-		//Character creation
 		Debug.Log("Login Succeed! Tranferring to character creation scene!");
 		SceneManager.Instance.LoadScene("CharacterCreation");
 	}

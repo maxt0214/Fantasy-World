@@ -6,33 +6,27 @@ public class UIUserCharacterEntry : MonoBehaviour {
 	[Header("Entry Element")]
 	public Text characterLevel;
 	public Text characterNickName;
-	public Image selectButtonBG;
+	public Image hightlightBG;
+	public Image characterAvatar;
 
 	public CharacterClass currClass { get; private set; }
-
-	private Sprite inactiveBtn;
-	private Sprite activeBtn;
 
 	/// <summary>
 	/// Initate character entry.
 	/// </summary>
-	public void Init(NCharacterInfo charaInfo, Sprite inactive, Sprite active = null)
+	public void Init(NCharacterInfo charaInfo, Sprite avatarSprite)
 	{
 		characterLevel.text = "LEVEL " + charaInfo.Level.ToString();
 		characterNickName.text = string.IsNullOrEmpty(charaInfo.Name) ? "New Character" : charaInfo.Name;
 		currClass = charaInfo.Class;
 
-		inactiveBtn = inactive;
-		activeBtn = active;
-
-		selectButtonBG.overrideSprite = inactiveBtn;
+		characterAvatar.overrideSprite = avatarSprite;
 	}
 
-	public void SetButtonActive(bool ifActive)
-	{
-		if (!inactiveBtn || !activeBtn)
-			return;
-
-		selectButtonBG.overrideSprite = (ifActive) ? activeBtn : inactiveBtn;
+	public void HightLightAvatar(bool ifHighlighted)
+    {
+		var color = hightlightBG.color;
+		color.a = ifHighlighted ? 1 : 0;
+		hightlightBG.color = color;
 	}
 }

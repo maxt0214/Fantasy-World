@@ -17,6 +17,7 @@ namespace GameServer.Services
         {
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserRegisterRequest>(OnRegister);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserLoginRequest>(OnLogin);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserCreateCharacterRequest>(OnCreateCharacter);
         }
 
         public void Init()
@@ -93,6 +94,17 @@ namespace GameServer.Services
             //Send message to client
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data,0,data.Length);
+        }
+
+        void OnCreateCharacter(NetConnection<NetSession> sender, UserCreateCharacterRequest request)
+        {
+            Log.InfoFormat("Create Character Request: Character Class: {0}, Nick Name: {1}", request.Class.ToString(), request.Name);
+            //Generate message to send to client
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.createChar = new UserCreateCharacterResponse();
+
+            //TODO:Finish this
         }
     }
 }

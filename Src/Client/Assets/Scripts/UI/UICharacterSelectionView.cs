@@ -8,9 +8,6 @@ using SkillBridge.Message;
 public class UICharacterSelectionView : MonoBehaviour {
 	public GameObject UICharaCreatePanel;
 	public UICharacterView charaView;
-	[Header("User Info")]
-	public Text playerLevel;
-	public Text playerNickName;
 
 	[Header("Character Entries")]
 	public UIUserCharacterEntry[] characterEntries;
@@ -30,50 +27,28 @@ public class UICharacterSelectionView : MonoBehaviour {
 		}
     }
 
-	[Header("Button Sprites")]
+	[Header("Character Avatar Sprites")]
 	public Sprite empty;
-	public Sprite warriorAct;
-	public Sprite warriorInact;
-	public Sprite wizardAct;
-	public Sprite wizardInact;
-	public Sprite archerAct;
-	public Sprite archerInact;
+	public Sprite existed;
 
 	void Start() {
+		//For local debug
 		if(User.Instance.Info == null)
         {
 			var chara = new NCharacterInfo();
-			chara.Class = CharacterClass.Archer;
+			chara.Class = CharacterClass.None;
 			for (int i = 0; i < characterEntries.Length; i++)
-				characterEntries[i].Init(chara, archerAct, archerInact);
+				characterEntries[i].Init(chara, empty);
 			return;
 		}
-
-		//playerLevel.text = User.Instance.Info.Player.Level;
-		//playerNickName.text = User.Instance.Info.Player.Name;
+		
 		charaInfos = User.Instance.Info.Player.Characters;
 		for (int i = 0; i < characterEntries.Length; i++)
         {
-			Sprite act = null, inact = null;
-			switch(charaInfos[i].Class)
-            {
-				case CharacterClass.None:
-					act = empty;
-					break;
-				case CharacterClass.Warrior:
-					act = warriorAct;
-					inact = warriorInact;
-					break;
-				case CharacterClass.Wizard:
-					act = wizardAct;
-					inact = wizardInact;
-					break;
-				case CharacterClass.Archer:
-					act = archerAct;
-					inact = archerInact;
-					break;
-			}
-			characterEntries[i].Init(charaInfos[i], inact, act);
+			if(charaInfos[i].Class == CharacterClass.None)
+				characterEntries[i].Init(charaInfos[i], empty);
+			else
+				characterEntries[i].Init(charaInfos[i], existed);
 		}
 	}
 
@@ -88,7 +63,7 @@ public class UICharacterSelectionView : MonoBehaviour {
 
 		for (int i = 0; i < characterEntries.Length; i++)
         {
-			characterEntries[i].SetButtonActive(_currSelected == i);
+			characterEntries[i].HightLightAvatar(currSelected == i);
 		}
 	}
 }

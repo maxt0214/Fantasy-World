@@ -19,6 +19,11 @@ public class UIRegisterPage : MonoBehaviour {
 		UserService.Instance.OnRegister += OnRegister;
 	}
 
+	private void OnDisable()
+	{
+		UserService.Instance.OnRegister -= OnRegister;
+	}
+
 	//Will take care of register
 	public void OnClickRegister()
 	{
