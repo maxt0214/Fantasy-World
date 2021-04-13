@@ -1,6 +1,20 @@
-2021-04-10 09:35:35,845 [ 1] INFO  Unity: Loading Manager Awake
-2021-04-10 09:36:57,237 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-04-10 09:36:57,238 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-04-13 04:09:09,305 [ 1] INFO  Unity: Loading Manager Awake
+2021-04-13 04:09:22,355 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-04-13 04:09:22,356 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-04-13 04:09:22,357 [ 1] INFO  Unity: DoConnect
+2021-04-13 04:09:22,359 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-04-13 04:09:22,360 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2021-04-13 04:09:22,364 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-04-13 04:09:25,030 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-04-13 04:09:25,031 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-04-13 04:09:25,032 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-04-13 04:09:25,322 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-04-13 04:09:25,325 [ 1] INFO  Unity: DataManager > DataManager()
+2021-04-13 04:09:40,188 [ 1] INFO  Unity: UserCreateCharacterRequest::class :Warrior nick name:Dragon Slayer
+2021-04-13 04:09:40,538 [ 1] INFO  Unity: OnUserCreateCharacter:Success [None]
+2021-04-13 04:09:47,250 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-04-13 04:09:47,251 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

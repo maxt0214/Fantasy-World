@@ -23,7 +23,7 @@ public class UICharacterView : MonoBehaviour {
     {
         for(int i = 0; i < characters.Length; i++)
         {
-            characters[i].SetActive(i == _currChar);
+            characters[i].SetActive(i == _currChar-1);
         }
     }
 }

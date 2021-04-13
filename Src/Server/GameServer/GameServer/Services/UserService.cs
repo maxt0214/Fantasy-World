@@ -47,6 +47,8 @@ namespace GameServer.Services
                     message.Response.userLogin.Errormsg = "Incorrect Password!";
                 } else
                 {
+                    sender.Session.User = user;
+
                     message.Response.userLogin.Result = Result.Success;
                     message.Response.userLogin.Errormsg = "None";
                     //Retrieve user info
@@ -104,7 +106,48 @@ namespace GameServer.Services
             message.Response = new NetMessageResponse();
             message.Response.createChar = new UserCreateCharacterResponse();
 
-            //TODO:Finish this
+            TCharacter newChara = new TCharacter()
+            {
+                TID = (int)request.Class,
+                Name = request.Name,
+                Class = (int)request.Class,
+                MapID = 1,
+                MapPosX = 5000,
+                MapPosY = 4000,
+                MapPosZ = 820,
+            };
+
+            byte[] data;
+            try
+            {
+                DBService.Instance.Entities.Characters.Add(newChara);
+                sender.Session.User.Player.Characters.Add(newChara);
+                DBService.Instance.Entities.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                Log.ErrorFormat("Character Creation Failed In Cause Of {0}", e.Message);
+                message.Response.createChar.Result = Result.Failed;
+                message.Response.createChar.Errormsg = e.Message;
+
+                data = PackageHandler.PackMessage(message);
+                sender.SendData(data, 0, data.Length);
+                return;
+            }
+
+            message.Response.createChar.Result = Result.Success;
+            message.Response.createChar.Errormsg = "None";
+            foreach (var character in sender.Session.User.Player.Characters)
+            {
+                NCharacterInfo cInfo = new NCharacterInfo();
+                cInfo.Id = character.ID;
+                cInfo.Name = character.Name;
+                cInfo.Class = (CharacterClass)character.Class;
+                message.Response.createChar.Characters.Add(cInfo);
+            }
+
+            data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
         }
     }
 }

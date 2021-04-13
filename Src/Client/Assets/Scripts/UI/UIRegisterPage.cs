@@ -14,12 +14,12 @@ public class UIRegisterPage : MonoBehaviour {
 	public Button loginButton;
 	public Button backButton;
 
-	void Start()
-	{
+    private void OnEnable()
+    {
 		UserService.Instance.OnRegister += OnRegister;
 	}
 
-	private void OnDisable()
+    private void OnDisable()
 	{
 		UserService.Instance.OnRegister -= OnRegister;
 	}

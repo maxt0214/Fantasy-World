@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Services;
 using System.Linq;
+using SkillBridge.Message;
 
 public class UICharacterCreateView : MonoBehaviour {
     public UICharacterView charaView;
@@ -13,43 +14,40 @@ public class UICharacterCreateView : MonoBehaviour {
     public Text[] characterClasses;
     public Text nickName;
 
-    private int selectedClassID;
-    private int creatingCharaTID = -1;
+    private int selectedCharaClass;
+    private bool creatingCharacter = false;
 
-    private void Start()
+    public void Init()
     {
         DataManager.Instance.Load();
-        var charaDefs = DataManager.Instance.Characters.Values;
         for (int i = 0; i < characterClasses.Length; i++)
         {
-            characterClasses[i].text = charaDefs.Where(c => c.TID == i+1).FirstOrDefault().Name;
+            characterClasses[i].text = ((CharacterClass)i+1).ToString();
         }
 
-        description.text = charaDefs.Where(c => c.TID == 1).FirstOrDefault().Description;
-
-        UserService.Instance.OnCreateCharacter += OnCreateCharacter;
+        description.text = DataManager.Instance.Characters.Values.Where(c => c.Class == (CharacterClass)1).FirstOrDefault().Description;
     }
 
-    private void OnDisable()
+    public void SwitchCharacter(int charaIndex, CharacterClass currClass)
     {
-        UserService.Instance.OnCreateCharacter -= OnCreateCharacter;
-    }
-
-    public void OnClickSwitchCharacter(int charaIndex)
-    {
-        charaView.currChar = charaIndex;
-        for(int i = 0; i < titles.Length; i++)
+        selectedCharaClass = (int)currClass;
+        for (int i = 0; i < titles.Length; i++)
         {
             titles[i].SetActive(i == charaIndex);
         }
 
-        selectedClassID = charaIndex + 1;
-        description.text = DataManager.Instance.Characters.Values.Where(c => c.TID == selectedClassID).FirstOrDefault().Description;
+        description.text = DataManager.Instance.Characters.Values.Where(c => c.Class == currClass).FirstOrDefault().Description;
     }
 
-    public void OnClickStartAdventure()
+    public void CreateCharacter()
     {
-        if(creatingCharaTID == -1)
+        if(selectedCharaClass == 0)
+        {
+            MessageBox.Show("You must select a character class to create your character!");
+            return;
+        }
+
+        if(creatingCharacter)
         {
             MessageBox.Show("Already Trying To Create A Character. Please Be Patient!");
             return;
@@ -67,21 +65,12 @@ public class UICharacterCreateView : MonoBehaviour {
             return;
         }
 
-        creatingCharaTID = selectedClassID;
-        var charaClass = DataManager.Instance.Characters.Values.Where(c => c.TID == creatingCharaTID).FirstOrDefault().Class;
-        UserService.Instance.SendCharacterCreation(charaClass, nickName.text);
+        creatingCharacter = true;
+        UserService.Instance.SendCharacterCreation((CharacterClass)selectedCharaClass, nickName.text);
     }
 
-    public void OnCreateCharacter(SkillBridge.Message.Result res, string errMsg)
+    public void CharacterCreationDone()
     {
-        if (res == SkillBridge.Message.Result.Failed)
-        {
-            MessageBox.Show(errMsg + " Character Creation Failed.");
-            creatingCharaTID = -1;//Mark creating character as none
-            return;
-        }
-
-        Debug.Log("Character Creation Succeeded!!");
-        //SceneManager.Instance.LoadScene("MainCity");
+        creatingCharacter = false;
     }
 }

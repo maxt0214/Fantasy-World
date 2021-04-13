@@ -186,6 +186,12 @@ namespace Services
         {
             Debug.LogFormat("OnUserCreateCharacter:{0} [{1}]", response.Result, response.Errormsg);
 
+            if(response.Result == Result.Success)
+            {
+                Models.User.Instance.Info.Player.Characters.Clear();
+                Models.User.Instance.Info.Player.Characters.AddRange(response.Characters);
+            }
+
             if(OnCreateCharacter != null)
             {
                 OnCreateCharacter(response.Result, response.Errormsg);

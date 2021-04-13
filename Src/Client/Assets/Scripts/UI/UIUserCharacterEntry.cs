@@ -8,13 +8,27 @@ public class UIUserCharacterEntry : MonoBehaviour {
 	public Text characterNickName;
 	public Image hightlightBG;
 	public Image characterAvatar;
+	public Button btn;
 
 	public CharacterClass currClass { get; private set; }
 
-	/// <summary>
-	/// Initate character entry.
-	/// </summary>
-	public void Init(NCharacterInfo charaInfo, Sprite avatarSprite)
+    public void Init(NCharacterInfo charaInfo, Sprite avatarSprite, int index)
+    {
+		characterLevel.text = "LEVEL " + charaInfo.Level.ToString();
+		characterNickName.text = string.IsNullOrEmpty(charaInfo.Name) ? "New Character" : charaInfo.Name;
+		currClass = charaInfo.Class;
+
+		characterAvatar.overrideSprite = avatarSprite;
+
+		btn.onClick.AddListener(() => { UIUserCharacterView.Instance.OnCharacterEntrySelected(index); });
+	}
+
+    private void OnDisable()
+    {
+		//btn.onClick.RemoveAllListeners();
+	}
+
+    public void UpdateInfo(NCharacterInfo charaInfo, Sprite avatarSprite)
 	{
 		characterLevel.text = "LEVEL " + charaInfo.Level.ToString();
 		characterNickName.text = string.IsNullOrEmpty(charaInfo.Name) ? "New Character" : charaInfo.Name;

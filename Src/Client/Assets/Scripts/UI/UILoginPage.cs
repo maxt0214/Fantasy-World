@@ -12,11 +12,12 @@ public class UILoginPage : MonoBehaviour {
 	public Button loginButton;
 	public Button registerButton;
 
-	void Start () {
+    private void OnEnable()
+    {
 		UserService.Instance.OnLogin += OnLogin;
 	}
 
-	private void OnDisable()
+    private void OnDisable()
 	{
 		UserService.Instance.OnLogin -= OnLogin;
 	}
