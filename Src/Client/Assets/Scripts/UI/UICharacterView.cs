@@ -21,7 +21,7 @@ public class UICharacterView : MonoBehaviour {
 
     private void UpdateCharacters()
     {
-        for(int i = 0; i < characters.Length; i++)
+        for (int i = 0; i < characters.Length; i++)
         {
             characters[i].SetActive(i == _currChar-1);
         }

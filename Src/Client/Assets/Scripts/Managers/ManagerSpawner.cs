@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Network;
+using Managers;
 
 public class ManagerSpawner : MonoBehaviour {
     [Header("Manager Prefabs")]
     public Transform netClient;
+    public int nCSpawnScene = 0;
     public Transform sceneManager;
+    public int sMSpawnScene = 0;
+    //public Transform gameObjManager;
+    //public int gOMSpawnScene = 2;
 
     void Awake()
     {
@@ -22,12 +24,12 @@ public class ManagerSpawner : MonoBehaviour {
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
     {
-        if (!NetClient.Instance)
+        if (!NetClient.Instance && scene.buildIndex >= nCSpawnScene)
         {
             Instantiate(netClient, transform.position, transform.rotation);
         }
 
-        if(!SceneManager.Instance)
+        if(!SceneManager.Instance && scene.buildIndex >= sMSpawnScene)
         {
             Instantiate(sceneManager, transform.position, transform.rotation);
         }

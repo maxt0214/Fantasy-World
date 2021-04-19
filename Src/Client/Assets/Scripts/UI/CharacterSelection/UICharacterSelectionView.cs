@@ -33,6 +33,7 @@ public class UICharacterSelectionView : MonoBehaviour {
 
 	public void UpdateCharacters(int entryCap)
     {
+		_currSelected = 0;
 		//Recieve this user's characters from remote and populate our list
 		charaInfos = User.Instance.Info.Player.Characters;
 
@@ -87,7 +88,7 @@ public class UICharacterSelectionView : MonoBehaviour {
 
 		for (int i = 0; i < characterEntries.Count; i++)
         {
-			characterEntries[i].HightLightAvatar(currSelected == i);
+			characterEntries[i].HightLightAvatar(_currSelected == i);
 		}
 	}
 }

@@ -56,7 +56,10 @@ public class UIUserCharacterView : MonoSingleton<UIUserCharacterView>
 
     public void OnClickStartAdventure()
     {
-
+        if(selectView.currEntry.ID != null) 
+        {
+            UserService.Instance.SendEnterGame((int)selectView.currEntry.ID);
+        }
     }
 
     #region Character Create Funcs

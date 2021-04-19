@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Services;
 
 public class LoadingManager : MonoBehaviour {
 	[Header("Windows")]
@@ -26,7 +27,11 @@ public class LoadingManager : MonoBehaviour {
 		loadingPage.SetActive(true);
 		loginPage.SetActive(false);
 		registerPage.SetActive(false);
-		yield return new WaitForSeconds(loadingWaitTime);
+
+		yield return DataManager.Instance.LoadData();
+
+		UserService.Instance.Init();
+		MapService.Instance.Init();
 
 		//TODO: resource load and percentage update
 

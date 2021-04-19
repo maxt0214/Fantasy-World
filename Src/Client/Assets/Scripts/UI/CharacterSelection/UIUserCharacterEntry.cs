@@ -11,6 +11,7 @@ public class UIUserCharacterEntry : MonoBehaviour {
 	public Button btn;
 
 	public CharacterClass currClass { get; private set; }
+	public int? ID;
 
     public void Init(NCharacterInfo charaInfo, Sprite avatarSprite, int index)
     {
@@ -20,12 +21,12 @@ public class UIUserCharacterEntry : MonoBehaviour {
 
 		characterAvatar.overrideSprite = avatarSprite;
 
-		btn.onClick.AddListener(() => { UIUserCharacterView.Instance.OnCharacterEntrySelected(index); });
-	}
+		if (charaInfo.Class == CharacterClass.None)
+			ID = null;
+		else
+			ID = charaInfo.Id;
 
-    private void OnDisable()
-    {
-		//btn.onClick.RemoveAllListeners();
+		btn.onClick.AddListener(() => { UIUserCharacterView.Instance.OnCharacterEntrySelected(index); });
 	}
 
     public void UpdateInfo(NCharacterInfo charaInfo, Sprite avatarSprite)
@@ -35,6 +36,11 @@ public class UIUserCharacterEntry : MonoBehaviour {
 		currClass = charaInfo.Class;
 
 		characterAvatar.overrideSprite = avatarSprite;
+
+		if (charaInfo.Class == CharacterClass.None)
+			ID = null;
+		else
+			ID = charaInfo.Id;
 	}
 
 	public void HightLightAvatar(bool ifHighlighted)

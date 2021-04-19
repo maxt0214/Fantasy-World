@@ -5,7 +5,7 @@ using System.Text;
 using Common;
 using Network;
 using UnityEngine;
-
+using Models;
 using SkillBridge.Message;
 
 namespace Services
@@ -26,10 +26,14 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserRegisterResponse>(OnUserRegister);
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(OnUserLogin);
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(OnUserCreateCharacter);
+            MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(OnUserEnterGame);
+            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(OnCharacterEnterMap);
         }
 
         public void Dispose()
         {
+            MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(OnCharacterEnterMap);
+            MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(OnUserEnterGame);
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(OnUserLogin);
             MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(OnUserRegister);
@@ -121,7 +125,7 @@ namespace Services
 
             if(response.Result == Result.Success) //Success. Retrieve user character info
             {
-                Models.User.Instance.SetupUserInfo(response.Userinfo);
+                User.Instance.SetupUserInfo(response.Userinfo);
             }
 
             if (OnLogin != null)
@@ -188,14 +192,40 @@ namespace Services
 
             if(response.Result == Result.Success)
             {
-                Models.User.Instance.Info.Player.Characters.Clear();
-                Models.User.Instance.Info.Player.Characters.AddRange(response.Characters);
+                User.Instance.Info.Player.Characters.Clear();
+                User.Instance.Info.Player.Characters.AddRange(response.Characters);
             }
 
             if(OnCreateCharacter != null)
             {
                 OnCreateCharacter(response.Result, response.Errormsg);
             }
+        }
+
+        public void SendEnterGame(int charaID)
+        {
+            Debug.LogFormat("UserEnterGameRequest::Character ID: {0}", charaID);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.gameEnter = new UserGameEnterRequest();
+            message.Request.gameEnter.characterIdx = charaID;
+
+            NetClient.Instance.SendMessage(message);
+        }
+
+        void OnUserEnterGame(object sender, UserGameEnterResponse response)
+        {
+            Debug.LogFormat("OnUserEnterGame:{0} [{1}]", response.Result, response.Errormsg);
+        }
+
+        private void OnCharacterEnterMap(object sender, MapCharacterEnterResponse response)
+        {
+            var character = response.Characters[0];
+            User.Instance.CurrentCharacter = character;
+
+            Debug.LogFormat("OnMapCharacterEnter: Character: {0} CharacterID: {1} MapId: {2}", character.Name, character.Id, response.mapId);
+
+            SceneManager.Instance.LoadScene(DataManager.Instance.Maps[response.mapId].Resource);
         }
     }
 }
