@@ -10575,6 +10575,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08806fa9fb78d4a4aa8be10736dd23bc, type: 3}
+--- !u!1 &341902063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341902064}
+  - component: {fileID: 341902065}
+  m_Layer: 0
+  m_Name: MiniMapBoundingBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341902064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341902063}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -1718.0122, y: -867.6849, z: 38.78788}
+  m_LocalScale: {x: 77.57576, y: 77.57579, z: 0.9696975}
+  m_Children: []
+  m_Father: {fileID: 1512203193}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &341902065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341902063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &343560422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44929,6 +44973,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1525845670}
+  - {fileID: 341902064}
   m_Father: {fileID: 1415483400}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44949,6 +44994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4488b0f78002d458aec5c3bb0c58e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  miniMapBoundingBox: {fileID: 341902065}
   miniMap: {fileID: 1626241214}
   arrow: {fileID: 2033281450}
   mapName: {fileID: 1951143978}
@@ -48461,7 +48507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000118494034, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 685, y: 654}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626241214
@@ -48482,7 +48528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8428c4bedd8b9924d8c72646da42e901, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -57499,7 +57545,7 @@ PrefabInstance:
     - target: {fileID: 114937104081108908, guid: e5daa2fd873f26d46b5f49911237812f,
         type: 3}
       propertyPath: m_Text
-      value: Blin Town
+      value: NUll
       objectReference: {fileID: 0}
     - target: {fileID: 114937104081108908, guid: e5daa2fd873f26d46b5f49911237812f,
         type: 3}

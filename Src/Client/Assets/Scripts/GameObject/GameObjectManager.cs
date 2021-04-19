@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entities;
+using Models;
 
 namespace Managers {
     public class GameObjectManager : MonoBehaviour
@@ -60,8 +61,9 @@ namespace Managers {
                 var pc = gameObject.GetComponent<PlayerInputController>();
                 if (pc != null)
                 {
-                    if(chara.Info.Id == Models.User.Instance.CurrentCharacter.Id)
+                    if(chara.Info.Id == User.Instance.CurrentCharacter.Id)
                     {
+                        User.Instance.currentCharacterObj = gameObject;
                         MainPlayerCamera.Instance.player = gameObject;
                         pc.enabled = true;
                         pc.characterEntity = chara;

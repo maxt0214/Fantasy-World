@@ -64,6 +64,7 @@ namespace Services
             if (DataManager.Instance.Maps.ContainsKey(mapId))
             {
                 var map = DataManager.Instance.Maps[mapId];
+                User.Instance.currMap = map;
                 SceneManager.Instance.LoadScene(map.Resource);
             }
             else
