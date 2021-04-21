@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 using SkillBridge.Message;
+using Managers;
 
-public class EntityController : MonoBehaviour
+public class EntityController : MonoBehaviour , IEntityNotify
 {
     public Animator anim;
     private AnimationState currentBaseState;
@@ -28,7 +29,11 @@ public class EntityController : MonoBehaviour
     private void Start()
     {
         if (entity != null)
+        {
+            EntityManager.Instance.RegisterEntityChangeNotify(entity.entityId,this);
             UpdateTransform();
+        }
+            
 
         if(!isLocalPlayer) //We do not want gravity to take effect when the entity is not our player
             rb.useGravity = false;
@@ -83,5 +88,12 @@ public class EntityController : MonoBehaviour
                 anim.SetTrigger("Jump");
                 break;
         }
+    }
+
+    public void OnEntityRemoved()
+    {
+        if (UIWorldElementManager.Instance != null)
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(transform);
+        Destroy(gameObject);
     }
 }

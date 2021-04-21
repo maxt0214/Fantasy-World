@@ -1,7 +1,97 @@
-2021-04-19 09:59:44,634 [ 1] INFO  Unity: Loading Manager Awake
-2021-04-19 09:59:44,650 [ 1] INFO  Unity: DataManager > DataManager()
-2021-04-19 09:59:47,553 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-04-19 09:59:47,554 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-04-21 12:06:40,975 [ 1] INFO  Unity: Loading Manager Awake
+2021-04-21 12:06:40,995 [ 1] INFO  Unity: DataManager > DataManager()
+2021-04-21 12:06:51,551 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-04-21 12:06:51,552 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-04-21 12:06:51,553 [ 1] INFO  Unity: DoConnect
+2021-04-21 12:06:51,555 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-04-21 12:06:51,556 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2021-04-21 12:06:51,559 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-04-21 12:06:54,197 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-04-21 12:06:54,198 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-04-21 12:06:54,199 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-04-21 12:06:54,317 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-04-21 12:06:55,686 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 11
+2021-04-21 12:08:13,541 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
+
+2021-04-21 12:08:13,541 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+
+2021-04-21 12:08:13,556 [ 1] INFO  Unity: DoConnect
+2021-04-21 12:08:13,557 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-04-21 12:08:13,557 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2021-04-21 12:08:15,580 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2021-04-21 12:08:15,581 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2021-04-21 12:08:15,633 [ 1] INFO  Unity: DoConnect
+2021-04-21 12:08:15,634 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-04-21 12:08:15,635 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+
+2021-04-21 12:08:17,657 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2021-04-21 12:08:17,657 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2021-04-21 12:08:17,698 [ 1] INFO  Unity: DoConnect
+2021-04-21 12:08:17,698 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-04-21 12:08:17,699 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
+
+2021-04-21 12:08:19,722 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2021-04-21 12:08:19,723 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2021-04-21 12:08:19,723 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
+2021-04-21 12:08:20,056 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-04-21 12:08:20,057 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

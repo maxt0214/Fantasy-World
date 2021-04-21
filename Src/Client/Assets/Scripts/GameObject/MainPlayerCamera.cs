@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Models;
 
 public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 {
@@ -12,7 +13,10 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
     private void LateUpdate()
     {
         if (player == null)
-            return;
+        {
+            player = User.Instance.currentCharacterObj;
+        }
+        if (player == null) return;
 
         transform.position = player.transform.position;
         transform.rotation = player.transform.rotation;

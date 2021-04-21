@@ -75,6 +75,17 @@ namespace GameServer.Models
             conn.SendData(data, 0, data.Length);
         }
 
+        internal void CharacterLeave(NCharacterInfo character)
+        {
+            Log.InfoFormat("CharacterLeave: Map:{0} Online characterId:{1}", Define.ID, character.Id);
+
+            foreach (var kv in MapCharacters)
+            {
+                SendCharacterLeaveMap(kv.Value.connection, character);
+            }
+            MapCharacters.Remove(character.Entity.Id);
+        }
+
         void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
         {
             NetMessage message = new NetMessage();
@@ -83,6 +94,18 @@ namespace GameServer.Models
             message.Response.mapCharacterEnter = new MapCharacterEnterResponse();
             message.Response.mapCharacterEnter.mapId = Define.ID;
             message.Response.mapCharacterEnter.Characters.Add(character);
+
+            byte[] data = PackageHandler.PackMessage(message);
+            conn.SendData(data, 0, data.Length);
+        }
+
+        private void SendCharacterLeaveMap(NetConnection<NetSession> conn, NCharacterInfo character)
+        {
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+
+            message.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
+            message.Response.mapCharacterLeave.characterId = character.Id;
 
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);

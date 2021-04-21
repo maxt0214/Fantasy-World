@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Models;
+using Services;
 
 public class UIMainCity : MonoBehaviour
 {
@@ -19,5 +20,11 @@ public class UIMainCity : MonoBehaviour
     {
         playerName.text = User.Instance.CurrentCharacter.Name;
         playerLevel.text = User.Instance.CurrentCharacter.Level.ToString();
+    }
+
+    public void OnClickReturnToCharaSelect()
+    {
+        SceneManager.Instance.LoadScene("CharacterCreation");
+        UserService.Instance.SendLeaveGame();
     }
 }

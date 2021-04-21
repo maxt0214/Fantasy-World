@@ -15,6 +15,7 @@ namespace Managers
         public Dictionary<int, Character> characters = new Dictionary<int, Character>();
 
         public UnityAction<Character> OnCharacterEnter;
+        public UnityAction<Character> OnCharacterLeave;
 
         public CharacterManager()
         {
@@ -33,6 +34,11 @@ namespace Managers
 
         public void Clear()
         {
+            var keys = characters.Keys;
+            foreach(var key in keys)
+            {
+                Instance.RemoveCharacter(key);
+            }
             characters.Clear();
         }
 
@@ -41,7 +47,7 @@ namespace Managers
             Debug.LogFormat("AddCharacter: {0}: {1} Map: {2} Entity: {3}", chara.Id, chara.Name, chara.mapId, chara.Entity.String());
             var character = new Character(chara);
             characters[chara.Id] = character;
-
+            EntityManager.Instance.AddEntity(character);
             if (OnCharacterEnter != null)
                 OnCharacterEnter(character);
         }
@@ -50,6 +56,14 @@ namespace Managers
         {
             Debug.LogFormat("RemoveCharacter:{0}", charaId);
             characters.Remove(charaId);
+
+            if(characters.ContainsKey(charaId))
+            {
+                EntityManager.Instance.RemoveEntity(characters[charaId].Info.Entity);
+                if (OnCharacterLeave != null)
+                    OnCharacterLeave(characters[charaId]);
+                characters.Remove(charaId);
+            }
         }
     }
 }

@@ -23,7 +23,8 @@ public class UIMiniMap : MonoBehaviour
         mapName.text = User.Instance.currMap.Name;
         if(miniMap.overrideSprite == null)
         {
-            miniMap.overrideSprite = MiniMapManager.Instance.LoadCurrentMiniMap();
+            var sprite = MiniMapManager.Instance.LoadCurrentMiniMap();
+            miniMap.overrideSprite = sprite;
         }
 
         miniMap.SetNativeSize();
@@ -33,8 +34,10 @@ public class UIMiniMap : MonoBehaviour
 
     private void Update()
     {
-        float mapWidth = miniMapBoundingBox.size.x;
-        float mapHeight = miniMapBoundingBox.size.y;
+        if (miniMapBoundingBox == null || playerTrans == null) return;
+
+        float mapWidth = miniMapBoundingBox.bounds.size.x;
+        float mapHeight = miniMapBoundingBox.bounds.size.z;
 
         float relativeX = playerTrans.position.x - miniMapBoundingBox.bounds.min.x;
         float relativeY = playerTrans.position.z - miniMapBoundingBox.bounds.min.z;
@@ -44,5 +47,6 @@ public class UIMiniMap : MonoBehaviour
 
         miniMap.rectTransform.pivot = new Vector2(pivotX, pivotY);
         miniMap.rectTransform.localPosition = Vector3.zero;
+        arrow.transform.eulerAngles = new Vector3(0,0,-playerTrans.eulerAngles.y);
     }
 }
