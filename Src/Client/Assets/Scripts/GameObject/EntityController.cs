@@ -96,4 +96,9 @@ public class EntityController : MonoBehaviour , IEntityNotify
             UIWorldElementManager.Instance.RemoveCharacterNameBar(transform);
         Destroy(gameObject);
     }
+
+    public void OnEntityChange(Entity entity)
+    {
+        Debug.LogFormat("OnEntityChange: EntityID:{0} Pos:{1} Dir:{2}", entity.entityId, entity.EntityData.Position, entity.EntityData.Direction);
+    }
 }

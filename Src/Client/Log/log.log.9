@@ -1,73 +1,28 @@
-2021-04-21 11:49:24,401 [ 1] INFO  Unity: Loading Manager Awake
-2021-04-21 11:49:24,420 [ 1] INFO  Unity: DataManager > DataManager()
-2021-04-21 11:49:34,318 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
-2021-04-21 11:49:34,319 [ 1] INFO  Unity: ConnectToServer() Start 
-2021-04-21 11:49:34,320 [ 1] INFO  Unity: DoConnect
-2021-04-21 11:49:34,322 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-04-21 11:49:34,324 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2021-04-23 02:26:55,564 [ 1] INFO  Unity: Loading Manager Awake
+2021-04-23 02:26:55,582 [ 1] INFO  Unity: DataManager > DataManager()
+2021-04-23 02:27:03,520 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-04-23 02:27:03,522 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-04-23 02:27:03,523 [ 1] INFO  Unity: DoConnect
+2021-04-23 02:27:03,523 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-04-23 02:27:03,525 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2021-04-21 11:49:34,327 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2021-04-21 11:49:36,910 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2021-04-21 11:49:36,911 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
-2021-04-21 11:49:36,914 [ 1] INFO  Unity: LoadLevel: CharacterCreation
-2021-04-21 11:49:37,048 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-04-21 11:49:38,623 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 11
-2021-04-21 11:49:38,661 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
-2021-04-21 11:49:38,662 [ 1] INFO  Unity: OnMapCharacterEnter: Character: Elf CharacterID: 11 MapId: 1
-2021-04-21 11:49:38,663 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-04-21 11:49:38,664 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
-2021-04-21 11:49:38,667 [ 1] INFO  Unity: AddCharacter: 11: Elf Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-04-21 11:49:38,671 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-04-21 11:49:39,016 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-04-21 11:49:39,021 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
-2021-04-21 11:49:39,261 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-04-21 11:49:39,322 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-04-21 11:49:39,325 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
-2021-04-21 11:49:45,917 [ 1] INFO  Unity: LoadLevel: CharacterCreation
-2021-04-21 11:49:45,918 [ 1] INFO  Unity: UserLeaveGameRequest::Character ID: 11 Name:Elf
-2021-04-21 11:49:45,956 [ 1] INFO  Unity: OnCharacterLeaveMap: CharacterID11
-2021-04-21 11:49:45,960 [ 1] INFO  Unity: RemoveCharacter:11
-2021-04-21 11:49:46,010 [ 1] ERROR Unity: Message handler exception:, out of sync, mscorlib,   at System.Collections.Generic.Dictionary`2+Enumerator[System.Int32,Entities.Character].VerifyState () [0x00028] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:912 
-  at System.Collections.Generic.Dictionary`2+Enumerator[System.Int32,Entities.Character].MoveNext () [0x00000] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:835 
-  at System.Collections.Generic.Dictionary`2+KeyCollection+Enumerator[System.Int32,Entities.Character].MoveNext () [0x00000] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:1028 
-  at Managers.CharacterManager.Clear () [0x00031] in C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Client\Assets\Scripts\Managers\CharacterManager.cs:38 
-  at Services.MapService.OnCharacterLeaveMap (System.Object sender, SkillBridge.Message.MapCharacterLeaveResponse response) [0x00053] in C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Client\Assets\Scripts\Services\MapService.cs:62 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterLeaveResponse] (System.Object sender, SkillBridge.Message.MapCharacterLeaveResponse msg) [0x00000] in <filename unknown>:0 
-2021-04-21 11:49:46,014 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{InvalidOperationException: out of sync, System.Collections.Generic.Dictionary`2+Enumerator[System.Int32,Entities.Character].VerifyState () (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:912)
-System.Collections.Generic.Dictionary`2+Enumerator[System.Int32,Entities.Character].MoveNext () (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:835)
-System.Collections.Generic.Dictionary`2+KeyCollection+Enumerator[System.Int32,Entities.Character].MoveNext () (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:1028)
-Managers.CharacterManager.Clear () (at Assets/Scripts/Managers/CharacterManager.cs:38)
-Services.MapService.OnCharacterLeaveMap (System.Object sender, SkillBridge.Message.MapCharacterLeaveResponse response) (at Assets/Scripts/Services/MapService.cs:62)
-Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterLeaveResponse] (System.Object sender, SkillBridge.Message.MapCharacterLeaveResponse msg)
-}</args></log4net.Error>
-2021-04-21 11:49:46,120 [ 1] INFO  Unity: OnUserLeaveGame:Success [None]
-2021-04-21 11:49:46,142 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-04-21 11:49:46,162 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-04-21 11:49:48,120 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 12
-2021-04-21 11:49:48,152 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
-2021-04-21 11:49:48,153 [ 1] INFO  Unity: OnMapCharacterEnter: Character: Old Bear CharacterID: 12 MapId: 1
-2021-04-21 11:49:48,153 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-04-21 11:49:48,154 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
-2021-04-21 11:50:37,478 [ 1] INFO  Unity: AddCharacter: 12: Old Bear Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-04-21 11:50:37,478 [ 1] INFO  Unity: OnMapCharacterEnter: Character: Old Bear CharacterID: 12 MapId: 1
-2021-04-21 11:50:37,479 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-04-21 11:50:37,621 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:2
-2021-04-21 11:51:04,436 [ 1] INFO  Unity: AddCharacter: 12: Old Bear Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-04-21 11:51:04,437 [ 1] INFO  Unity: AddCharacter: 11: Elf Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-04-21 11:51:04,719 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-04-21 11:51:04,722 [ 1] INFO  Unity: Character[Old Bear] TID:2 ID:2 is created
-2021-04-21 11:51:04,995 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
-2021-04-21 11:51:05,084 [ 1] INFO  Unity: Character_2_Old Bear OnDestroy: ID: 2 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-04-21 11:51:05,084 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-04-21 11:51:05,149 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-04-21 11:51:05,154 [ 1] INFO  Unity: Character[Old Bear] TID:2 ID:2 is created
-2021-04-21 11:51:05,229 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
-2021-04-21 11:51:08,556 [ 1] INFO  Unity: Character_2_Old Bear OnDestroy: ID: 2 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-04-21 11:51:08,557 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-04-21 11:51:08,558 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-04-21 11:51:08,559 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-04-23 02:27:03,529 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-04-23 02:27:06,199 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-04-23 02:27:06,199 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-04-23 02:27:06,202 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-04-23 02:27:06,335 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-04-23 02:27:09,677 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 11
+2021-04-23 02:27:09,713 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-04-23 02:27:09,715 [ 1] INFO  Unity: OnMapCharacterEnter: Character: Elf CharacterID: 11 MapId: 1
+2021-04-23 02:27:09,715 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
+2021-04-23 02:27:09,716 [ 1] INFO  Unity: AddCharacter: 11: Elf Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-04-23 02:27:09,719 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-04-23 02:27:10,101 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-04-23 02:27:10,108 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
+2021-04-23 02:27:12,657 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-04-23 02:27:12,657 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
+2021-04-23 02:27:12,659 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0

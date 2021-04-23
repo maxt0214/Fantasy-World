@@ -29,11 +29,11 @@ public class UIMiniMap : MonoBehaviour
 
         miniMap.SetNativeSize();
         miniMap.transform.localPosition = Vector3.zero;
-        playerTrans = User.Instance.currentCharacterObj.transform;
     }
 
     private void Update()
     {
+        if(playerTrans == null) playerTrans = MiniMapManager.Instance.playerTransform;
         if (miniMapBoundingBox == null || playerTrans == null) return;
 
         float mapWidth = miniMapBoundingBox.bounds.size.x;

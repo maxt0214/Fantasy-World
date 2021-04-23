@@ -35,9 +35,9 @@ namespace Managers
         public void Clear()
         {
             var keys = characters.Keys;
-            foreach(var key in keys)
+            foreach (var key in keys)
             {
-                Instance.RemoveCharacter(key);
+                Instance.RemoveCharacter(key, false);
             }
             characters.Clear();
         }
@@ -52,17 +52,15 @@ namespace Managers
                 OnCharacterEnter(character);
         }
 
-        public void RemoveCharacter(int charaId)
+        public void RemoveCharacter(int charaId, bool ifRemove = true)
         {
             Debug.LogFormat("RemoveCharacter:{0}", charaId);
-            characters.Remove(charaId);
-
-            if(characters.ContainsKey(charaId))
+            if (characters.ContainsKey(charaId))
             {
                 EntityManager.Instance.RemoveEntity(characters[charaId].Info.Entity);
                 if (OnCharacterLeave != null)
                     OnCharacterLeave(characters[charaId]);
-                characters.Remove(charaId);
+                if(ifRemove) characters.Remove(charaId);
             }
         }
     }

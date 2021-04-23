@@ -9,6 +9,8 @@ namespace Managers
 {
     interface IEntityNotify {
         void OnEntityRemoved();
+        void OnEntityChange(Entity entity);
+        void OnEntityEvent(EntityEvent entityEvent);
     }
     class EntityManager : Singleton<EntityManager>
     {
@@ -32,6 +34,22 @@ namespace Managers
             {
                 notifiers[entity.Id].OnEntityRemoved();
                 notifiers.Remove(entity.Id);
+            }
+        }
+
+        public void OnEntitySync(NEntitySync entitySync)
+        {
+            Entity entity;
+            entities.TryGetValue(entitySync.Id,out entity);
+            if(entity != null)
+            {
+                if (entitySync.Entity != null)
+                    entity.EntityData = entitySync.Entity;
+                if(notifiers.ContainsKey(entitySync.Id))
+                {
+                    notifiers[entitySync.Id].OnEntityChange(entity);
+                    notifiers[entitySync.Id].OnEntityEvent(entitySync.Event);
+                }
             }
         }
     }

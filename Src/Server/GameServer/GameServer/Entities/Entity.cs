@@ -65,22 +65,22 @@ namespace GameServer.Entities
 
         public Entity(Vector3Int pos,Vector3Int dir)
         {
-            this.entityData = new NEntity();
-            this.entityData.Position = pos;
-            this.entityData.Direction = dir;
-            this.SetEntityData(this.entityData);
+            entityData = new NEntity();
+            entityData.Position = pos;
+            entityData.Direction = dir;
+            SetEntityData(this.entityData);
         }
 
         public Entity(NEntity entity)
         {
-            this.entityData = entity;
+            entityData = entity;
         }
 
         public void SetEntityData(NEntity entity)
         {
-            this.Position = entity.Position;
-            this.Direction = entity.Direction;
-            this.speed = entity.Speed;
+            Position = entity.Position;
+            Direction = entity.Direction;
+            speed = entity.Speed;
         }
     }
 }

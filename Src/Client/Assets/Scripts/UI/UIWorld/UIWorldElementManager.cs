@@ -9,11 +9,6 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
 
     public Dictionary<Transform, GameObject> elements = new Dictionary<Transform, GameObject>();
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         
