@@ -5,13 +5,13 @@ using UnityEngine.UI;
 using Models;
 using Services;
 
-public class UIMainCity : MonoBehaviour
+public class UIMainCity : MonoSingleton<UIMainCity>
 {
     [Header("Player Avatar")]
     public Text playerName;
     public Text playerLevel;
 
-    private void Start()
+    protected override void OnStart()
     {
         UpdateAvatar();
     }

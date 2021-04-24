@@ -106,5 +106,15 @@ namespace Services
 
             Debug.Log(sb.ToString());
         }
+
+        public void TeleportFrom(int teleID)
+        {
+            Debug.LogFormat("MapTeleportRequest: local player enters Teleporter:{0}", teleID);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapTeleport = new MapTeleportRequest();
+            message.Request.mapTeleport.teleporterId = teleID;
+            NetClient.Instance.SendMessage(message);
+        }
     }
 }

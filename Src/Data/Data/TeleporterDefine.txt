@@ -1,46 +1,54 @@
 {
   "1": {
     "ID": 1,
-    "Name": "主城->野外",
+    "Name": "MainCity->Wild",
     "LinkTo": 6,
-    "MapID": 1
+    "MapID": 1,
+    "Description": "From Blin Town to Sunset Forest"
   },
   "2": {
     "ID": 2,
-    "Name": "主城->副本",
+    "Name": "MainCity->Dungeon",
     "LinkTo": 8,
-    "MapID": 1
+    "MapID": 1,
+    "Description": "From Blin Town to Sunset Dungeon"
   },
   "3": {
     "ID": 3,
-    "Name": "主城传入点1",
-    "MapID": 1
+    "Name": "->MainCity",
+    "MapID": 1,
+    "Description": "To Blin Town"
   },
   "4": {
     "ID": 4,
-    "Name": "出城传入点2",
-    "MapID": 1
+    "Name": "->MainCity",
+    "MapID": 1,
+    "Description": "To Blin Town"
   },
   "5": {
     "ID": 5,
-    "Name": "野外->主城",
+    "Name": "Wild->MainCity",
     "LinkTo": 3,
-    "MapID": 2
+    "MapID": 2,
+    "Description": "From Sunset Forest to Blin Town"
   },
   "6": {
     "ID": 6,
-    "Name": "野外传入点",
-    "MapID": 2
+    "Name": "->Wild",
+    "MapID": 2,
+    "Description": "To Sunset Forest"
   },
   "7": {
     "ID": 7,
-    "Name": "副本->主城",
+    "Name": "Dungeon->MainCity",
     "LinkTo": 4,
-    "MapID": 4
+    "MapID": 4,
+    "Description": "From Sunset Dungeon to Blin Town"
   },
   "8": {
     "ID": 8,
-    "Name": "副本传入点",
-    "MapID": 4
+    "Name": "->Dungeon",
+    "MapID": 4,
+    "Description": "To Sunset Dungeon"
   }
 }

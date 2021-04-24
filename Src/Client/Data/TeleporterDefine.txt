@@ -1,46 +1,138 @@
 {
   "1": {
     "ID": 1,
-    "Name": "主城->野外",
+    "Name": "MainCity->Wild",
+    "MapID": 1,
     "LinkTo": 6,
-    "MapID": 1
+    "Descript": null,
+    "Position": {
+      "X": 858,
+      "Y": 2604,
+      "Z": 1100
+    },
+    "Direction": {
+      "X": -100,
+      "Y": 0,
+      "Z": 0
+    }
   },
   "2": {
     "ID": 2,
-    "Name": "主城->副本",
+    "Name": "MainCity->Dungeon",
+    "MapID": 1,
     "LinkTo": 8,
-    "MapID": 1
+    "Descript": null,
+    "Position": {
+      "X": 7221,
+      "Y": 2596,
+      "Z": 1100
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": 0
+    }
   },
   "3": {
     "ID": 3,
-    "Name": "主城传入点1",
-    "MapID": 1
+    "Name": "->MainCity",
+    "MapID": 1,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 2026,
+      "Y": 2584,
+      "Z": 849
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": 0
+    }
   },
   "4": {
     "ID": 4,
-    "Name": "出城传入点2",
-    "MapID": 1
+    "Name": "->MainCity",
+    "MapID": 1,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 6311,
+      "Y": 2597,
+      "Z": 849
+    },
+    "Direction": {
+      "X": -100,
+      "Y": 0,
+      "Z": 0
+    }
   },
   "5": {
     "ID": 5,
-    "Name": "野外->主城",
+    "Name": "Wild->MainCity",
+    "MapID": 2,
     "LinkTo": 3,
-    "MapID": 2
+    "Descript": null,
+    "Position": {
+      "X": 2428,
+      "Y": 3990,
+      "Z": 327
+    },
+    "Direction": {
+      "X": -100,
+      "Y": 0,
+      "Z": 0
+    }
   },
   "6": {
     "ID": 6,
-    "Name": "野外传入点",
-    "MapID": 2
+    "Name": "->Wild",
+    "MapID": 2,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 2817,
+      "Y": 4001,
+      "Z": 55
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": 0
+    }
   },
   "7": {
     "ID": 7,
-    "Name": "副本->主城",
+    "Name": "Dungeon->MainCity",
+    "MapID": 4,
     "LinkTo": 4,
-    "MapID": 4
+    "Descript": null,
+    "Position": {
+      "X": -2154,
+      "Y": 2125,
+      "Z": 154
+    },
+    "Direction": {
+      "X": -71,
+      "Y": 71,
+      "Z": 0
+    }
   },
   "8": {
     "ID": 8,
-    "Name": "副本传入点",
-    "MapID": 4
+    "Name": "->Dungeon",
+    "MapID": 4,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": -2548,
+      "Y": -3044,
+      "Z": -70
+    },
+    "Direction": {
+      "X": 71,
+      "Y": 71,
+      "Z": 0
+    }
   }
 }

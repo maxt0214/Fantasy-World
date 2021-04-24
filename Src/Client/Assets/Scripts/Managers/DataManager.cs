@@ -33,8 +33,8 @@ public class DataManager : Singleton<DataManager>
         json = File.ReadAllText(DataPath + "CharacterDefine.txt");
         Characters = JsonConvert.DeserializeObject<Dictionary<int, CharacterDefine>>(json);
 
-        //json = File.ReadAllText(DataPath + "TeleporterDefine.txt");
-        //Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
+        json = File.ReadAllText(DataPath + "TeleporterDefine.txt");
+        Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
 
         //json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
         //SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>> (json);
@@ -53,10 +53,10 @@ public class DataManager : Singleton<DataManager>
 
         yield return null;
 
-        //json = File.ReadAllText(DataPath + "TeleporterDefine.txt");
-        //Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
+        json = File.ReadAllText(DataPath + "TeleporterDefine.txt");
+        Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
 
-        //yield return null;
+        yield return null;
 
         //json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
         //SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
