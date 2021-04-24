@@ -7,28 +7,29 @@ using Managers;
 
 public class UIMiniMap : MonoBehaviour
 {
-    public BoxCollider miniMapBoundingBox;
     public Image miniMap;
     public Image arrow;
     public Text mapName;
+    private Collider miniMapBoundingBox;
 
     private Transform playerTrans;
     private void Start()
     {
-        InitMap();
+        MiniMapManager.Instance.miniMap = this;
+        UpdateMap();
     }
 
-    private void InitMap()
+    public void UpdateMap()
     {
         mapName.text = User.Instance.currMap.Name;
-        if(miniMap.overrideSprite == null)
-        {
-            var sprite = MiniMapManager.Instance.LoadCurrentMiniMap();
-            miniMap.overrideSprite = sprite;
-        }
+
+        var sprite = MiniMapManager.Instance.LoadCurrentMiniMap();
+        miniMap.overrideSprite = sprite;
 
         miniMap.SetNativeSize();
         miniMap.transform.localPosition = Vector3.zero;
+        miniMapBoundingBox = MiniMapManager.Instance.MiniMapBoundingBox;
+        playerTrans = null;
     }
 
     private void Update()

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Models;
 using Services;
 
-public class UIMainCity : MonoSingleton<UIMainCity>
+public class UIMain : MonoSingleton<UIMain>
 {
     [Header("Player Avatar")]
     public Text playerName;
