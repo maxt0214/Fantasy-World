@@ -8,6 +8,7 @@ using Network;
 using SkillBridge.Message;
 using GameServer.Entities;
 using GameServer.Managers;
+using GameServer.Models;
 
 namespace GameServer.Services
 {
@@ -144,7 +145,7 @@ namespace GameServer.Services
             foreach (var character in sender.Session.User.Player.Characters)
             {
                 NCharacterInfo cInfo = new NCharacterInfo();
-                cInfo.Id = 0;
+                cInfo.Id = character.ID;
                 cInfo.Name = character.Name;
                 cInfo.Type = CharacterType.Player;
                 cInfo.Class = (CharacterClass)character.Class;
@@ -167,6 +168,7 @@ namespace GameServer.Services
             message.Response.gameEnter = new UserGameEnterResponse();
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None";
+            message.Response.gameEnter.Character = character.Info;
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);

@@ -16,7 +16,7 @@ public class UIManager : Singleton<UIManager>
 
     public UIManager()
     {
-
+        UIResources.Add(typeof(UITestingWindow),new UIElement() { resource = "UI/UITester", cache = true});
     }
 
     public T Show<T>()
@@ -25,7 +25,7 @@ public class UIManager : Singleton<UIManager>
         if(UIResources.ContainsKey(type))
         {
             var UIInfo = UIResources[type];
-            if (UIInfo != null)
+            if (UIInfo.instance != null)
             {
                 UIInfo.instance.SetActive(true);
             } else

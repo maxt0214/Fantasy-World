@@ -28,7 +28,7 @@ namespace GameServer.Managers
 
         public void Clear()
         {
-            this.Characters.Clear();
+            Characters.Clear();
         }
 
         public Character AddCharacter(TCharacter cha)

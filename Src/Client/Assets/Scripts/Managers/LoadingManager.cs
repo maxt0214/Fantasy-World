@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Services;
+using Managers;
 
 public class LoadingManager : MonoBehaviour {
 	[Header("Windows")]
@@ -33,6 +33,7 @@ public class LoadingManager : MonoBehaviour {
 		UserService.Instance.Init();
 		MapService.Instance.Init();
 
+		TestManager.Instance.Init();
 		//TODO: resource load and percentage update
 
 		//Now loading page fades away and login page shows

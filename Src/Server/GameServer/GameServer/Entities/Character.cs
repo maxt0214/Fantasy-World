@@ -1,5 +1,6 @@
 ﻿using Common.Data;
 using GameServer.Core;
+using GameServer.Managers;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -13,22 +14,25 @@ namespace GameServer.Entities
     {
        
         public TCharacter Data;
-        
+        public ItemManager itemManager;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
         {
-            this.Data = cha;
-            this.Info = new NCharacterInfo();
-            this.Info.Type = type;
-            this.Info.Id = cha.ID;
-            this.Info.Name = cha.Name;
-            this.Info.Level = 1;//cha.Level;
-            this.Info.Tid = cha.TID;
-            this.Info.Class = (CharacterClass)cha.Class;
-            this.Info.mapId = cha.MapID;
-            this.Info.Entity = this.EntityData;
-            //this.Define = DataManager.Instance.Characters[this.Info.Tid];
+            Data = cha;
+            Info = new NCharacterInfo();
+            Info.Type = type;
+            Info.Id = cha.ID;
+            Info.Name = cha.Name;
+            Info.Level = 1;//cha.Level;
+            Info.Tid = cha.TID;
+            Info.Class = (CharacterClass)cha.Class;
+            Info.mapId = cha.MapID;
+            Info.Entity = EntityData;
+            Define = DataManager.Instance.Characters[Info.Tid];
+
+            itemManager = new ItemManager(this);
+            itemManager.GetItemInfos(Info.Items);
         }
     }
 }

@@ -1,0 +1,31 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "Ellis",
+    "Description": "Mission Related",
+    "Type": "Task"
+  },
+  "2": {
+    "ID": 2,
+    "Name": "Sophia",
+    "Description": "Grocery Seller",
+    "Type": "Functional",
+    "Function": "InvokeShop",
+    "Param": 1
+  },
+  "3": {
+    "ID": 3,
+    "Name": "Albert",
+    "Description": "Dungeon Related",
+    "Type": "Functional",
+    "Function": "InvokeDungeon"
+  },
+  "4": {
+    "ID": 4,
+    "Name": "Aldrich",
+    "Description": "Equipment Dealer",
+    "Type": "Functional",
+    "Function": "InvokeShop",
+    "Param": 2
+  }
+}

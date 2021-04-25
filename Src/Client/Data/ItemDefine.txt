@@ -1,0 +1,121 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "Small HP Potion",
+    "Description": "Instant 500 HP recovery after use",
+    "Type": "NORMAL",
+    "Category": "Portion",
+    "Usability": true,
+    "CD": 1.0,
+    "Price": 200,
+    "SellPrice": 100,
+    "Function": "RecoverHP",
+    "Param": 500
+  },
+  "2": {
+    "ID": 2,
+    "Name": "Small MP Potion",
+    "Description": "Instant 500 MP recovery after use",
+    "Type": "NORMAL",
+    "Category": "Portion",
+    "Usability": true,
+    "CD": 1.0,
+    "Price": 200,
+    "SellPrice": 100,
+    "Function": "RecoverMP",
+    "Param": 500
+  },
+  "3": {
+    "ID": 3,
+    "Name": "Bread",
+    "Description": "1000 HP recovery in 5s after use",
+    "Type": "NORMAL",
+    "Category": "Food",
+    "Usability": true,
+    "CD": 5.0,
+    "Price": 200,
+    "SellPrice": 100,
+    "Function": "AddBuff",
+    "Param": 1
+  },
+  "4": {
+    "ID": 4,
+    "Name": "Soup",
+    "Description": "1000 MP recovery in 5s after use",
+    "Type": "NORMAL",
+    "Category": "Food",
+    "Usability": true,
+    "CD": 5.0,
+    "Price": 200,
+    "SellPrice": 100,
+    "Function": "AddBuff",
+    "Param": 2
+  },
+  "5": {
+    "ID": 5,
+    "Name": "Small Exp Book",
+    "Description": "Obtains 1000 exp after use",
+    "Type": "NORMAL",
+    "Category": "Exp Book",
+    "Usability": true,
+    "CD": 0.0,
+    "SellPrice": 1,
+    "Function": "AddExp"
+  },
+  "6": {
+    "ID": 6,
+    "Name": "Honor Badge",
+    "Description": "Trade for an equipment with certain amount",
+    "Type": "MATERIAL",
+    "Category": "Bage",
+    "Usability": true,
+    "CD": 0.0,
+    "SellPrice": 1
+  },
+  "7": {
+    "ID": 7,
+    "Name": "Money Bag",
+    "Description": "Obtains 1000 gold",
+    "Type": "NORMAL",
+    "Category": "Money Bag",
+    "CD": 0.0,
+    "SellPrice": 1,
+    "Function": "AddMoney",
+    "Param": 1000
+  },
+  "8": {
+    "ID": 8,
+    "Name": "Big Money Bag",
+    "Description": "Obtains 10000 gold(or 10 Money Bags if you will LOL)",
+    "Type": "NORMAL",
+    "Category": "Money Bag",
+    "Usability": true,
+    "CD": 0.0,
+    "SellPrice": 1,
+    "Function": "AddMoney",
+    "Param": 10000
+  },
+  "9": {
+    "ID": 9,
+    "Name": "Epic Equip Box",
+    "Description": "Obtains a random epic-quality equipment.",
+    "Type": "NORMAL",
+    "Category": "Equip Box",
+    "Usability": true,
+    "CD": 0.0,
+    "SellPrice": 1,
+    "Function": "AddItem"
+  },
+  "10": {
+    "ID": 10,
+    "Name": "Skill Book",
+    "Description": "Obtains 1 Skill Point",
+    "Type": "NORMAL",
+    "Category": "Skill Book",
+    "Usability": true,
+    "CD": 0.0,
+    "SellPrice": 1,
+    "Function": "AddSkillPoint",
+    "Param": 1
+  }
+}
