@@ -125,7 +125,12 @@ namespace GameServer.Services
             byte[] data;
             try
             {
-                DBService.Instance.Entities.Characters.Add(newChara);
+                var bag = new TCharacterBag();
+                bag.Owner = newChara;
+                bag.items = new byte[0];
+                bag.Unlocked = 20;
+                newChara.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
+                newChara = DBService.Instance.Entities.Characters.Add(newChara);
                 sender.Session.User.Player.Characters.Add(newChara);
                 DBService.Instance.Entities.SaveChanges();
             }
@@ -169,6 +174,20 @@ namespace GameServer.Services
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None";
             message.Response.gameEnter.Character = character.Info;
+
+            //Item testing
+            int itemId = 1;
+            bool hasItem = character.itemManager.HasItem(itemId);
+            if(!hasItem)
+            {
+                character.itemManager.AddItem(1,100);
+                character.itemManager.AddItem(2, 200);
+                character.itemManager.AddItem(3, 20);
+                character.itemManager.AddItem(4, 99);
+                character.itemManager.AddItem(5, 2);
+                DBService.Instance.Save();
+            }
+            
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);

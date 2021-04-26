@@ -17,6 +17,7 @@ public class UIManager : Singleton<UIManager>
     public UIManager()
     {
         UIResources.Add(typeof(UITestingWindow),new UIElement() { resource = "UI/UITester", cache = true});
+        UIResources.Add(typeof(UIBagView), new UIElement() { resource = "UI/UIBagView", cache = false});
     }
 
     public T Show<T>()

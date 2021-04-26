@@ -27,4 +27,9 @@ public class UIMain : MonoSingleton<UIMain>
         SceneManager.Instance.LoadScene("CharacterCreation");
         UserService.Instance.SendLeaveGame();
     }
+
+    public void OnClickOpenBag()
+    {
+        UIManager.Instance.Show<UIBagView>();
+    }
 }

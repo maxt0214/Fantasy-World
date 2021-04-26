@@ -17,7 +17,7 @@ namespace GameServer.Entities
         public ItemManager itemManager;
 
         public Character(CharacterType type,TCharacter cha):
-            base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
+            base(new Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Vector3Int(100,0,0))
         {
             Data = cha;
             Info = new NCharacterInfo();
@@ -33,6 +33,10 @@ namespace GameServer.Entities
 
             itemManager = new ItemManager(this);
             itemManager.GetItemInfos(Info.Items);
+
+            Info.Bag = new NBagInfo();
+            Info.Bag.Unlocked = cha.Bag.Unlocked;
+            Info.Bag.Items = cha.Bag.items;
         }
     }
 }

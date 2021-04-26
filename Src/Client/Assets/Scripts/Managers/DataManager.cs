@@ -18,7 +18,9 @@ public class DataManager : Singleton<DataManager>
     public Dictionary<int, TeleporterDefine> Teleporters = null;
     public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
     public Dictionary<int, NPCDefine> NPCs = null;
-
+    public Dictionary<int, ItemDefine> Items = null;
+    public Dictionary<int, ShopDefine> Shops = null;
+    public Dictionary<int, Dictionary<int, ShopItemDefine>> ShopItems = null;
 
     public DataManager()
     {
@@ -39,6 +41,15 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(DataPath + "NPCDefine.txt");
         NPCs = JsonConvert.DeserializeObject<Dictionary<int, NPCDefine>>(json);
+
+        json = File.ReadAllText(DataPath + "ItemDefine.txt");
+        Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
+
+        json = File.ReadAllText(DataPath + "ShopDefine.txt");
+        Shops = JsonConvert.DeserializeObject<Dictionary<int, ShopDefine>>(json);
+
+        json = File.ReadAllText(DataPath + "ShopItemDefine.txt");
+        ShopItems = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, ShopItemDefine>>>(json);
 
         //json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
         //SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>> (json);
@@ -64,6 +75,21 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(DataPath + "NPCDefine.txt");
         NPCs = JsonConvert.DeserializeObject<Dictionary<int, NPCDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(DataPath + "ItemDefine.txt");
+        Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(DataPath + "ShopDefine.txt");
+        Shops = JsonConvert.DeserializeObject<Dictionary<int, ShopDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(DataPath + "ShopItemDefine.txt");
+        ShopItems = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, ShopItemDefine>>>(json);
 
         yield return null;
 

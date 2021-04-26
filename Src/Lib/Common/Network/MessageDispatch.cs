@@ -15,7 +15,9 @@ namespace Network
             if (message.gameLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gameLeave); }
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapCharacterLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterLeave); }
-            if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }   
+            if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }
+            if (message.itemPurchase != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemPurchase); }
+            if (message.statucNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statucNotify); }
         }
 
         //Requests are handled on the server
@@ -29,6 +31,7 @@ namespace Network
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }
             if (message.mapTeleport != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapTeleport); }
+            if (message.itemPurchase != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemPurchase); }
         }
     }
 }

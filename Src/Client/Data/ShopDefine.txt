@@ -1,0 +1,14 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "Potion Shop",
+    "Description": "\"Poisonless\" Shop",
+    "Status": 1
+  },
+  "2": {
+    "ID": 2,
+    "Name": "Grocery Store",
+    "Description": "Everything You Want Store",
+    "Status": 1
+  }
+}

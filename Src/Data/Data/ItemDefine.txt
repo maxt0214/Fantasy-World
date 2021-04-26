@@ -4,11 +4,13 @@
     "Name": "Small HP Potion",
     "Description": "Instant 500 HP recovery after use",
     "Type": "NORMAL",
-    "Category": "Portion",
+    "Category": "Potion",
     "Usability": true,
     "CD": 1.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/ItemIcons/HpPotion",
     "Function": "RecoverHP",
     "Param": 500
   },
@@ -17,11 +19,13 @@
     "Name": "Small MP Potion",
     "Description": "Instant 500 MP recovery after use",
     "Type": "NORMAL",
-    "Category": "Portion",
+    "Category": "Potion",
     "Usability": true,
     "CD": 1.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/ItemIcons/MpPotion",
     "Function": "RecoverMP",
     "Param": 500
   },
@@ -35,6 +39,8 @@
     "CD": 5.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/ItemIcons/Bread",
     "Function": "AddBuff",
     "Param": 1
   },
@@ -48,6 +54,8 @@
     "CD": 5.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/ItemIcons/Soup",
     "Function": "AddBuff",
     "Param": 2
   },
@@ -60,6 +68,8 @@
     "Usability": true,
     "CD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/ExpBook",
     "Function": "AddExp"
   },
   "6": {
@@ -70,7 +80,9 @@
     "Category": "Bage",
     "Usability": true,
     "CD": 0.0,
-    "SellPrice": 1
+    "SellPrice": 1,
+    "StackLimit": 99,
+    "Icon": "UI/ItemIcons/HonorBadge"
   },
   "7": {
     "ID": 7,
@@ -80,6 +92,8 @@
     "Category": "Money Bag",
     "CD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/SmallMoneyBag",
     "Function": "AddMoney",
     "Param": 1000
   },
@@ -92,6 +106,8 @@
     "Usability": true,
     "CD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/BigMoneyBag",
     "Function": "AddMoney",
     "Param": 10000
   },
@@ -104,6 +120,8 @@
     "Usability": true,
     "CD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/TreasureBox",
     "Function": "AddItem"
   },
   "10": {
@@ -115,6 +133,8 @@
     "Usability": true,
     "CD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/SpellBook",
     "Function": "AddSkillPoint",
     "Param": 1
   }
