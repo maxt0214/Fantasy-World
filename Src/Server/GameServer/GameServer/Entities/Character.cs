@@ -12,9 +12,10 @@ namespace GameServer.Entities
 {
     class Character : CharacterBase
     {
-       
         public TCharacter Data;
         public ItemManager itemManager;
+
+        public StatusManager StatusManager;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Vector3Int(100,0,0))
@@ -28,6 +29,7 @@ namespace GameServer.Entities
             Info.Tid = cha.TID;
             Info.Class = (CharacterClass)cha.Class;
             Info.mapId = cha.MapID;
+            Info.Gold = cha.Gold;
             Info.Entity = EntityData;
             Define = DataManager.Instance.Characters[Info.Tid];
 
@@ -37,6 +39,22 @@ namespace GameServer.Entities
             Info.Bag = new NBagInfo();
             Info.Bag.Unlocked = cha.Bag.Unlocked;
             Info.Bag.Items = cha.Bag.items;
+            StatusManager = new StatusManager(this);
+        }
+
+        public long Gold
+        {
+            get
+            {
+                return Data.Gold;
+            }
+            set
+            {
+                if (Data.Gold == value)
+                    return;
+                StatusManager.ChangeGoldStatus((int)(value - Data.Gold));
+                Data.Gold = value;
+            }
         }
     }
 }

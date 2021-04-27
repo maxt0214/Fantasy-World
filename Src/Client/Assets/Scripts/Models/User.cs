@@ -27,5 +27,10 @@ namespace Models
         public MapDefine currMap { get; set; }
 
         public GameObject currentCharacterObj { get; set; }
+
+        public void AddGold(int toAdd)
+        {
+            CurrentCharacter.Gold += toAdd;
+        }
     }
 }

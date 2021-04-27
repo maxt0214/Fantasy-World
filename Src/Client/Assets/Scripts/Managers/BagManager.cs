@@ -80,5 +80,55 @@ namespace Managers
             }
             return bagInfo;
         }
+
+        public void AddItem(int id, int value)
+        {
+            ushort countToAdd = (ushort)value, limit = (ushort)DataManager.Instance.Items[id].StackLimit;
+            for(int i = 0; i < Items.Length; i++)
+            {
+                if(Items[i].ItemId == id)
+                {
+                    ushort gap = (ushort)(limit - Items[i].Count);
+                    if(countToAdd > gap)
+                    {
+                        Items[i].Count += gap;
+                        countToAdd -= gap;
+                    } 
+                    else
+                    {
+                        Items[i].Count += countToAdd;
+                        countToAdd = 0;
+                        break;
+                    }
+                }
+            }
+
+            if(countToAdd > 0)
+            {
+                for(int i = 0; i < Items.Length; i++)
+                {
+                    if(Items[i].ItemId == 0)
+                    {
+                        if(countToAdd > limit)
+                        {
+                            Items[i].ItemId = (ushort)id;
+                            Items[i].Count = limit;
+                            countToAdd -= limit;
+                        } 
+                        else
+                        {
+                            Items[i].ItemId = (ushort)id;
+                            Items[i].Count = countToAdd;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void RemoveItem(int id, int value)
+        {
+
+        }
     }
 }

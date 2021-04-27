@@ -9,16 +9,6 @@ public class UIIconItem : MonoBehaviour
     public Text count;
     public Image secondImage;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void SetIcon(string imageSource, string itemCount)
     {
         mainImage.overrideSprite = Resloader.Load<Sprite>(imageSource);

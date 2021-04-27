@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using SkillBridge.Message;
 using UnityEngine;
 using Common.Data;
+using Services;
+using System;
 
 namespace Managers
 {
@@ -10,7 +12,7 @@ namespace Managers
     {
         public Dictionary<int, Item> Items = new Dictionary<int, Item>();
 
-        internal void Init(List<NItemInfo> list)
+        public void Init(List<NItemInfo> list)
         {
             Items.Clear();
             foreach(var info in list)
@@ -19,6 +21,46 @@ namespace Managers
                 Items.Add(item.Id,item);
                 Debug.LogFormat("ItemManager:Init[{0}]", item);
             }
+            StatusService.Instance.RegisterStatusNotify(StatusType.Item, OnItemNotify);
+        }
+
+        private bool OnItemNotify(NStatus status)
+        {
+            if(status.Action == StatusAction.Add)
+            {
+                AddItem(status.Id, status.Value);
+            }
+            else if(status.Action == StatusAction.Delete)
+            {
+                RemoveItem(status.Id, status.Value);
+            }
+
+            return true;
+        }
+
+        private void AddItem(int id, int value)
+        {
+            Item item = null;
+            if(Items.TryGetValue(id, out item))
+            {
+                item.Count += value;
+            } else
+            {
+                item = new Item(id, value);
+                Items.Add(id,item);
+            }
+            BagManager.Instance.AddItem(id,value);
+        }
+
+        private void RemoveItem(int id, int value)
+        {
+            if (!Items.ContainsKey(id)) return;
+
+            var item = Items[id];
+            if (item.Count < value) return;
+
+            item.Count -= value;
+            BagManager.Instance.RemoveItem(id,value);
         }
 
         public ItemDefine GetItem(int itemId)

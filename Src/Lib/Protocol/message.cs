@@ -77,6 +77,9 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(11)]
         public NBagInfo Bag { get; set; }
 
+        [global::ProtoBuf.ProtoMember(12)]
+        public byte[] Equips { get; set; }
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -135,10 +138,10 @@ namespace SkillBridge.Message
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
         [global::ProtoBuf.ProtoMember(1, Name = @"type")]
-        public StatucType Type { get; set; }
+        public StatusType Type { get; set; }
 
         [global::ProtoBuf.ProtoMember(2, Name = @"action")]
-        public StatucAction Action { get; set; }
+        public StatusAction Action { get; set; }
 
         [global::ProtoBuf.ProtoMember(3, Name = @"id")]
         public int Id { get; set; }
@@ -248,6 +251,9 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(10)]
         public ItemPurchaseRequest itemPurchase { get; set; }
 
+        [global::ProtoBuf.ProtoMember(11)]
+        public ItemEquipRequest ItemEquip { get; set; }
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -284,8 +290,11 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(10)]
         public ItemPurchaseResponse itemPurchase { get; set; }
 
+        [global::ProtoBuf.ProtoMember(11)]
+        public ItemEquipResponse ItemEquip { get; set; }
+
         [global::ProtoBuf.ProtoMember(100)]
-        public StatusNotify statucNotify { get; set; }
+        public StatusNotify statusNotify { get; set; }
 
     }
 
@@ -583,6 +592,40 @@ namespace SkillBridge.Message
 
     }
 
+    [global::ProtoBuf.ProtoContract()]
+    public partial class ItemEquipRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"slot")]
+        public int Slot { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2)]
+        public int itemId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3)]
+        public bool ifEquip { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class ItemEquipResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+    }
+
     [global::ProtoBuf.ProtoContract(Name = @"RESULT")]
     public enum Result
     {
@@ -647,10 +690,33 @@ namespace SkillBridge.Message
         Material = 1,
         [global::ProtoBuf.ProtoEnum(Name = @"TASK")]
         Task = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"EQUIP")]
+        Equip = 3,
     }
 
-    [global::ProtoBuf.ProtoContract(Name = @"STATUC_ACTION")]
-    public enum StatucAction
+    [global::ProtoBuf.ProtoContract(Name = @"EQUIP_SLOT")]
+    public enum EquipSlot
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"WEAPON")]
+        Weapon = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"ACCESSORY")]
+        Accessory = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"HELMET")]
+        Helmet = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"CHEST")]
+        Chest = 3,
+        [global::ProtoBuf.ProtoEnum(Name = @"SHOULDER")]
+        Shoulder = 4,
+        [global::ProtoBuf.ProtoEnum(Name = @"PANTS")]
+        Pants = 5,
+        [global::ProtoBuf.ProtoEnum(Name = @"BOOTS")]
+        Boots = 6,
+        [global::ProtoBuf.ProtoEnum(Name = @"SLOT_CAP")]
+        SlotCap = 7,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"STATUS_ACTION")]
+    public enum StatusAction
     {
         [global::ProtoBuf.ProtoEnum(Name = @"UPDATE")]
         Update = 0,
@@ -660,8 +726,8 @@ namespace SkillBridge.Message
         Delete = 2,
     }
 
-    [global::ProtoBuf.ProtoContract(Name = @"STATUC_TYPE")]
-    public enum StatucType
+    [global::ProtoBuf.ProtoContract(Name = @"STATUS_TYPE")]
+    public enum StatusType
     {
         [global::ProtoBuf.ProtoEnum(Name = @"MONEY")]
         Money = 0,
@@ -671,17 +737,6 @@ namespace SkillBridge.Message
         SkillPoint = 2,
         [global::ProtoBuf.ProtoEnum(Name = @"ITEM")]
         Item = 3,
-    }
-
-    [global::ProtoBuf.ProtoContract(Name = @"STATUC_SOURCE")]
-    public enum StatucSource
-    {
-        [global::ProtoBuf.ProtoEnum(Name = @"UPDATE")]
-        Update = 0,
-        [global::ProtoBuf.ProtoEnum(Name = @"ADD")]
-        Add = 1,
-        [global::ProtoBuf.ProtoEnum(Name = @"DELETE")]
-        Delete = 2,
     }
 
 }

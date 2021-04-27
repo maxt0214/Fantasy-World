@@ -1,4 +1,5 @@
 ﻿using Managers;
+using Models;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,7 +38,9 @@ public class UIBagView : UIWindow
 
     IEnumerator InitBag()
     {
-        for(int i = 0; i < BagManager.Instance.Items.Length; i++)
+        goldAmount.text = User.Instance.CurrentCharacter.Gold.ToString();
+
+        for (int i = 0; i < BagManager.Instance.Items.Length; i++)
         {
             var item = BagManager.Instance.Items[i];
             if(item.ItemId > 0)
@@ -62,11 +65,6 @@ public class UIBagView : UIWindow
             switchBagButton[i].overrideSprite = (i == curr) ? selected : highlighted;
             bags[i].SetActive(i == curr);
         }
-    }
-
-    public void SetGoldAmount(string amount)
-    {
-        goldAmount.text = amount;
     }
 
     public void OnReset()

@@ -51,6 +51,19 @@ enum ITEM_TYPE
 	NORMAL = 0;
 	MATERIAL = 1;
 	TASK = 2;
+	EQUIP = 3;
+}
+
+enum EQUIP_SLOT
+{
+	WEAPON = 0;
+	ACCESSORY = 1;
+	HELMET = 2;
+	CHEST = 3;
+	SHOULDER = 4;
+	PANTS = 5;
+	BOOTS = 6;
+	SLOT_CAP = 7;
 }
 
 message NUserInfo {
@@ -76,6 +89,7 @@ message NCharacterInfo {
 
 	repeated NItemInfo Items = 10;
 	NBagInfo Bag = 11;
+	bytes Equips = 12;
 }
 
 message NItemInfo 
@@ -97,14 +111,14 @@ message NBagInfo
 	bytes Items = 2;
 }
 
-enum STATUC_ACTION 
+enum STATUS_ACTION 
 {
 	UPDATE = 0;
 	ADD = 1;
 	DELETE = 2;
 }
 
-enum STATUC_TYPE 
+enum STATUS_TYPE 
 {
 	MONEY = 0;
 	EXP = 1;
@@ -112,17 +126,10 @@ enum STATUC_TYPE
 	ITEM = 3;
 }
 
-enum STATUC_SOURCE 
-{
-	UPDATE = 0;
-	ADD = 1;
-	DELETE = 2;
-}
-
 message NStatus 
 {
-	STATUC_TYPE type = 1;
-	STATUC_ACTION action = 2;
+	STATUS_TYPE type = 1;
+	STATUS_ACTION action = 2;
 	int32 id = 3;
 	int32 value = 4;
 }
@@ -179,6 +186,7 @@ message NetMessageRequest{
 	MapTeleportRequest mapTeleport = 9;
 
 	ItemPurchaseRequest itemPurchase = 10;
+	ItemEquipRequest ItemEquip = 11;
 }
 
 message NetMessageResponse{
@@ -194,8 +202,9 @@ message NetMessageResponse{
 	MapEntitySyncResponse mapEntitySync = 8;
 	
 	ItemPurchaseResponse itemPurchase = 10;
+	ItemEquipResponse ItemEquip = 11;
 
-	StatusNotify statucNotify = 100;
+	StatusNotify statusNotify = 100;
 }
 
 
@@ -307,6 +316,19 @@ message BagSaveRequest
 }
 
 message BagSaveResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
+message ItemEquipRequest 
+{
+	int32 slot = 1;
+	int32 itemId = 2;
+	bool ifEquip = 3;
+}
+
+message ItemEquipResponse 
 {
 	RESULT result = 1;
 	string errormsg = 2;
