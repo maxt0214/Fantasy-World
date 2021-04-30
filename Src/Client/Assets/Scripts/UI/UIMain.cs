@@ -28,8 +28,19 @@ public class UIMain : MonoSingleton<UIMain>
         UserService.Instance.SendLeaveGame();
     }
 
+    UIBagView bag;
     public void OnClickOpenBag()
     {
-        UIManager.Instance.Show<UIBagView>();
+        var newbag = UIManager.Instance.Show<UIBagView>();
+        if(bag != null)
+        {
+            bag.OnReset();
+        }
+        bag = newbag;
+    }
+
+    public void OnClickOpenEquip()
+    {
+        UIManager.Instance.Show<UIEquip>();
     }
 }

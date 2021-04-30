@@ -121,6 +121,7 @@ namespace GameServer.Services
                 MapPosY = 4000,
                 MapPosZ = 820,
                 Gold = 10000,
+                Equips = new byte[28],
             };
 
             byte[] data;
@@ -132,6 +133,10 @@ namespace GameServer.Services
                 bag.Unlocked = 20;
                 newChara.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
                 newChara = DBService.Instance.Entities.Characters.Add(newChara);
+
+                newChara.Items.Add(new TCharacterItem { Owner = newChara, ItemID = 1, ItemCount = 10 });
+                newChara.Items.Add(new TCharacterItem { Owner = newChara, ItemID = 2, ItemCount = 10 });
+
                 sender.Session.User.Player.Characters.Add(newChara);
                 DBService.Instance.Entities.SaveChanges();
             }
@@ -175,20 +180,6 @@ namespace GameServer.Services
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None";
             message.Response.gameEnter.Character = character.Info;
-
-            //Item testing
-            int itemId = 1;
-            bool hasItem = character.itemManager.HasItem(itemId);
-            if(!hasItem)
-            {
-                character.itemManager.AddItem(1,100);
-                character.itemManager.AddItem(2, 200);
-                character.itemManager.AddItem(3, 20);
-                character.itemManager.AddItem(4, 99);
-                character.itemManager.AddItem(5, 2);
-                DBService.Instance.Save();
-            }
-            
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);

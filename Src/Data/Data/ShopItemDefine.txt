@@ -5,28 +5,28 @@
       "Count": 1,
       "Price": 10,
       "Status": 1,
-      "Small Hp Potion": {}
+      "SmallHpPotion": {}
     },
     "2": {
       "ItemID": 1,
       "Count": 10,
       "Price": 100,
       "Status": 1,
-      "Small Hp PotionX10": {}
+      "SmallHpPotionX10": {}
     },
     "3": {
       "ItemID": 2,
       "Count": 1,
       "Price": 10,
       "Status": 1,
-      "Small Mp Potion": {}
+      "SmallMpPotion": {}
     },
     "4": {
       "ItemID": 2,
       "Count": 10,
       "Price": 100,
       "Status": 1,
-      "Small Mp PotionX10": {}
+      "SmallMpPotion X10": {}
     },
     "5": {
       "ItemID": 3,
@@ -40,7 +40,7 @@
       "Count": 10,
       "Price": 200,
       "Status": 1,
-      "BreadX10": {}
+      "Bread X10": {}
     },
     "7": {
       "ItemID": 4,
@@ -54,7 +54,141 @@
       "Count": 10,
       "Price": 200,
       "Status": 1,
-      "SoupX10": {}
+      "Soup X10": {}
+    }
+  },
+  "2": {
+    "9": {
+      "ItemID": 1001,
+      "Count": 1,
+      "Price": 300,
+      "Status": 1,
+      "IronSword": {}
+    },
+    "10": {
+      "ItemID": 1002,
+      "Count": 1,
+      "Price": 200,
+      "Status": 1,
+      "Iron": {}
+    },
+    "11": {
+      "ItemID": 2001,
+      "Count": 1,
+      "Price": 300,
+      "Status": 1,
+      "Wand": {}
+    },
+    "12": {
+      "ItemID": 2002,
+      "Count": 1,
+      "Price": 200,
+      "Status": 1,
+      "LeatherBook": {}
+    },
+    "13": {
+      "ItemID": 3001,
+      "Count": 1,
+      "Price": 300,
+      "Status": 1,
+      "Bow": {}
+    },
+    "14": {
+      "ItemID": 3002,
+      "Count": 1,
+      "Price": 200,
+      "Status": 1,
+      "LeatherQuivel": {}
+    },
+    "15": {
+      "ItemID": 1003,
+      "Count": 1,
+      "Price": 400,
+      "Status": 1
+    },
+    "16": {
+      "ItemID": 1004,
+      "Count": 1,
+      "Price": 500,
+      "Status": 1
+    },
+    "17": {
+      "ItemID": 1005,
+      "Count": 1,
+      "Price": 600,
+      "Status": 1
+    },
+    "18": {
+      "ItemID": 1006,
+      "Count": 1,
+      "Price": 700,
+      "Status": 1
+    },
+    "19": {
+      "ItemID": 1007,
+      "Count": 1,
+      "Price": 800,
+      "Status": 1
+    },
+    "20": {
+      "ItemID": 2003,
+      "Count": 1,
+      "Price": 400,
+      "Status": 1
+    },
+    "21": {
+      "ItemID": 2004,
+      "Count": 1,
+      "Price": 500,
+      "Status": 1
+    },
+    "22": {
+      "ItemID": 2005,
+      "Count": 1,
+      "Price": 600,
+      "Status": 1
+    },
+    "23": {
+      "ItemID": 2006,
+      "Count": 1,
+      "Price": 700,
+      "Status": 1
+    },
+    "24": {
+      "ItemID": 2007,
+      "Count": 1,
+      "Price": 800,
+      "Status": 1
+    },
+    "25": {
+      "ItemID": 3003,
+      "Count": 1,
+      "Price": 400,
+      "Status": 1
+    },
+    "26": {
+      "ItemID": 3004,
+      "Count": 1,
+      "Price": 500,
+      "Status": 1
+    },
+    "27": {
+      "ItemID": 3005,
+      "Count": 1,
+      "Price": 600,
+      "Status": 1
+    },
+    "28": {
+      "ItemID": 3006,
+      "Count": 1,
+      "Price": 700,
+      "Status": 1
+    },
+    "29": {
+      "ItemID": 3007,
+      "Count": 1,
+      "Price": 800,
+      "Status": 1
     }
   }
 }

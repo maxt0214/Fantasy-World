@@ -7,11 +7,12 @@ using SkillBridge.Message;
 
 namespace Models
 {
-    class Item
+    public class Item
     {
         public int Id;
         public int Count;
         public ItemDefine itemDef;
+        public EquipDefine equipDef;
 
         public Item(NItemInfo itemInfo) : this(itemInfo.Id, itemInfo.Count) {}
 
@@ -19,7 +20,8 @@ namespace Models
         {
             Id = id;
             Count = count;
-            itemDef = DataManager.Instance.Items[Id];
+            DataManager.Instance.Items.TryGetValue(Id, out itemDef);
+            DataManager.Instance.Equips.TryGetValue(Id, out equipDef);
         }
 
         public override string ToString()

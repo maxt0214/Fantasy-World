@@ -16,7 +16,7 @@ namespace GameServer.Models
         public Item(TCharacterItem item)
         {
             dbItem = item;
-            ItemID = item.ID;
+            ItemID = item.ItemID;
             ItemCount = item.ItemCount;
         }
 

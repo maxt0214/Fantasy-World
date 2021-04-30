@@ -74,7 +74,7 @@ public class NPCController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if((User.Instance.currentCharacterObj.transform.position - transform.position).magnitude < 10)
+        if((User.Instance.currentCharacterObj.transform.position - transform.position).magnitude < 5)
             Interact();
     }
 

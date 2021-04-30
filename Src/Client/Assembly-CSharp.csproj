@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EntityManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GameObjectManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
     <Compile Include="Assets\Scripts\Managers\LoadingManager.cs" />
@@ -103,6 +104,8 @@
     <Compile Include="Assets\Scripts\UI\CharacterSelection\UICharacterView.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterSelection\UIUserCharacterEntry.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterSelection\UIUserCharacterView.cs" />
+    <Compile Include="Assets\Scripts\UI\Equip\UIEquip.cs" />
+    <Compile Include="Assets\Scripts\UI\Equip\UIEquipItem.cs" />
     <Compile Include="Assets\Scripts\UI\Login\UILoginPage.cs" />
     <Compile Include="Assets\Scripts\UI\Login\UIRegisterPage.cs" />
     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />

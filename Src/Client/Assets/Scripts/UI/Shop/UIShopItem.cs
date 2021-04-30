@@ -11,6 +11,7 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
     public Text itemName;
     public Text itemPrice;
     public Text itemCount;
+    public Text itemClass;
 
     public Image background;
     public Sprite select;
@@ -38,6 +39,7 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
         shop = owner;
         shopItem = shopItemDef;
         item = DataManager.Instance.Items[shopItem.ItemID];
+        itemClass.text = item.Class.ToString();
 
         itemIcon.overrideSprite = Resloader.Load<Sprite>(item.Icon);
         itemName.text = item.Name;

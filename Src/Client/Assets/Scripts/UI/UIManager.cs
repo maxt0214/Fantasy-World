@@ -16,8 +16,9 @@ public class UIManager : Singleton<UIManager>
 
     public UIManager()
     {
-        UIResources.Add(typeof(UITestingWindow),new UIElement() { resource = "UI/UITester", cache = true});
-        UIResources.Add(typeof(UIBagView), new UIElement() { resource = "UI/UIBagView", cache = false});
+        UIResources.Add(typeof(UITestingWindow),new UIElement() { resource = "UI/UITester", cache = true });
+        UIResources.Add(typeof(UIBagView), new UIElement() { resource = "UI/UIBagView", cache = true });
+        UIResources.Add(typeof(UIEquip), new UIElement() { resource = "UI/UIEquipView", cache = true });
         UIResources.Add(typeof(UIShop), new UIElement() { resource = "UI/UIShopView", cache = false });
     }
 

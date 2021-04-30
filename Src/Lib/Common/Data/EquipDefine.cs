@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillBridge.Message;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,8 @@ namespace Common.Data
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Slot { get; set; }
+
+        public EquipSlot Slot { get; set; }
         public string Category { get; set; }
         public float STR { get; set; }
         public float INT { get; set; }

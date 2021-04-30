@@ -18,16 +18,15 @@ public class UIBagView : UIWindow
     public Text goldAmount;
     public GameObject bagItem;
 
-    List<Image> slots;
+    List<Image> slots = new List<Image>();
 
-    void Start()
+    private void Start()
     {
         highlighted = switchBagButton[0].sprite;
-        SetUpBagView(0);
+        SwitchBagView(0);
 
-        if(slots == null)
+        if(slots.Count == 0)
         {
-            slots = new List<Image>();
             for(int page = 0; page < pages.Length; page++)
             {
                 slots.AddRange(pages[page].GetComponentsInChildren<Image>(true));
@@ -58,7 +57,7 @@ public class UIBagView : UIWindow
         yield return null;
     }
 
-    public void SetUpBagView(int curr)
+    public void SwitchBagView(int curr)
     {
         for(int i = 0; i < switchBagButton.Length; i++)
         {
@@ -67,8 +66,21 @@ public class UIBagView : UIWindow
         }
     }
 
+    public void Clear()
+    {
+        for(int i = 0; i < slots.Count; i++)
+        {
+            if(slots[i].transform.childCount > 0)
+            {
+                Destroy(slots[i].transform.GetChild(0).gameObject);
+            }
+        }
+    }
+
     public void OnReset()
     {
         BagManager.Instance.Reset();
+        Clear();
+        StartCoroutine(InitBag());
     }
 }

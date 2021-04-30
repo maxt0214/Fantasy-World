@@ -12,6 +12,7 @@ namespace Services
         public delegate bool StatusNotifyhandler(NStatus status);
 
         private Dictionary<StatusType, StatusNotifyhandler> statusEvents = new Dictionary<StatusType, StatusNotifyhandler>();
+        HashSet<StatusNotifyhandler> actions = new HashSet<StatusNotifyhandler>();
 
         public StatusService()
         {
@@ -30,6 +31,8 @@ namespace Services
 
         public void RegisterStatusNotify(StatusType type, StatusNotifyhandler handler)
         {
+            if (!actions.Add(handler)) return;
+
             if(!statusEvents.ContainsKey(type))
             {
                 statusEvents[type] = handler;

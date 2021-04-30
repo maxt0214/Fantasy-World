@@ -90,6 +90,7 @@ message NCharacterInfo {
 	repeated NItemInfo Items = 10;
 	NBagInfo Bag = 11;
 	bytes Equips = 12;
+	repeated NQuestInfo quests = 13;
 }
 
 message NItemInfo 
@@ -187,6 +188,9 @@ message NetMessageRequest{
 
 	ItemPurchaseRequest itemPurchase = 10;
 	ItemEquipRequest ItemEquip = 11;
+
+	QuestListRequest questList = 12;
+	QuestAccepctRequest qeustAccept = 13;
 }
 
 message NetMessageResponse{
@@ -203,6 +207,9 @@ message NetMessageResponse{
 	
 	ItemPurchaseResponse itemPurchase = 10;
 	ItemEquipResponse ItemEquip = 11;
+
+	QuestListResponse questList = 12;
+	QuestAccepctResponse qeustAccept = 13;
 
 	StatusNotify statusNotify = 100;
 }
@@ -329,6 +336,75 @@ message ItemEquipRequest
 }
 
 message ItemEquipResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
+//Quest System
+enum QUEST_STATUS 
+{
+	IN_PROGRESS = 0;
+	COMPLETE = 1;
+	FINISHED = 2;
+	FAILED = 3;
+}
+
+enum QUEST_LIST_TYPE 
+{
+	ALL = 0;
+	IN_PROGRESS = 1;
+	FINISHED = 2;
+}
+
+message NQuestInfo 
+{
+	int32 quest_id = 1;
+	int32 quest_guid = 2;
+	QUEST_STATUS status = 3;
+	repeated int32 target = 4;
+}
+
+message QuestListRequest 
+{
+	QUEST_LIST_TYPE type = 1;
+}
+
+message QuestListResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated NQuestInfo quests = 3;
+}
+
+message QuestAccepctRequest
+{
+	int32 quest_id = 1;
+}
+
+message QuestAccepctResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
+message QuestSubmitRequest
+{
+	int32 quest_id = 1;
+}
+
+message QuestSubmitResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
+message QuestAbandonRequest
+{
+	int32 quest_id = 1;
+}
+
+message QuestAbandonResponse
 {
 	RESULT result = 1;
 	string errormsg = 2;
