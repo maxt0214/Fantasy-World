@@ -20,7 +20,6 @@ public class UINameBar : MonoBehaviour
     private void Update()
     {
         UpdatePlayerInfo();
-        transform.forward = Camera.main.transform.forward;
     }
 
     private void UpdatePlayerInfo()

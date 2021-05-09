@@ -16,10 +16,11 @@ public class UIManager : Singleton<UIManager>
 
     public UIManager()
     {
-        UIResources.Add(typeof(UITestingWindow),new UIElement() { resource = "UI/UITester", cache = true });
-        UIResources.Add(typeof(UIBagView), new UIElement() { resource = "UI/UIBagView", cache = true });
+        UIResources.Add(typeof(UIBagView), new UIElement() { resource = "UI/UIBagView", cache = false });
         UIResources.Add(typeof(UIEquip), new UIElement() { resource = "UI/UIEquipView", cache = true });
         UIResources.Add(typeof(UIShop), new UIElement() { resource = "UI/UIShopView", cache = false });
+        UIResources.Add(typeof(UIQuestSystem), new UIElement() { resource = "UI/UIQuestView", cache = false });
+        UIResources.Add(typeof(UIQuestDialog), new UIElement() { resource = "UI/UIQuestDialog", cache = false });
     }
 
     public T Show<T>()

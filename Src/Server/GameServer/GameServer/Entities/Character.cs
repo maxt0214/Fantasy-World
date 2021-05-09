@@ -16,6 +16,7 @@ namespace GameServer.Entities
         public ItemManager itemManager;
 
         public StatusManager StatusManager;
+        public QuestManager QuestManager;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Vector3Int(100,0,0))
@@ -25,7 +26,7 @@ namespace GameServer.Entities
             Info.Type = type;
             Info.Id = cha.ID;
             Info.Name = cha.Name;
-            Info.Level = 1;//cha.Level;
+            Info.Level = 10;//cha.Level;
             Info.Tid = cha.TID;
             Info.Class = (CharacterClass)cha.Class;
             Info.mapId = cha.MapID;
@@ -40,6 +41,8 @@ namespace GameServer.Entities
             Info.Bag.Unlocked = cha.Bag.Unlocked;
             Info.Bag.Items = cha.Bag.items;
             Info.Equips = Data.Equips;
+            QuestManager = new QuestManager(this);
+            QuestManager.GetQuestInfos(Info.Quests);
             StatusManager = new StatusManager(this);
         }
 

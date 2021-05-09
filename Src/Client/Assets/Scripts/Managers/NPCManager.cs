@@ -40,12 +40,12 @@ namespace Managers
 
         private bool Interact(NPCDefine npc)
         {
-            if(npc.Type == NPCType.Functional)
+            if(InvokeTask(npc))
+            {
+                return true;
+            } else if(npc.Type == NPCType.Functional)
             {
                 return InvokeFunction(npc);
-            } else if(npc.Type == NPCType.Task)
-            {
-                return InvokeTask(npc);
             }
             return false;
         }
@@ -62,8 +62,11 @@ namespace Managers
 
         private bool InvokeTask(NPCDefine npc)
         {
-            MessageBox.Show("Interacting with NPC: " + npc.Name);
-            return true;
+            var stat = QuestManager.Instance.GetQuestStatusByNpc(npc.ID);
+            if (stat == NPCQuestStatus.None)
+                return false;
+
+            return QuestManager.Instance.OpenNpcQuest(npc.ID);
         }
     }
 }

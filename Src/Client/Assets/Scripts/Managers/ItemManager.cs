@@ -10,8 +10,8 @@ namespace Managers
 {
     class ItemManager : Singleton<ItemManager>
     {
-        //public delegate void OnItemChange(int itemId);
-        //public event OnItemChange ItemChanged;
+        public delegate void OnItemChange(int itemId);
+        public event OnItemChange ItemChanged;
 
         public Dictionary<int, Item> Items = new Dictionary<int, Item>();
 
@@ -37,7 +37,7 @@ namespace Managers
             {
                 RemoveItem(status.Id, status.Value);
             }
-            //if (ItemChanged != null) ItemChanged(status.Id);
+            if (ItemChanged != null) ItemChanged(status.Id);
             return true;
         }
 

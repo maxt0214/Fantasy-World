@@ -19,6 +19,8 @@ namespace Network
             if (message.itemPurchase != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemPurchase); }
             if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); }
             if (message.ItemEquip != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.ItemEquip); }
+            if (message.questAccept != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questAccept); }
+            if (message.questSubmit != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questSubmit); }
         }
 
         //Requests are handled on the server
@@ -34,6 +36,8 @@ namespace Network
             if (message.mapTeleport != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapTeleport); }
             if (message.itemPurchase != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemPurchase); }
             if (message.ItemEquip != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.ItemEquip); }
+            if (message.questAccept != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questAccept); }
+            if (message.questSubmit != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questSubmit); }
         }
     }
 }

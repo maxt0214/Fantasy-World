@@ -28,4 +28,9 @@ public abstract class UIWindow : MonoBehaviour
     {
         Close(WindowResult.Confirm);
     }
+
+    public virtual void OnClickNo()
+    {
+        Close(WindowResult.No);
+    }
 }

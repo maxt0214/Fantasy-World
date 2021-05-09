@@ -190,7 +190,8 @@ message NetMessageRequest{
 	ItemEquipRequest ItemEquip = 11;
 
 	QuestListRequest questList = 12;
-	QuestAccepctRequest qeustAccept = 13;
+	QuestAccepctRequest questAccept = 13;
+	QuestSubmitRequest questSubmit = 14;
 }
 
 message NetMessageResponse{
@@ -209,7 +210,8 @@ message NetMessageResponse{
 	ItemEquipResponse ItemEquip = 11;
 
 	QuestListResponse questList = 12;
-	QuestAccepctResponse qeustAccept = 13;
+	QuestAccepctResponse questAccept = 13;
+	QuestSubmitResponse questSubmit = 14;
 
 	StatusNotify statusNotify = 100;
 }
@@ -386,6 +388,7 @@ message QuestAccepctResponse
 {
 	RESULT result = 1;
 	string errormsg = 2;
+	NQuestInfo quest = 3;
 }
 
 message QuestSubmitRequest
@@ -397,6 +400,7 @@ message QuestSubmitResponse
 {
 	RESULT result = 1;
 	string errormsg = 2;
+	NQuestInfo quest = 3;
 }
 
 message QuestAbandonRequest

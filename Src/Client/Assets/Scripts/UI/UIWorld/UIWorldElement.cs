@@ -18,5 +18,9 @@ public class UIWorldElement : MonoBehaviour
         {
             transform.position = owner.position + Vector3.up * height;
         }
+        if(Camera.main != null)
+        {
+            transform.forward = Camera.main.transform.forward;
+        }
     }
 }
