@@ -19,6 +19,7 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\NpcDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\ShopDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\ShopItemDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
+@copy Data\SpawnRuleDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\QuestDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 
 pause

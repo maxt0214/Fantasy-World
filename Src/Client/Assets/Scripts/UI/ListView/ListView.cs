@@ -73,4 +73,10 @@ public class ListView : MonoBehaviour
         }
         items.Clear();
     }
+
+    public void ClearSelection()
+    {
+        selectedItem.Selected = false;
+        selectedItem = null;
+    }
 }

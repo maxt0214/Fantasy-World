@@ -1,7 +1,6 @@
-﻿using Models;
+﻿using Common.Data;
+using Models;
 using SkillBridge.Message;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +28,22 @@ public class UIQuestDetailPanel : MonoBehaviour
             {
                 objective.text = quest.Define.Overview + '\n';
                 overview.text = quest.Define.DialogFinish + '\n';
+            }
+        }
+
+        for(int i = 0; i < rewardItems.Length; i++)
+        {
+            rewardItems[i].ResetIcon();
+        }
+
+        ItemDefine rewardItem;
+        if (DataManager.Instance.Items.TryGetValue(quest.Define.RewardItem1, out rewardItem)) {
+            rewardItems[0].SetIcon(rewardItem.Icon, quest.Define.RewardItem1Count.ToString());
+            if (DataManager.Instance.Items.TryGetValue(quest.Define.RewardItem2, out rewardItem))
+            {
+                rewardItems[1].SetIcon(rewardItem.Icon, quest.Define.RewardItem2Count.ToString());
+                if (DataManager.Instance.Items.TryGetValue(quest.Define.RewardItem3, out rewardItem))
+                    rewardItems[2].SetIcon(rewardItem.Icon, quest.Define.RewardItem3Count.ToString());
             }
         }
 

@@ -42,6 +42,12 @@ namespace GameServer.Managers
             json = File.ReadAllText(DataPath + "TeleporterDefine.txt");
             Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
 
+            json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
+            SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+            json = File.ReadAllText(DataPath + "SpawnRuleDefine.txt");
+            SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+
             json = File.ReadAllText(DataPath + "NPCDefine.txt");
             NPCs = JsonConvert.DeserializeObject<Dictionary<int, NPCDefine>>(json);
 

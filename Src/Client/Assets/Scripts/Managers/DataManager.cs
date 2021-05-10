@@ -17,6 +17,7 @@ public class DataManager : Singleton<DataManager>
     public Dictionary<int, CharacterDefine> Characters = null;
     public Dictionary<int, TeleporterDefine> Teleporters = null;
     public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
+    public Dictionary<int, Dictionary<int, SpawnRuleDefine>> SpawnRules = null;
     public Dictionary<int, NPCDefine> NPCs = null;
     public Dictionary<int, ItemDefine> Items = null;
     public Dictionary<int, ShopDefine> Shops = null;
@@ -41,6 +42,12 @@ public class DataManager : Singleton<DataManager>
         json = File.ReadAllText(DataPath + "TeleporterDefine.txt");
         Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
 
+        json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
+        SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+        json = File.ReadAllText(DataPath + "SpawnRuleDefine.txt");
+        SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+
         json = File.ReadAllText(DataPath + "NPCDefine.txt");
         NPCs = JsonConvert.DeserializeObject<Dictionary<int, NPCDefine>>(json);
 
@@ -58,9 +65,6 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(DataPath + "QuestDefine.txt");
         Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
-
-        //json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
-        //SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>> (json);
     }
 
 
@@ -81,6 +85,16 @@ public class DataManager : Singleton<DataManager>
 
         yield return null;
 
+        json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
+        SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(DataPath + "SpawnRuleDefine.txt");
+        SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+
+        yield return null;
+
         json = File.ReadAllText(DataPath + "NPCDefine.txt");
         NPCs = JsonConvert.DeserializeObject<Dictionary<int, NPCDefine>>(json);
 
@@ -110,11 +124,6 @@ public class DataManager : Singleton<DataManager>
         Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
 
         yield return null;
-
-        //json = File.ReadAllText(DataPath + "SpawnPointDefine.txt");
-        //SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
-
-        //yield return null;
     }
 
 #if UNITY_EDITOR
@@ -122,12 +131,18 @@ public class DataManager : Singleton<DataManager>
     {
         string json = JsonConvert.SerializeObject(Teleporters, Formatting.Indented);
         File.WriteAllText(DataPath + "TeleporterDefine.txt", json);
+        //Copy to common.data and server
+        //File.WriteAllText("../Data/Data/TeleporterDefine.txt", json);
+        File.WriteAllText("../Server/GameServer/GameServer/bin/Debug/Data/TeleporterDefine.txt", json);
     }
 
     public void SaveSpawnPoints()
     {
         string json = JsonConvert.SerializeObject(SpawnPoints, Formatting.Indented);
         File.WriteAllText(DataPath + "SpawnPointDefine.txt", json);
+        //Copy to common.data and server
+        File.WriteAllText("../Data/Data/SpawnPointDefine.txt", json);
+        File.WriteAllText("../Server/GameServer/GameServer/bin/Debug/Data/SpawnPointDefine.txt", json);
     }
 
 #endif

@@ -10,6 +10,8 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     public GameObject player;
 
+    public float rotateAngle = 1f;
+
     private void LateUpdate()
     {
         if (player == null)
@@ -20,5 +22,10 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
         transform.position = player.transform.position;
         transform.rotation = player.transform.rotation;
+
+        //float xRot = Input.GetAxis("Mouse X");
+        //float yRot = Input.GetAxis("Mouse Y");
+        //xRot = Mathf.Clamp(xRot, -30, 20);
+        //transform.Rotate(yRot * rotateAngle, xRot * rotateAngle, 0);
     }
 }

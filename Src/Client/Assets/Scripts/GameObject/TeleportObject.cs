@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class TeleportObject : MonoBehaviour
 {
     public int ID;
@@ -45,10 +46,10 @@ public class TeleportObject : MonoBehaviour
         Gizmos.color = Color.green;
         if(mesh != null)
         {
-            Gizmos.DrawMesh(mesh, transform.position + Vector3.up * transform.localScale.y * 0.5f, transform.rotation, transform.localScale);
+            Gizmos.DrawMesh(mesh, transform.position, transform.rotation, transform.localScale);
         }
         UnityEditor.Handles.color = Color.red;
-        UnityEditor.Handles.ArrowHandleCap(0, transform.position, transform.rotation, 1, EventType.Repaint);
+        UnityEditor.Handles.ArrowHandleCap(0, transform.position, transform.rotation, 5, EventType.Repaint);
     }
 #endif
 }

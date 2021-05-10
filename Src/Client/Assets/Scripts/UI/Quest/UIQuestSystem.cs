@@ -86,8 +86,8 @@ public class UIQuestSystem : UIWindow
         UIQuestInfo.SetQuestInfo(questItem.quest);
 
         if (questItem.owner == mainQuestList && branchQuestList.SelectedItem != null)
-            branchQuestList.SelectedItem.Selected = false;
+            branchQuestList.ClearSelection();
         if (questItem.owner == branchQuestList && mainQuestList.SelectedItem != null)
-            mainQuestList.SelectedItem.Selected = false;
+            mainQuestList.ClearSelection();
     }
 }

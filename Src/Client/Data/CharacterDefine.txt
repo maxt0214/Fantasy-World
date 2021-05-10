@@ -40,19 +40,37 @@
   },
   "1002": {
     "TID": 1002,
-    "Name": "-",
+    "Name": "Rocky Titan",
     "Type": "Normal",
-    "Class": "WIZARD",
+    "Class": "WARRIOR",
     "Resource": "Monster/M1002",
     "InitLevel": 1,
     "Speed": 300
   },
   "1003": {
     "TID": 1003,
-    "Name": "-",
+    "Name": "Little Demon",
+    "Type": "Normal",
+    "Class": "WARRIOR",
+    "Resource": "Monster/M1003",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "1004": {
+    "TID": 1004,
+    "Name": "Skeleton Archer",
     "Type": "Normal",
     "Class": "ARCHER",
-    "Resource": "Monster/M1003",
+    "Resource": "Monster/M1004",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "1005": {
+    "TID": 1005,
+    "Name": "Grim Reaper",
+    "Type": "Normal",
+    "Class": "WARRIOR",
+    "Resource": "Monster/M1005",
     "InitLevel": 1,
     "Speed": 300
   }
