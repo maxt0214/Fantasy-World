@@ -22,7 +22,8 @@ namespace GameServer.Managers
         {
             Monster monster = new Monster(monId, spawnLevel, spawnPos, spawnDir);
             EntityManager.Instance.AddEntity(map.ID, monster);
-            monster.Info.Id = monster.entityId;
+            monster.Id = monster.entityId;
+            monster.Info.EntityId = monster.entityId;
             monster.Info.mapId = map.ID;
             monsters[monster.Id] = monster;
             map.MonsterEnter(monster);

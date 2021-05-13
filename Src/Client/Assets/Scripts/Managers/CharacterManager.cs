@@ -34,10 +34,10 @@ namespace Managers
 
         public void Clear()
         {
-            var keys = characters.Keys;
+            int[] keys = characters.Keys.ToArray();
             foreach (var key in keys)
             {
-                Instance.RemoveCharacter(key, false);
+                Instance.RemoveCharacter(key);
             }
             characters.Clear();
         }
@@ -46,21 +46,21 @@ namespace Managers
         {
             Debug.LogFormat("AddCharacter: {0}: {1} Map: {2} Entity: {3}", chara.Id, chara.Name, chara.mapId, chara.Entity.String());
             var character = new Character(chara);
-            characters[chara.Id] = character;
+            characters[chara.EntityId] = character;
             EntityManager.Instance.AddEntity(character);
             if (OnCharacterEnter != null)
                 OnCharacterEnter(character);
         }
 
-        public void RemoveCharacter(int charaId, bool ifRemove = true)
+        public void RemoveCharacter(int entityId)
         {
-            Debug.LogFormat("RemoveCharacter:{0}", charaId);
-            if (characters.ContainsKey(charaId))
+            Debug.LogFormat("RemoveCharacter:{0}", entityId);
+            if (characters.ContainsKey(entityId))
             {
-                EntityManager.Instance.RemoveEntity(characters[charaId].Info.Entity);
+                EntityManager.Instance.RemoveEntity(characters[entityId].Info.Entity);
                 if (OnCharacterLeave != null)
-                    OnCharacterLeave(characters[charaId]);
-                if(ifRemove) characters.Remove(charaId);
+                    OnCharacterLeave(characters[entityId]);
+                characters.Remove(entityId);
             }
         }
     }

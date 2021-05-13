@@ -29,7 +29,7 @@ public class PlayerInputController : MonoBehaviour
             var charaInfo = new NCharacterInfo();
             charaInfo.Id = 1;
             charaInfo.Name = "Test Character";
-            charaInfo.Tid = 1;
+            charaInfo.ConfigId = 1;
             charaInfo.Entity = new NEntity();
             charaInfo.Entity.Position = new NVector3();
             charaInfo.Entity.Direction = new NVector3();

@@ -35,6 +35,9 @@ namespace GameServer.Models
         }
         internal MapDefine Define;
 
+        /// <summary>
+        /// Paired as character Id, Character
+        /// </summary>
         Dictionary<int, MapCharacter> MapCharacters = new Dictionary<int, MapCharacter>();
 
         SpawnManager spawnManager = new SpawnManager();
@@ -101,8 +104,9 @@ namespace GameServer.Models
 
         private void SendCharacterLeaveMap(NetConnection<NetSession> conn, Character character)
         {
+            Log.InfoFormat("SendCharacterLeaveMap: To Character[{0}]:{1} Map:{2} CharacterLeft[{3}]:{4}", conn.Session.Character.Id, conn.Session.Character.Info.Name, Define.ID, character.Id, character.Info.Name);
             conn.Session.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
-            conn.Session.Response.mapCharacterLeave.characterId = character.Id;
+            conn.Session.Response.mapCharacterLeave.entityId = character.entityId;
             conn.SendResponse();
         }
 

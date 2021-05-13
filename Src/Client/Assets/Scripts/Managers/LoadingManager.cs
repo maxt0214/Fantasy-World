@@ -32,8 +32,12 @@ public class LoadingManager : MonoBehaviour {
 
 		UserService.Instance.Init();
 		MapService.Instance.Init();
+		StatusService.Instance.Init();
+		FriendService.Instance.Init();
+		TeamService.Instance.Init();
 
 		ShopManager.Instance.Init();
+
 		//TODO: resource load and percentage update
 
 		//Now loading page fades away and login page shows

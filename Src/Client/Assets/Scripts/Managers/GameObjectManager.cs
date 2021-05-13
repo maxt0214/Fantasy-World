@@ -60,7 +60,7 @@ namespace Managers {
                 }
 
                 GameObject gameObject = (GameObject)Instantiate(obj,transform);
-                gameObject.name = "Character_" + chara.entityId + "_" + chara.Name;
+                gameObject.name = "Character_" + chara.Id + "_" + chara.Name;
                 characters[chara.entityId] = gameObject;
                 
                 Debug.LogFormat("Character[{0}] TID:{1} ID:{2} is created", chara.Name, chara.Define.TID, chara.entityId);
@@ -78,13 +78,13 @@ namespace Managers {
             if (ec != null)
             {
                 ec.entity = chara;
-                ec.isLocalPlayer = chara.IsPlayer;
+                ec.isLocalPlayer = chara.IsLocalPlayer;
             }
 
             var pc = gameObject.GetComponent<PlayerInputController>();
             if (pc != null)
             {
-                if (chara.Info.Id == User.Instance.CurrentCharacter.Id)
+                if (chara.IsLocalPlayer)
                 {
                     User.Instance.currentCharacterObj = gameObject;
                     MainPlayerCamera.Instance.player = gameObject;

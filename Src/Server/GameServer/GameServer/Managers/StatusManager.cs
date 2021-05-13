@@ -2,6 +2,7 @@
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
+using Network;
 
 namespace GameServer.Managers
 {
@@ -40,7 +41,7 @@ namespace GameServer.Managers
             AddStatus(StatusType.Item, id, count, action);
         }
 
-        public void ApplyResponse(NetMessageResponse response)
+        public void PostProcess(NetMessageResponse response)
         {
             if (response.statusNotify == null)
                 response.statusNotify = new StatusNotify();

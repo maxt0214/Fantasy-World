@@ -1,11 +1,5 @@
-﻿using Common.Data;
-using Managers;
-using Models;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Models;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIQuestItem : ListView.ListViewItem

@@ -13,6 +13,11 @@ namespace Entities
 
         public Common.Data.CharacterDefine Define;
 
+        public int Id
+        {
+            get { return Info.Id; }
+        }
+
         public string Name
         {
             get
@@ -26,13 +31,22 @@ namespace Entities
 
         public bool IsPlayer
         {
-            get { return Info.Id == Models.User.Instance.CurrentCharacter.Id; }
+            get { return Info.Type == CharacterType.Player; }
+        }
+
+        public bool IsLocalPlayer 
+        {
+            get 
+            {
+                if (!IsPlayer) return false;
+                return Id == Models.User.Instance.CurrentCharacter.Id;
+            }
         }
 
         public Character(NCharacterInfo info) : base(info.Entity)
         {
             Info = info;
-            Define = DataManager.Instance.Characters[info.Tid];
+            Define = DataManager.Instance.Characters[info.ConfigId];
         }
 
         public void MoveForward()

@@ -32,30 +32,30 @@ public class UIMessageBox : MonoBehaviour {
     {
         if (!string.IsNullOrEmpty(title)) this.title.text = title;
         this.message.text = message;
-        this.icons[0].enabled = type == MessageBoxType.Information;
-        this.icons[1].enabled = type == MessageBoxType.Confirm;
-        this.icons[2].enabled = type == MessageBoxType.Error;
+        icons[0].enabled = type == MessageBoxType.Information;
+        icons[1].enabled = type == MessageBoxType.Confirm;
+        icons[2].enabled = type == MessageBoxType.Error;
 
-        if (!string.IsNullOrEmpty(btnOK)) this.buttonYesTitle.text = title;
-        if (!string.IsNullOrEmpty(btnCancel)) this.buttonNoTitle.text = title;
+        if (!string.IsNullOrEmpty(btnOK)) buttonYesTitle.text = btnOK;
+        if (!string.IsNullOrEmpty(btnCancel)) buttonNoTitle.text = btnCancel;
 
-        this.buttonYes.onClick.AddListener(OnClickYes);
-        this.buttonNo.onClick.AddListener(OnClickNo);
+        buttonYes.onClick.AddListener(OnClickYes);
+        buttonNo.onClick.AddListener(OnClickNo);
 
-        this.buttonNo.gameObject.SetActive(type == MessageBoxType.Confirm);
+        buttonNo.gameObject.SetActive(type == MessageBoxType.Confirm);
     }
 
     void OnClickYes()
     {
-        Destroy(this.gameObject);
-        if (this.OnYes != null)
-            this.OnYes();
+        Destroy(gameObject);
+        if (OnYes != null)
+            OnYes();
     }
 
     void OnClickNo()
     {
-        Destroy(this.gameObject);
-        if (this.OnNo != null)
-            this.OnNo();
+        Destroy(gameObject);
+        if (OnNo != null)
+            OnNo();
     }
 }

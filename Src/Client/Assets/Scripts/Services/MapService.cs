@@ -42,7 +42,7 @@ namespace Services
             foreach(var chara in response.Characters)
             {
                 //Every time we enter the game, the server will send back this list of characters in which the first one is our player.
-                if(User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == chara.Id)
+                if(User.Instance.CurrentCharacter == null || (chara.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == chara.Id))
                 {
                     User.Instance.CurrentCharacter = chara;
                 }
@@ -58,9 +58,9 @@ namespace Services
 
         private void OnCharacterLeaveMap(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnCharacterLeaveMap: CharacterID{0}", response.characterId);
-            if (response.characterId != User.Instance.CurrentCharacter.Id)
-                CharacterManager.Instance.RemoveCharacter(response.characterId);
+            Debug.LogFormat("OnCharacterLeaveMap: Character EntityID{0}", response.entityId);
+            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+                CharacterManager.Instance.RemoveCharacter(response.entityId);
             else
                 CharacterManager.Instance.Clear();
         }

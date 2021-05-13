@@ -11,6 +11,8 @@ public class UIMain : MonoSingleton<UIMain>
     public Text playerName;
     public Text playerLevel;
 
+    public UITeamView TeamWindow;
+
     protected override void OnStart()
     {
         UpdateAvatar();
@@ -41,5 +43,15 @@ public class UIMain : MonoSingleton<UIMain>
     public void OnClickOpenQuestSystem()
     {
         UIManager.Instance.Show<UIQuestSystem>();
+    }
+
+    public void OnClickOpenFriendSystem()
+    {
+        UIManager.Instance.Show<UIFriendView>();
+    }
+
+    public void ShowTeamUI(bool ifShow)
+    {
+        TeamWindow.ShowTeam(ifShow);
     }
 }

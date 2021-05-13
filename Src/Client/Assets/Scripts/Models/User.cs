@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SkillBridge.Message;
 using Common.Data;
 using UnityEngine;
 
@@ -9,24 +8,26 @@ namespace Models
 {
     class User : Singleton<User>
     {
-        SkillBridge.Message.NUserInfo userInfo;
+        NUserInfo userInfo;
 
 
-        public SkillBridge.Message.NUserInfo Info
+        public NUserInfo Info
         {
             get { return userInfo; }
         }
 
 
-        public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
+        public void SetupUserInfo(NUserInfo info)
         {
             userInfo = info;
         }
 
-        public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
+        public NCharacterInfo CurrentCharacter { get; set; }
         public MapDefine currMap { get; set; }
 
         public GameObject currentCharacterObj { get; set; }
+
+        public NTeamInfo teamInfo { get; set; }
 
         public void AddGold(int toAdd)
         {

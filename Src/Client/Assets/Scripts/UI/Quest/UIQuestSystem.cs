@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Common.Data;
+using Models;
 
 public class UIQuestSystem : UIWindow
 {
@@ -24,12 +25,12 @@ public class UIQuestSystem : UIWindow
         branchQuestList.OnItemSelected += OnQuestSelected;
         tabs.OnTabSelected += OnSelectTab;
         RefreshUI();
-        //QuestManager.Instance.OnQuestChanged += RefreshUI;
+        QuestManager.Instance.onQuestStatusChanged += RefreshUI;
     }
 
     private void OnDestroy()
     {
-        //QuestManager.Instance.OnQuestChanged -= RefreshUI;
+        QuestManager.Instance.onQuestStatusChanged -= RefreshUI;
     }
 
     private void OnSelectTab(int tabIndx)
@@ -38,7 +39,7 @@ public class UIQuestSystem : UIWindow
         RefreshUI();
     }
 
-    private void RefreshUI()
+    private void RefreshUI(Quest quest = null)
     {
         ClearQuestList();
         InitQuestList();

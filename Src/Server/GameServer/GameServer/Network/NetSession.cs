@@ -16,10 +16,12 @@ namespace Network
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; }
+        public IPostResponser PostResponser { get; set; }
 
         internal void Disconnect()
         {
-            if(Character != null)
+            PostResponser = null;
+            if (Character != null)
                 UserService.Instance.CharacterLeave(Character);
         }
 
@@ -39,10 +41,8 @@ namespace Network
         {
             if (response != null)
             {
-                if (Character != null && Character.StatusManager.HasStatus)
-                {
-                    Character.StatusManager.ApplyResponse(Response);
-                }
+                if (PostResponser != null)
+                    PostResponser.PostProcess(Response);
                 byte[] data = PackageHandler.PackMessage(response);
                 response = null;
                 return data;
