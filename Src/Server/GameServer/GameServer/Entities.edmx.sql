@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/11/2021 03:06:01
+-- Date Created: 05/17/2021 06:49:11
 -- Generated from EDMX file: C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
@@ -35,6 +35,12 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_CharacterFriend]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[CharacterFriends] DROP CONSTRAINT [FK_CharacterFriend];
 GO
+IF OBJECT_ID(N'[dbo].[FK_GuildMember]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[GuildMembers] DROP CONSTRAINT [FK_GuildMember];
+GO
+IF OBJECT_ID(N'[dbo].[FK_GuildApplicant]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[GuildApplicants] DROP CONSTRAINT [FK_GuildApplicant];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -60,6 +66,15 @@ IF OBJECT_ID(N'[dbo].[CharacterQuests]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[CharacterFriends]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CharacterFriends];
+GO
+IF OBJECT_ID(N'[dbo].[TGuilds]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TGuilds];
+GO
+IF OBJECT_ID(N'[dbo].[GuildMembers]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[GuildMembers];
+GO
+IF OBJECT_ID(N'[dbo].[GuildApplicants]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[GuildApplicants];
 GO
 
 -- --------------------------------------------------
@@ -96,6 +111,7 @@ CREATE TABLE [dbo].[Characters] (
     [MapPosZ] int  NOT NULL,
     [Gold] bigint  NOT NULL,
     [Equips] binary(28)  NOT NULL,
+    [GuildId] int  NOT NULL,
     [Player_ID] int  NOT NULL,
     [Bag_Id] int  NOT NULL
 );
@@ -138,6 +154,44 @@ CREATE TABLE [dbo].[CharacterFriends] (
     [Level] int  NOT NULL,
     [Class] int  NOT NULL,
     [TCharacterID] int  NOT NULL
+);
+GO
+
+-- Creating table 'Guilds'
+CREATE TABLE [dbo].[Guilds] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(max)  NOT NULL,
+    [LeaderId] int  NOT NULL,
+    [LeaderName] nvarchar(max)  NOT NULL,
+    [Overview] nvarchar(max)  NOT NULL,
+    [FoundTime] datetime  NOT NULL
+);
+GO
+
+-- Creating table 'GuildMembers'
+CREATE TABLE [dbo].[GuildMembers] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [CharacterId] int  NOT NULL,
+    [Name] nvarchar(max)  NOT NULL,
+    [Class] int  NOT NULL,
+    [Level] int  NOT NULL,
+    [Title] int  NOT NULL,
+    [JoinTime] datetime  NOT NULL,
+    [LastOnlineTime] datetime  NOT NULL,
+    [GuildId] int  NOT NULL
+);
+GO
+
+-- Creating table 'GuildApplicants'
+CREATE TABLE [dbo].[GuildApplicants] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [CharacterId] int  NOT NULL,
+    [Name] nvarchar(max)  NOT NULL,
+    [Class] int  NOT NULL,
+    [Level] int  NOT NULL,
+    [Result] int  NOT NULL,
+    [ApplyTime] datetime  NOT NULL,
+    [GuildId] int  NOT NULL
 );
 GO
 
@@ -184,6 +238,24 @@ GO
 -- Creating primary key on [Id] in table 'CharacterFriends'
 ALTER TABLE [dbo].[CharacterFriends]
 ADD CONSTRAINT [PK_CharacterFriends]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'Guilds'
+ALTER TABLE [dbo].[Guilds]
+ADD CONSTRAINT [PK_Guilds]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'GuildMembers'
+ALTER TABLE [dbo].[GuildMembers]
+ADD CONSTRAINT [PK_GuildMembers]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'GuildApplicants'
+ALTER TABLE [dbo].[GuildApplicants]
+ADD CONSTRAINT [PK_GuildApplicants]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -279,6 +351,36 @@ GO
 CREATE INDEX [IX_FK_CharacterFriend]
 ON [dbo].[CharacterFriends]
     ([TCharacterID]);
+GO
+
+-- Creating foreign key on [GuildId] in table 'GuildMembers'
+ALTER TABLE [dbo].[GuildMembers]
+ADD CONSTRAINT [FK_GuildMember]
+    FOREIGN KEY ([GuildId])
+    REFERENCES [dbo].[Guilds]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_GuildMember'
+CREATE INDEX [IX_FK_GuildMember]
+ON [dbo].[GuildMembers]
+    ([GuildId]);
+GO
+
+-- Creating foreign key on [GuildId] in table 'GuildApplicants'
+ALTER TABLE [dbo].[GuildApplicants]
+ADD CONSTRAINT [FK_GuildApplicant]
+    FOREIGN KEY ([GuildId])
+    REFERENCES [dbo].[Guilds]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_GuildApplicant'
+CREATE INDEX [IX_FK_GuildApplicant]
+ON [dbo].[GuildApplicants]
+    ([GuildId]);
 GO
 
 -- --------------------------------------------------

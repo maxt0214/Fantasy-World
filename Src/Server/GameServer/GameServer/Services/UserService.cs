@@ -166,9 +166,10 @@ namespace GameServer.Services
             sender.Session.Response.gameEnter.Errormsg = "None";
             sender.Session.Response.gameEnter.Character = character.Info;
 
-            sender.SendResponse();
             sender.Session.Character = character; //Mark the current character
             sender.Session.PostResponser = character;
+
+            sender.SendResponse();
             MapManager.Instance[dbChara.MapID].CharacterEnter(sender, character);
         }
         

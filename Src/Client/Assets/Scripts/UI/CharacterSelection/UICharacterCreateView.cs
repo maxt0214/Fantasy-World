@@ -65,6 +65,12 @@ public class UICharacterCreateView : MonoBehaviour {
             return;
         }
 
+        if (nickName.text.Length > 10)
+        {
+            MessageBox.Show("Your Nick Name Must Be 0~10 characters");
+            return;
+        }
+
         creatingCharacter = true;
         UserService.Instance.SendCharacterCreation((CharacterClass)selectedCharaClass, nickName.text);
     }

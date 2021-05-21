@@ -13,14 +13,17 @@ namespace GameServer.Entities
     class Character : CharacterBase, IPostResponser
     {
         public TCharacter Data;
-        public ItemManager itemManager;
 
+        public ItemManager itemManager;
         public StatusManager StatusManager;
         public QuestManager QuestManager;
         public FriendManager FriendManager;
 
         public Team team;
-        public int teamUpdateTS;
+        public double teamUpdateTS;
+
+        public Guild guild;
+        public double guildUpdateTS;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Vector3Int(100,0,0))
@@ -52,6 +55,8 @@ namespace GameServer.Entities
             StatusManager = new StatusManager(this);
             FriendManager = new FriendManager(this);
             FriendManager.GetFriendInfos(Info.Friends);
+
+            guild = GuildManager.Instance.GetGuild(Data.GuildId);
         }
 
         public long Gold
@@ -95,6 +100,22 @@ namespace GameServer.Entities
                 }
             }
 
+            if (guild != null)
+            {
+                Log.InfoFormat("PostProccess > Character[{0}]:{1} LastUpdate:{2} vs GuildUpdate:{3}", Id, Info.Name, guildUpdateTS, guild.timeStamp);
+                if (Info.Guild == null)
+                {
+                    Info.Guild = guild.GuildInfo(this);
+                    if (response.mapCharacterEnter != null)
+                        guildUpdateTS = guild.timeStamp;
+                }
+                if(guildUpdateTS < guild.timeStamp && response.mapCharacterEnter == null)
+                {
+                    guildUpdateTS = guild.timeStamp;
+                    guild.PostProcess(this,response);
+                }
+            }
+
             if (StatusManager.HasStatus)
                 StatusManager.PostProcess(response);
         }
@@ -106,6 +127,7 @@ namespace GameServer.Entities
         {
             FriendManager.OfflineNotify();
             if(team != null) team.MemberLeft(this);
+            if(guild != null) guild.MemberOffline();
         }
     }
 }

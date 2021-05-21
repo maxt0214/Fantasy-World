@@ -1,6 +1,29 @@
-2021-05-13 11:57:15,220 [ 1] INFO  Unity: Loading Manager Awake
-2021-05-13 11:57:15,244 [ 1] INFO  Unity: DataManager > DataManager()
-2021-05-13 11:57:45,570 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(18,24): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+2021-05-20 06:15:43,270 [ 1] INFO  Unity: Loading Manager Awake
+2021-05-20 06:15:43,301 [ 1] INFO  Unity: DataManager > DataManager()
+2021-05-20 06:15:50,734 [ 1] INFO  Unity: UserLoginRequest::user :user002 psw:user1234
+2021-05-20 06:15:50,735 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-05-20 06:15:50,736 [ 1] INFO  Unity: DoConnect
+2021-05-20 06:15:50,737 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-05-20 06:15:50,738 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2021-05-13 11:57:45,571 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(21,24): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+2021-05-20 06:15:50,742 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-05-20 06:15:50,925 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-05-20 06:15:50,925 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-05-20 06:15:50,928 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-05-20 06:15:51,126 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-20 06:15:52,789 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 3
+2021-05-20 06:15:52,830 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-05-20 06:15:52,832 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
+2021-05-20 06:15:52,833 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
+2021-05-20 06:15:52,843 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
+2021-05-20 06:15:52,845 [ 1] INFO  Unity: AddCharacter: 3: OldBear Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-05-20 06:15:52,849 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-05-20 06:15:53,275 [ 1] INFO  Unity: Character[OldBear] TID:2 ID:2 is created
+2021-05-20 06:15:53,322 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-20 06:15:55,047 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-05-20 06:15:55,048 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
 
+2021-05-20 06:15:55,051 [ 1] INFO  Unity: Character_3_OldBear OnDestroy: ID: 2 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0

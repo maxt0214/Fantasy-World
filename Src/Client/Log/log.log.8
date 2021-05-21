@@ -1,116 +1,32 @@
-2021-05-13 05:09:25,865 [ 1] INFO  Unity: Loading Manager Awake
-2021-05-13 05:09:25,886 [ 1] INFO  Unity: DataManager > DataManager()
-2021-05-13 05:09:58,094 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
-2021-05-13 05:09:58,101 [ 1] INFO  Unity: ConnectToServer() Start 
-2021-05-13 05:09:58,102 [ 1] INFO  Unity: DoConnect
-2021-05-13 05:09:58,103 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-13 05:09:58,106 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2021-05-20 06:08:14,628 [ 1] INFO  Unity: Loading Manager Awake
+2021-05-20 06:08:14,646 [ 1] INFO  Unity: DataManager > DataManager()
+2021-05-20 06:08:21,748 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:user1234
+2021-05-20 06:08:21,749 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-05-20 06:08:21,749 [ 1] INFO  Unity: DoConnect
+2021-05-20 06:08:21,751 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-05-20 06:08:21,752 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2021-05-13 05:09:58,113 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2021-05-13 05:10:01,022 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2021-05-13 05:10:01,025 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
-2021-05-13 05:10:01,029 [ 1] INFO  Unity: LoadLevel: CharacterCreation
-2021-05-13 05:10:01,255 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-13 05:11:05,801 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
-2021-05-13 05:11:06,031 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
-2021-05-13 05:11:06,039 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
-2021-05-13 05:11:06,039 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
-2021-05-13 05:11:06,040 [ 1] INFO  Unity: ItemManager:Init[Item[3] Count:5]
-2021-05-13 05:11:06,082 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
-2021-05-13 05:11:06,090 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (9:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-05-13 05:11:06,106 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-05-13 05:11:06,545 [ 1] INFO  Unity: Character[Elf] TID:3 ID:9 is created
-2021-05-13 05:11:06,614 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-13 05:11:13,649 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
-2021-05-13 05:11:13,649 [ 1] INFO  Unity: AddCharacter: 2: Old Bear Map: 1 Entity: (10:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-05-13 05:11:13,694 [ 1] INFO  Unity: Character[Old Bear] TID:2 ID:10 is created
-2021-05-13 05:11:13,695 [ 1] INFO  Unity: OnFriendList
-2021-05-13 05:12:54,626 [ 1] INFO  Unity: OnCharacterLeaveMap: Character EntityID10
-2021-05-13 05:12:54,628 [ 1] INFO  Unity: RemoveCharacter:10
-2021-05-13 05:12:54,632 [ 1] INFO  Unity: OnFriendList
-2021-05-13 05:15:12,455 [ 1] INFO  Unity: Character_2_Old Bear OnDestroy: ID: 10 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-05-13 05:15:24,639 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Client\Assets\Scripts\Network\NetClient.cs:336 
-
-2021-05-13 05:15:24,640 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:350)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
-
-2021-05-13 05:15:24,652 [ 1] INFO  Unity: DoConnect
-2021-05-13 05:15:24,652 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-13 05:15:24,673 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2021-05-13 05:15:26,717 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2021-05-13 05:15:26,718 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2021-05-13 05:15:26,758 [ 1] INFO  Unity: DoConnect
-2021-05-13 05:15:26,759 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-13 05:15:26,761 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2021-05-13 05:15:28,794 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2021-05-13 05:15:28,794 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2021-05-13 05:15:28,835 [ 1] INFO  Unity: DoConnect
-2021-05-13 05:15:28,836 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-13 05:15:28,837 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2021-05-13 05:15:30,880 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2021-05-13 05:15:30,881 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2021-05-13 05:15:30,881 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2021-05-13 05:15:34,640 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-05-13 05:15:34,640 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-05-20 06:08:21,755 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-05-20 06:08:21,933 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-05-20 06:08:21,934 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-05-20 06:08:21,935 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-05-20 06:08:22,122 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-20 06:08:23,347 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 2
+2021-05-20 06:08:23,387 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-05-20 06:08:23,389 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
+2021-05-20 06:08:23,389 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
+2021-05-20 06:08:23,399 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
+2021-05-20 06:08:23,400 [ 1] INFO  Unity: AddCharacter: 2: Brainless Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-05-20 06:08:23,404 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-05-20 06:08:23,837 [ 1] INFO  Unity: Character[Brainless] TID:1 ID:2 is created
+2021-05-20 06:08:23,880 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-20 06:08:26,018 [ 1] INFO  Unity: SendGuildList
+2021-05-20 06:08:26,069 [ 1] INFO  Unity: OnGuildList: Success
+2021-05-20 06:08:28,353 [ 1] INFO  Unity: SendJoinGuild
+2021-05-20 06:08:31,425 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-05-20 06:08:31,426 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
 
-2021-05-13 05:15:34,643 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 9 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
+2021-05-20 06:08:31,428 [ 1] INFO  Unity: Character_2_Brainless OnDestroy: ID: 2 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0

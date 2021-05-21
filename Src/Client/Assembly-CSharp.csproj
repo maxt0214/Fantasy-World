@@ -84,9 +84,9 @@
     <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
     <Compile Include="Assets\Scripts\Managers\FriendManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GameObjectManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GuildManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
     <Compile Include="Assets\Scripts\Managers\LoadingManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\ManagerSpawner.cs" />
     <Compile Include="Assets\Scripts\Managers\NPCManager.cs" />
     <Compile Include="Assets\Scripts\Managers\QuestManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Network\NetClient.cs" />
     <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
     <Compile Include="Assets\Scripts\Services\FriendService.cs" />
+    <Compile Include="Assets\Scripts\Services\GuildService.cs" />
     <Compile Include="Assets\Scripts\Services\ItemService.cs" />
     <Compile Include="Assets\Scripts\Services\MapService.cs" />
     <Compile Include="Assets\Scripts\Services\QuestService.cs" />
@@ -116,6 +117,15 @@
     <Compile Include="Assets\Scripts\UI\Equip\UIEquipItem.cs" />
     <Compile Include="Assets\Scripts\UI\Friend\UIFriendItem.cs" />
     <Compile Include="Assets\Scripts\UI\Friend\UIFriendView.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UICreateGuildPrompt.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UIGuild.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UIGuildApplicantItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UIGuildApplicantList.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UIGuildInfo.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UIGuildItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UIGuildList.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UIGuildMemberItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Guild\UINoneGuildPrompt.cs" />
     <Compile Include="Assets\Scripts\UI\ListView\ListView.cs" />
     <Compile Include="Assets\Scripts\UI\Login\UILoginPage.cs" />
     <Compile Include="Assets\Scripts\UI\Login\UIRegisterPage.cs" />

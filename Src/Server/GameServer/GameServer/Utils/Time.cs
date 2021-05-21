@@ -140,22 +140,11 @@ class Time
         lastTick = _ticks;
     }
 
-    public static int timestamp
-    {
-        get { return GetTimeStamp(DateTime.Now); }
-    }
-
     public static DateTime GetTime(long timeStamp)
     {
         var startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
         long lTime = timeStamp * 10000000;
         TimeSpan upUntilNow = new TimeSpan(lTime);
         return startTime.Add(upUntilNow);
-    }
-
-    public static int GetTimeStamp(DateTime time)
-    {
-        var startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970,1,1));
-        return (int)(time - startTime).TotalSeconds;
     }
 }

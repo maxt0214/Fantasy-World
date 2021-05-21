@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Models;
 using Services;
+using Managers;
 
 public class UIMain : MonoSingleton<UIMain>
 {
@@ -48,6 +49,26 @@ public class UIMain : MonoSingleton<UIMain>
     public void OnClickOpenFriendSystem()
     {
         UIManager.Instance.Show<UIFriendView>();
+    }
+
+    public void OnClickGuild()
+    {
+        GuildManager.Instance.ShowGuild();
+    }
+
+    public void OnClickRide()
+    {
+
+    }
+
+    public void OnClickSetting()
+    {
+
+    }
+
+    public void OnClickSkill()
+    {
+
     }
 
     public void ShowTeamUI(bool ifShow)
