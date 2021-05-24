@@ -27,6 +27,8 @@ public class UIManager : Singleton<UIManager>
         UIResources.Add(typeof(UINoneGuildPrompt), new UIElement() { resource = "UI/UINoneGuildPrompt", cache = true });
         UIResources.Add(typeof(UICreateGuildPrompt), new UIElement() { resource = "UI/UICreateGuildPrompt", cache = true });
         UIResources.Add(typeof(UIGuildApplicantList), new UIElement() { resource = "UI/UIGuildApplicantList", cache = true });
+        UIResources.Add(typeof(UISetting), new UIElement() { resource = "UI/UISetting", cache = true });
+        UIResources.Add(typeof(UIChatPopUp), new UIElement() { resource = "UI/UIChatPopUp", cache = true });
     }
 
     public T Show<T>()

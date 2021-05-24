@@ -1,31 +1,32 @@
-2021-05-20 06:04:35,074 [ 1] INFO  Unity: Loading Manager Awake
-2021-05-20 06:04:35,098 [ 1] INFO  Unity: DataManager > DataManager()
-2021-05-20 06:04:44,571 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:user1234
-2021-05-20 06:04:44,573 [ 1] INFO  Unity: ConnectToServer() Start 
-2021-05-20 06:04:44,573 [ 1] INFO  Unity: DoConnect
-2021-05-20 06:04:44,575 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-20 06:04:44,576 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2021-05-23 11:02:57,688 [ 1] INFO  Unity: Loading Manager Awake
+2021-05-23 11:02:57,709 [ 1] INFO  Unity: DataManager > DataManager()
+2021-05-23 11:03:06,504 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-05-23 11:03:06,506 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-05-23 11:03:06,507 [ 1] INFO  Unity: DoConnect
+2021-05-23 11:03:06,508 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-05-23 11:03:06,509 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2021-05-20 06:04:44,579 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2021-05-20 06:04:45,625 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2021-05-20 06:04:45,626 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
-2021-05-20 06:04:45,629 [ 1] INFO  Unity: LoadLevel: CharacterCreation
-2021-05-20 06:04:45,841 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-20 06:04:50,088 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 2
-2021-05-20 06:04:50,261 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
-2021-05-20 06:04:50,262 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
-2021-05-20 06:04:50,263 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
-2021-05-20 06:04:50,273 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
-2021-05-20 06:04:50,274 [ 1] INFO  Unity: AddCharacter: 2: Brainless Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-05-20 06:04:50,278 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-05-20 06:04:50,696 [ 1] INFO  Unity: Character[Brainless] TID:1 ID:1 is created
-2021-05-20 06:04:50,734 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-20 06:05:00,190 [ 1] INFO  Unity: SendGuildList
-2021-05-20 06:05:00,255 [ 1] INFO  Unity: OnGuildList: Success
-2021-05-20 06:05:03,688 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-05-20 06:05:03,689 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-05-23 11:03:06,511 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-05-23 11:03:06,661 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-05-23 11:03:06,662 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-05-23 11:03:06,665 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-05-23 11:03:06,864 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-23 11:03:08,041 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
+2021-05-23 11:03:08,088 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-05-23 11:03:08,090 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
+2021-05-23 11:03:08,090 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
+2021-05-23 11:03:08,102 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
+2021-05-23 11:03:08,103 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
+2021-05-23 11:03:08,105 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-05-23 11:03:08,107 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-05-23 11:03:08,555 [ 1] INFO  Unity: Character[Elf] TID:3 ID:11 is created
+2021-05-23 11:03:08,614 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-23 11:03:08,674 [ 1] INFO  Unity: SendChannelSetTo: Local
+2021-05-23 11:03:11,289 [ 1] INFO  Unity: SendChannelSetTo: World
+2021-05-23 11:06:13,590 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 11 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
+2021-05-23 11:06:13,592 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-05-23 11:06:13,593 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
 
-2021-05-20 06:05:03,694 [ 1] INFO  Unity: Character_2_Brainless OnDestroy: ID: 1 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0

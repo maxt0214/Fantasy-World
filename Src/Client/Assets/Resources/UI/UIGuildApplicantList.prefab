@@ -1308,6 +1308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab27e037ecd96c4ca82b6880b1768a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Root: {fileID: 0}
   itemPrefab: {fileID: 3698376335420006370, guid: bd0eb4eec493bf74b9d13d97bf5f3b45,
     type: 3}
   applicantList: {fileID: 7290525463311883381}
@@ -1360,7 +1361,6 @@ GameObject:
   - component: {fileID: 7539814163616793853}
   - component: {fileID: 7539814163616793827}
   - component: {fileID: 7539814163616793826}
-  - component: {fileID: 7539814163616793824}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1424,24 +1424,3 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &7539814163616793824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7539814163616793852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9297c22fbbc8d5449aa2501af469f158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questTitle: {fileID: 0}
-  objective: {fileID: 0}
-  overview: {fileID: 0}
-  rewardItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  expReward: {fileID: 0}
-  goldReward: {fileID: 0}

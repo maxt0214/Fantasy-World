@@ -1,38 +1,64 @@
-2021-05-20 06:23:29,658 [ 1] INFO  Unity: Loading Manager Awake
-2021-05-20 06:23:29,679 [ 1] INFO  Unity: DataManager > DataManager()
-2021-05-20 06:23:38,072 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
-2021-05-20 06:23:38,073 [ 1] INFO  Unity: ConnectToServer() Start 
-2021-05-20 06:23:38,074 [ 1] INFO  Unity: DoConnect
-2021-05-20 06:23:38,075 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-20 06:23:38,076 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2021-05-24 00:00:22,088 [ 1] INFO  Unity: Loading Manager Awake
+2021-05-24 00:00:22,111 [ 1] INFO  Unity: DataManager > DataManager()
+2021-05-24 00:00:43,718 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-05-24 00:00:43,719 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-05-24 00:00:43,720 [ 1] INFO  Unity: DoConnect
+2021-05-24 00:00:43,722 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-05-24 00:00:43,723 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2021-05-20 06:23:38,079 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2021-05-20 06:23:38,239 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2021-05-20 06:23:38,240 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
-2021-05-20 06:23:38,243 [ 1] INFO  Unity: LoadLevel: CharacterCreation
-2021-05-20 06:23:38,416 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-20 06:23:39,597 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
-2021-05-20 06:23:39,645 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
-2021-05-20 06:23:39,647 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
-2021-05-20 06:23:39,648 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
-2021-05-20 06:23:39,657 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
-2021-05-20 06:23:39,657 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
-2021-05-20 06:23:39,659 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (11:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-05-20 06:23:39,662 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-05-20 06:23:40,065 [ 1] INFO  Unity: Character[Elf] TID:3 ID:11 is created
-2021-05-20 06:23:40,106 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-20 06:23:42,876 [ 1] INFO  Unity: SendGuildList
-2021-05-20 06:23:42,945 [ 1] INFO  Unity: OnGuildList: Success
-2021-05-20 06:23:44,882 [ 1] INFO  Unity: SendGuildApplicationDecision
-2021-05-20 06:23:44,982 [ 1] INFO  Unity: OnJoinGuild: Success
-2021-05-20 06:23:44,983 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
-2021-05-20 06:24:06,235 [ 1] INFO  Unity: SendGuildAdminAction
-2021-05-20 06:24:06,269 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
-2021-05-20 06:24:06,273 [ 1] INFO  Unity: OnGuildAdmin: Transfer Success
-2021-05-20 06:24:12,283 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-05-20 06:24:12,283 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-05-24 00:00:43,728 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-05-24 00:00:43,892 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-05-24 00:00:43,893 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-05-24 00:00:43,894 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-05-24 00:00:44,116 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-24 00:00:45,604 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
+2021-05-24 00:00:45,656 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-05-24 00:00:45,657 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
+2021-05-24 00:00:45,658 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
+2021-05-24 00:00:45,671 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
+2021-05-24 00:00:45,672 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:2
+2021-05-24 00:00:45,673 [ 1] INFO  Unity: AddCharacter: 2: Brainless Map: 1 Entity: (10:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-05-24 00:00:45,677 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-05-24 00:00:45,678 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-05-24 00:00:46,161 [ 1] INFO  Unity: Character[Brainless] TID:1 ID:10 is created
+2021-05-24 00:00:46,221 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-05-24 00:00:46,301 [ 1] INFO  Unity: SendChannelSetTo: Local
+2021-05-24 00:00:46,331 [ 1] INFO  Unity: Character[Elf] TID:3 ID:11 is created
+2021-05-24 00:00:57,895 [ 1] INFO  Unity: SendChannelSetTo: Private
+2021-05-24 00:00:59,401 [ 1] INFO  Unity: SendChannelSetTo: Local
+2021-05-24 00:01:10,140 [ 1] INFO  Unity: SendChat: Channel:Private Message:hello To:[2]:Brainless
+2021-05-24 00:01:32,165 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-05-24 00:01:32,166 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [10] EVENT:MoveFwd Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:300
+
+2021-05-24 00:01:32,376 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-05-24 00:01:32,376 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [10] EVENT:None Entity:(10:pos:(5065,4000,820),dir:(98,-18,0),spd:300
+
+2021-05-24 00:01:32,476 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-05-24 00:01:32,476 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [10] EVENT:None Entity:(10:pos:(5095,3994,820),dir:(93,-36,0),spd:300
+
+2021-05-24 00:01:32,575 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-05-24 00:01:32,576 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [10] EVENT:None Entity:(10:pos:(5125,3982,820),dir:(85,-53,0),spd:300
+
+2021-05-24 00:01:32,741 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-05-24 00:01:32,741 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [10] EVENT:None Entity:(10:pos:(5165,3952,820),dir:(74,-68,0),spd:300
+
+2021-05-24 00:01:32,923 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-05-24 00:01:32,924 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [10] EVENT:Idle Entity:(10:pos:(5209,3919,820),dir:(74,-68,0),spd:0
+
+2021-05-24 00:01:39,847 [ 1] INFO  Unity: OnCharacterLeaveMap: Character EntityID10
+2021-05-24 00:01:39,849 [ 1] INFO  Unity: RemoveCharacter:10
+2021-05-24 00:01:39,851 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
+2021-05-24 00:01:39,852 [ 1] INFO  Unity: Character_2_Brainless OnDestroy: ID: 10 Position: (5209, 3919, 820) Direction: (74, -68, 0) Speed: 0
+2021-05-24 00:01:42,434 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 11 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
+2021-05-24 00:01:42,435 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-05-24 00:01:42,436 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
 
-2021-05-20 06:24:12,286 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 11 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0

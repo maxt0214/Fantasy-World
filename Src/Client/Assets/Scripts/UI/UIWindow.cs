@@ -11,6 +11,8 @@ public abstract class UIWindow : MonoBehaviour
 
     public enum WindowResult { None = 0, Confirm = 1, No = 2 }
 
+    public GameObject Root;
+
     public void Close(WindowResult result = WindowResult.None)
     {
         UIManager.Instance.Close(Type);

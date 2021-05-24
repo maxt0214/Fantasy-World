@@ -25,12 +25,6 @@ public class UIMain : MonoSingleton<UIMain>
         playerLevel.text = User.Instance.CurrentCharacter.Level.ToString();
     }
 
-    public void OnClickReturnToCharaSelect()
-    {
-        SceneManager.Instance.LoadScene("CharacterCreation");
-        UserService.Instance.SendLeaveGame();
-    }
-
     public void OnClickOpenBag()
     {
         UIManager.Instance.Show<UIBagView>();
@@ -63,7 +57,7 @@ public class UIMain : MonoSingleton<UIMain>
 
     public void OnClickSetting()
     {
-
+        UIManager.Instance.Show<UISetting>();
     }
 
     public void OnClickSkill()

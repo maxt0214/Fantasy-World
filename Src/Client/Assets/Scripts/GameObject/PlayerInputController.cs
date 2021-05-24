@@ -4,6 +4,7 @@ using UnityEngine;
 using Entities;
 using SkillBridge.Message;
 using Services;
+using Managers;
 
 [RequireComponent(typeof(EntityController))]
 public class PlayerInputController : MonoBehaviour
@@ -46,6 +47,8 @@ public class PlayerInputController : MonoBehaviour
     {
         if (characterEntity == null)
             return;
+
+        if (InputManager.Instance.InputMode) return;
 
         float v = Input.GetAxis("Vertical");
         if(v > 0.01)
