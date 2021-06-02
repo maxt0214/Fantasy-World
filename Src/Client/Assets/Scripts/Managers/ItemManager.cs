@@ -22,7 +22,8 @@ namespace Managers
             {
                 var item = new Item(info);
                 Items.Add(item.Id,item);
-                Debug.LogFormat("ItemManager:Init[{0}]", item);
+                Debug.LogFormat("ItemManager:Init[{0}]", item.Id);
+                RideManager.Instance.AddRide(item);
             }
             StatusService.Instance.RegisterStatusNotify(StatusType.Item, OnItemNotify);
         }
@@ -53,6 +54,7 @@ namespace Managers
                 Items.Add(id,item);
             }
             BagManager.Instance.AddItem(id,value);
+            RideManager.Instance.AddRide(item);
         }
 
         private void RemoveItem(int id, int value)
@@ -64,6 +66,7 @@ namespace Managers
 
             item.Count -= value;
             BagManager.Instance.RemoveItem(id,value);
+            RideManager.Instance.RemoveRide(item);
         }
 
         public ItemDefine GetItem(int itemId)

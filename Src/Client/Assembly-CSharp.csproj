@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\GameObject\MapController.cs" />
     <Compile Include="Assets\Scripts\GameObject\NPCController.cs" />
     <Compile Include="Assets\Scripts\GameObject\PlayerInputController.cs" />
+    <Compile Include="Assets\Scripts\GameObject\RideController.cs" />
     <Compile Include="Assets\Scripts\GameObject\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\GameObject\TeleportObject.cs" />
     <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Scripts\Managers\LoadingManager.cs" />
     <Compile Include="Assets\Scripts\Managers\NPCManager.cs" />
     <Compile Include="Assets\Scripts\Managers\QuestManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\RideManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TeamManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TestManager.cs" />
@@ -109,6 +111,10 @@
     <Compile Include="Assets\Scripts\Services\StatusService.cs" />
     <Compile Include="Assets\Scripts\Services\TeamService.cs" />
     <Compile Include="Assets\Scripts\Services\UserService.cs" />
+    <Compile Include="Assets\Scripts\Sound\Config.cs" />
+    <Compile Include="Assets\Scripts\Sound\SoundDefine.cs" />
+    <Compile Include="Assets\Scripts\Sound\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Sound\UISystemConfig.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIBagView.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIIconItem.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterSelection\UICharacterCreateView.cs" />
@@ -145,6 +151,9 @@
     <Compile Include="Assets\Scripts\UI\Quest\UIQuestItem.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\UIQuestStatus.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\UIQuestSystem.cs" />
+    <Compile Include="Assets\Scripts\UI\Ride\UIRide.cs" />
+    <Compile Include="Assets\Scripts\UI\Ride\UIRideInfo.cs" />
+    <Compile Include="Assets\Scripts\UI\Ride\UIRideItem.cs" />
     <Compile Include="Assets\Scripts\UI\Shop\UIShop.cs" />
     <Compile Include="Assets\Scripts\UI\Shop\UIShopItem.cs" />
     <Compile Include="Assets\Scripts\UI\SpriteManager.cs" />

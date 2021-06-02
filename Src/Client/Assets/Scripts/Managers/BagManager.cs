@@ -1,14 +1,14 @@
 ﻿using Models;
 using SkillBridge.Message;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEngine.Events;
 
 namespace Managers
 {
     class BagManager : Singleton<BagManager>
     {
+        public UnityAction<int> OnBagChanged;
+
         public int unlocked;
         public BagItem[] Items;
 
@@ -124,11 +124,13 @@ namespace Managers
                     }
                 }
             }
+            if (OnBagChanged != null) OnBagChanged(id);
         }
 
         public void RemoveItem(int id, int value)
         {
 
+            if (OnBagChanged != null) OnBagChanged(id);
         }
     }
 }

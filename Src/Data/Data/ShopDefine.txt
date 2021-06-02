@@ -10,5 +10,11 @@
     "Name": "Grocery Store",
     "Description": "Everything You Want Store",
     "Status": 1
+  },
+  "3": {
+    "ID": 3,
+    "Name": "Ride Store",
+    "Description": "Want A Ride",
+    "Status": 1
   }
 }

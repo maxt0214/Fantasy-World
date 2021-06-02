@@ -651,5 +651,41 @@
     "SellPrice": 5,
     "StackLimit": 1,
     "Icon": "UI/ItemIcons/equip3017"
+  },
+  "8001": {
+    "ID": 8001,
+    "Name": "Tiger Of Iceberg",
+    "Description": "Its feather looks nice.",
+    "Type": "RIDE",
+    "Category": "Ride",
+    "Level": 1,
+    "Price": 1000,
+    "SellPrice": 500,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/ride8001"
+  },
+  "8002": {
+    "ID": 8002,
+    "Name": "Beast Of Nightmare",
+    "Description": "Our best recommandation is to stay indoor during night.(From adventurers who were teared apart by these big cats coming out late night)",
+    "Type": "RIDE",
+    "Category": "Ride",
+    "Level": 1,
+    "Price": 1000,
+    "SellPrice": 500,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/ride8002"
+  },
+  "8003": {
+    "ID": 8003,
+    "Name": "Big Cat",
+    "Description": "After all, a cat.",
+    "Type": "RIDE",
+    "Category": "Ride",
+    "Level": 1,
+    "Price": 1000,
+    "SellPrice": 500,
+    "StackLimit": 1,
+    "Icon": "UI/ItemIcons/ride8003"
   }
 }

@@ -29,10 +29,13 @@ public class UIManager : Singleton<UIManager>
         UIResources.Add(typeof(UIGuildApplicantList), new UIElement() { resource = "UI/UIGuildApplicantList", cache = true });
         UIResources.Add(typeof(UISetting), new UIElement() { resource = "UI/UISetting", cache = true });
         UIResources.Add(typeof(UIChatPopUp), new UIElement() { resource = "UI/UIChatPopUp", cache = true });
+        UIResources.Add(typeof(UIRide), new UIElement() { resource = "UI/UIRide", cache = true });
+        UIResources.Add(typeof(UISystemConfig), new UIElement() { resource = "UI/UISystemConfig", cache = true });
     }
 
     public T Show<T>()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Open);
         var type = typeof(T);
         if(UIResources.ContainsKey(type))
         {
@@ -56,7 +59,8 @@ public class UIManager : Singleton<UIManager>
 
     public void Close(Type type)
     {
-        if(UIResources.ContainsKey(type))
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
+        if (UIResources.ContainsKey(type))
         {
             var info = UIResources[type];
             if(info.cache)

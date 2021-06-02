@@ -27,6 +27,7 @@ public class UIRegisterPage : MonoBehaviour {
 	//Will take care of register
 	public void OnClickRegister()
 	{
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 		//Validate user name and password
 		if (!UserNameValidated(userName.text))
 			return;
@@ -40,6 +41,7 @@ public class UIRegisterPage : MonoBehaviour {
 
 	public void OnRegister(SkillBridge.Message.Result res, string errMsg)
     {
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 		Debug.LogFormat("Registeration State: {0}, Error: {1}", res.ToString(), errMsg);
 		
 		if(res == SkillBridge.Message.Result.Failed)

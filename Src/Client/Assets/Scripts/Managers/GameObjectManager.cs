@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 using Models;
+using Common.Data;
 
 namespace Managers {
     public class GameObjectManager : MonoSingleton<GameObjectManager>
@@ -79,6 +80,7 @@ namespace Managers {
             {
                 ec.entity = chara;
                 ec.isLocalPlayer = chara.IsLocalPlayer;
+                ec.Ride(chara.Info.Ride);
             }
 
             var pc = gameObject.GetComponent<PlayerInputController>();
@@ -86,7 +88,7 @@ namespace Managers {
             {
                 if (chara.IsLocalPlayer)
                 {
-                    User.Instance.currentCharacterObj = gameObject;
+                    User.Instance.currentCharacterObj = pc;
                     MainPlayerCamera.Instance.player = gameObject;
                     pc.enabled = true;
                     pc.characterEntity = chara;
@@ -97,6 +99,26 @@ namespace Managers {
                     pc.enabled = false;
                 }
             }
+        }
+
+        public RideController LoadRide(int rideId, Transform parent)
+        {
+            RideDefine ride;
+            DataManager.Instance.Rides.TryGetValue(rideId,out ride);
+            if(ride == null)
+            {
+                Debug.LogErrorFormat("RideDefine[{0}] Does Not Exit",rideId);
+                return null;
+            }
+            Object obj = Resloader.Load<Object>(ride.Resource);
+            if(obj == null)
+            {
+                Debug.LogErrorFormat("Ride[{0}] Resource:{1} Does Not Exist", rideId, ride.Resource);
+                return null;
+            }
+            GameObject gameObj = (GameObject)Instantiate(obj,parent);
+            gameObj.name = "Ride_" + ride.ID + "_" + ride.Name;
+            return gameObj.GetComponent<RideController>();
         }
     }
 }

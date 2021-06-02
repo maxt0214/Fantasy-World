@@ -33,7 +33,7 @@ public class UIBagView : UIWindow
             }
         }
         StartCoroutine(InitBag());
-        //ItemManager.Instance.ItemChanged += OnReset;
+        BagManager.Instance.OnBagChanged += OnReset;
     }
 
     IEnumerator InitBag()
@@ -80,7 +80,6 @@ public class UIBagView : UIWindow
 
     public void OnReset(int itemId)
     {
-        BagManager.Instance.Reset();
         Clear();
         StartCoroutine(InitBag());
     }

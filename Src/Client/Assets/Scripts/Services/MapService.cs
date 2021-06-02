@@ -72,12 +72,13 @@ namespace Services
                 var map = DataManager.Instance.Maps[mapId];
                 User.Instance.currMap = map;
                 SceneManager.Instance.LoadScene(map.Resource);
+                SoundManager.Instance.PlayMusic(map.Music);
             }
             else
                 Debug.LogErrorFormat("Map with ID:{0} does not exist!", mapId);
         }
 
-        public void SendMapEntitySync(EntityEvent entityEvent, NEntity entityData)
+        public void SendMapEntitySync(EntityEvent entityEvent, NEntity entityData, int param)
         {
             Debug.LogFormat("MapEntitySnc Request: Entity ID:{0} Pos:{1} Dir:{2} Spd:{3} Event:{4}", entityData.Id, entityData.Position, entityData.Direction, entityData.Speed, entityEvent);
             NetMessage message = new NetMessage();
@@ -87,7 +88,8 @@ namespace Services
             {
                 Id = entityData.Id,
                 Event = entityEvent,
-                Entity = entityData
+                Entity = entityData,
+                Param = param,
             };
             NetClient.Instance.SendMessage(message);
         }

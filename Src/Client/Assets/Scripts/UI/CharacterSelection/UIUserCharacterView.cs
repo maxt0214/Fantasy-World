@@ -56,7 +56,8 @@ public class UIUserCharacterView : MonoSingleton<UIUserCharacterView>
 
     public void OnClickStartAdventure()
     {
-        if(selectView.currEntry.ID != null) 
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+        if (selectView.currEntry.ID != null) 
         {
             UserService.Instance.SendEnterGame((int)selectView.currEntry.ID);
         }
@@ -65,6 +66,7 @@ public class UIUserCharacterView : MonoSingleton<UIUserCharacterView>
     #region Character Create Funcs
     public void OnClickSwitchCharacterPreview(int charaClass)
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
         int charaIndex = charaClass - 1;
 
         charaView.currChar = charaClass;
@@ -73,6 +75,7 @@ public class UIUserCharacterView : MonoSingleton<UIUserCharacterView>
 
     public void OnClickCreateCharacter()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
         createView.CreateCharacter();
     }
 

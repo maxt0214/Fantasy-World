@@ -1,32 +1,20 @@
-2021-05-23 23:13:59,617 [ 1] INFO  Unity: Loading Manager Awake
-2021-05-23 23:13:59,641 [ 1] INFO  Unity: DataManager > DataManager()
-2021-05-23 23:14:13,452 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
-2021-05-23 23:14:13,454 [ 1] INFO  Unity: ConnectToServer() Start 
-2021-05-23 23:14:13,454 [ 1] INFO  Unity: DoConnect
-2021-05-23 23:14:13,456 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-23 23:14:13,457 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2021-06-02 07:22:20,679 [ 1] INFO  Unity: Loading Manager Awake
+2021-06-02 07:22:20,704 [ 1] INFO  Unity: DataManager > DataManager()
+2021-06-02 07:22:20,859 [ 1] WARN  Unity: Exposed name does not exist: SoundVolume
+UnityEngine.Audio.AudioMixer:SetFloat(String, Single)
+SoundManager:SetVolume(String, Int32) (at Assets/Scripts/Sound/SoundManager.cs:81)
+SoundManager:SoundMute(Boolean) (at Assets/Scripts/Sound/SoundManager.cs:75)
+SoundManager:set_SoundOn(Boolean) (at Assets/Scripts/Sound/SoundManager.cs:34)
+SoundManager:Start() (at Assets/Scripts/Sound/SoundManager.cs:63)
 
-2021-05-23 23:14:13,460 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2021-05-23 23:14:14,516 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2021-05-23 23:14:14,516 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
-2021-05-23 23:14:14,519 [ 1] INFO  Unity: LoadLevel: CharacterCreation
-2021-05-23 23:14:14,705 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-23 23:14:16,282 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
-2021-05-23 23:14:55,066 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
-2021-05-23 23:14:55,069 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
-2021-05-23 23:14:55,070 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
-2021-05-23 23:14:55,084 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
-2021-05-23 23:15:03,279 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
-2021-05-23 23:15:03,281 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-05-23 23:15:03,285 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-05-23 23:15:03,760 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
-2021-05-23 23:15:03,833 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-23 23:15:03,922 [ 1] INFO  Unity: SendChannelSetTo: Local
-2021-05-23 23:15:48,432 [ 1] INFO  Unity: SendChat: Channel:Local Message:hello To:[0]:
-2021-05-23 23:18:09,229 [ 1] INFO  Unity: SendChat: Channel:Local Message:hello To:[0]:
-2021-05-23 23:18:14,619 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-05-23 23:18:14,625 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-05-23 23:18:14,628 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-06-02 07:22:20,860 [ 1] WARN  Unity: Exposed name does not exist: SoundVolume
+UnityEngine.Audio.AudioMixer:SetFloat(String, Single)
+SoundManager:SetVolume(String, Int32) (at Assets/Scripts/Sound/SoundManager.cs:81)
+SoundManager:set_SoundVolume(Int32) (at Assets/Scripts/Sound/SoundManager.cs:56)
+SoundManager:Start() (at Assets/Scripts/Sound/SoundManager.cs:65)
+
+2021-06-02 07:22:42,930 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-06-02 07:22:42,931 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

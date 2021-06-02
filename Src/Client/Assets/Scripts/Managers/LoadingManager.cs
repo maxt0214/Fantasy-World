@@ -40,6 +40,8 @@ public class LoadingManager : MonoBehaviour {
 
 		ShopManager.Instance.Init();
 
+		SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
+
 		//TODO: resource load and percentage update
 
 		//Now loading page fades away and login page shows

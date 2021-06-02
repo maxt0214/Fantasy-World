@@ -1,64 +1,251 @@
-2021-05-24 00:00:22,088 [ 1] INFO  Unity: Loading Manager Awake
-2021-05-24 00:00:22,111 [ 1] INFO  Unity: DataManager > DataManager()
-2021-05-24 00:00:43,718 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
-2021-05-24 00:00:43,719 [ 1] INFO  Unity: ConnectToServer() Start 
-2021-05-24 00:00:43,720 [ 1] INFO  Unity: DoConnect
-2021-05-24 00:00:43,722 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2021-05-24 00:00:43,723 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2021-06-02 07:54:47,911 [ 1] INFO  Unity: Loading Manager Awake
+2021-06-02 07:54:47,930 [ 1] INFO  Unity: DataManager > DataManager()
+2021-06-02 07:54:55,272 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-06-02 07:54:55,273 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-06-02 07:54:55,274 [ 1] INFO  Unity: DoConnect
+2021-06-02 07:54:55,276 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-06-02 07:54:55,277 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2021-05-24 00:00:43,728 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2021-05-24 00:00:43,892 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2021-05-24 00:00:43,893 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
-2021-05-24 00:00:43,894 [ 1] INFO  Unity: LoadLevel: CharacterCreation
-2021-05-24 00:00:44,116 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-24 00:00:45,604 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
-2021-05-24 00:00:45,656 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
-2021-05-24 00:00:45,657 [ 1] INFO  Unity: ItemManager:Init[Item[1] Count:10]
-2021-05-24 00:00:45,658 [ 1] INFO  Unity: ItemManager:Init[Item[2] Count:10]
-2021-05-24 00:00:45,671 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
-2021-05-24 00:00:45,672 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:2
-2021-05-24 00:00:45,673 [ 1] INFO  Unity: AddCharacter: 2: Brainless Map: 1 Entity: (10:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-05-24 00:00:45,677 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (11:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2021-05-24 00:00:45,678 [ 1] INFO  Unity: LoadLevel: MainCity
-2021-05-24 00:00:46,161 [ 1] INFO  Unity: Character[Brainless] TID:1 ID:10 is created
-2021-05-24 00:00:46,221 [ 1] INFO  Unity: LevelLoadCompleted:1
-2021-05-24 00:00:46,301 [ 1] INFO  Unity: SendChannelSetTo: Local
-2021-05-24 00:00:46,331 [ 1] INFO  Unity: Character[Elf] TID:3 ID:11 is created
-2021-05-24 00:00:57,895 [ 1] INFO  Unity: SendChannelSetTo: Private
-2021-05-24 00:00:59,401 [ 1] INFO  Unity: SendChannelSetTo: Local
-2021-05-24 00:01:10,140 [ 1] INFO  Unity: SendChat: Channel:Private Message:hello To:[2]:Brainless
-2021-05-24 00:01:32,165 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
-2021-05-24 00:01:32,166 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
-   [10] EVENT:MoveFwd Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:300
-
-2021-05-24 00:01:32,376 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
-2021-05-24 00:01:32,376 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
-   [10] EVENT:None Entity:(10:pos:(5065,4000,820),dir:(98,-18,0),spd:300
-
-2021-05-24 00:01:32,476 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
-2021-05-24 00:01:32,476 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
-   [10] EVENT:None Entity:(10:pos:(5095,3994,820),dir:(93,-36,0),spd:300
-
-2021-05-24 00:01:32,575 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
-2021-05-24 00:01:32,576 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
-   [10] EVENT:None Entity:(10:pos:(5125,3982,820),dir:(85,-53,0),spd:300
-
-2021-05-24 00:01:32,741 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
-2021-05-24 00:01:32,741 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
-   [10] EVENT:None Entity:(10:pos:(5165,3952,820),dir:(74,-68,0),spd:300
-
-2021-05-24 00:01:32,923 [ 1] INFO  Unity: OnEntityChange: EntityID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
-2021-05-24 00:01:32,924 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
-   [10] EVENT:Idle Entity:(10:pos:(5209,3919,820),dir:(74,-68,0),spd:0
-
-2021-05-24 00:01:39,847 [ 1] INFO  Unity: OnCharacterLeaveMap: Character EntityID10
-2021-05-24 00:01:39,849 [ 1] INFO  Unity: RemoveCharacter:10
-2021-05-24 00:01:39,851 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
-2021-05-24 00:01:39,852 [ 1] INFO  Unity: Character_2_Brainless OnDestroy: ID: 10 Position: (5209, 3919, 820) Direction: (74, -68, 0) Speed: 0
-2021-05-24 00:01:42,434 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 11 Position: (5000, 4000, 820) Direction: (100, 0, 0) Speed: 0
-2021-05-24 00:01:42,435 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-05-24 00:01:42,436 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-06-02 07:54:55,280 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-06-02 07:54:55,445 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-06-02 07:54:55,448 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-06-02 07:54:55,451 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-06-02 07:54:55,639 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-06-02 07:54:57,115 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
+2021-06-02 07:54:57,172 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-06-02 07:54:57,175 [ 1] INFO  Unity: ItemManager:Init[1]
+2021-06-02 07:54:57,176 [ 1] INFO  Unity: ItemManager:Init[2]
+2021-06-02 07:54:57,176 [ 1] INFO  Unity: ItemManager:Init[8001]
+2021-06-02 07:54:57,176 [ 1] INFO  Unity: ItemManager:Init[8002]
+2021-06-02 07:54:57,177 [ 1] INFO  Unity: ItemManager:Init[8003]
+2021-06-02 07:54:57,188 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
+2021-06-02 07:54:57,189 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
+2021-06-02 07:54:57,191 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (10:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-06-02 07:54:57,194 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-06-02 07:54:57,619 [ 1] INFO  Unity: Character[Elf] TID:3 ID:10 is created
+2021-06-02 07:54:57,671 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-06-02 07:54:57,749 [ 1] INFO  Unity: SendChannelSetTo: Local
+2021-06-02 07:54:58,200 [ 1] INFO  Unity: MoveForward
+2021-06-02 07:54:58,202 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-06-02 07:54:58,896 [ 1] INFO  Unity: SetDirection:(98, -20, 0)
+2021-06-02 07:54:58,897 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:54:58,995 [ 1] INFO  Unity: SetDirection:(92, -40, 0)
+2021-06-02 07:54:58,996 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:54:59,095 [ 1] INFO  Unity: SetDirection:(82, -58, 0)
+2021-06-02 07:54:59,095 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:54:59,211 [ 1] INFO  Unity: SetDirection:(70, -71, 0)
+2021-06-02 07:54:59,211 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:54:59,483 [ 1] INFO  Unity: Stop
+2021-06-02 07:54:59,483 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-06-02 07:55:08,391 [ 1] INFO  Unity: MoveForward
+2021-06-02 07:55:08,391 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-06-02 07:55:08,605 [ 1] INFO  Unity: SetDirection:(56, -83, 0)
+2021-06-02 07:55:08,606 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:08,789 [ 1] INFO  Unity: SetDirection:(40, -92, 0)
+2021-06-02 07:55:08,789 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:08,888 [ 1] INFO  Unity: SetDirection:(21, -98, 0)
+2021-06-02 07:55:08,888 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:08,987 [ 1] INFO  Unity: SetDirection:(1, -100, 0)
+2021-06-02 07:55:08,987 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:09,070 [ 1] INFO  Unity: SetDirection:(-17, -99, 0)
+2021-06-02 07:55:09,070 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:09,168 [ 1] INFO  Unity: SetDirection:(-37, -93, 0)
+2021-06-02 07:55:09,169 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:09,269 [ 1] INFO  Unity: SetDirection:(-54, -84, 0)
+2021-06-02 07:55:09,269 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:09,401 [ 1] INFO  Unity: SetDirection:(-68, -73, 0)
+2021-06-02 07:55:09,401 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:10,396 [ 1] INFO  Unity: SetPosition:(5213, 3423, 807)
+2021-06-02 07:55:10,397 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:10,693 [ 1] INFO  Unity: Stop
+2021-06-02 07:55:10,693 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-06-02 07:55:11,788 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-06-02 07:55:11,791 [ 1] INFO  Unity: UserLeaveGameRequest::Character ID: 1 Name:Elf
+2021-06-02 07:55:11,822 [ 1] INFO  Unity: OnCharacterLeaveMap: Character EntityID10
+2021-06-02 07:55:11,823 [ 1] INFO  Unity: RemoveCharacter:10
+2021-06-02 07:55:11,826 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
+2021-06-02 07:55:11,827 [ 1] INFO  Unity: OnUserLeaveGame:Success [None]
+2021-06-02 07:55:11,828 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 10 Position: (5159, 3351, 807) Direction: (-68, -73, 0) Speed: 0
+2021-06-02 07:55:11,966 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-06-02 07:55:13,835 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
+2021-06-02 07:55:13,865 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-06-02 07:55:13,865 [ 1] INFO  Unity: ItemManager:Init[1]
+2021-06-02 07:55:13,866 [ 1] INFO  Unity: ItemManager:Init[2]
+2021-06-02 07:55:13,867 [ 1] INFO  Unity: ItemManager:Init[8001]
+2021-06-02 07:55:13,867 [ 1] INFO  Unity: ItemManager:Init[8002]
+2021-06-02 07:55:13,867 [ 1] INFO  Unity: ItemManager:Init[8003]
+2021-06-02 07:55:13,867 [ 1] INFO  Unity: OnGuildInfo: Success Guild[3]:Dragon Slayers
+2021-06-02 07:55:13,868 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
+2021-06-02 07:55:13,868 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-06-02 07:55:13,871 [ 1] INFO  Unity: Character[Elf] TID:3 ID:11 is created
+2021-06-02 07:55:13,872 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-06-02 07:55:14,291 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-06-02 07:55:14,334 [ 1] INFO  Unity: MoveForward
+2021-06-02 07:55:14,335 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-06-02 07:55:15,412 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
+2021-06-02 07:55:15,412 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:15,511 [ 1] INFO  Unity: SetDirection:(93, 37, 0)
+2021-06-02 07:55:15,511 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:15,610 [ 1] INFO  Unity: SetDirection:(83, 55, 0)
+2021-06-02 07:55:15,611 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:15,710 [ 1] INFO  Unity: SetDirection:(70, 71, 0)
+2021-06-02 07:55:15,710 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:15,792 [ 1] INFO  Unity: SetDirection:(57, 82, 0)
+2021-06-02 07:55:15,793 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:15,875 [ 1] INFO  Unity: SetDirection:(41, 91, 0)
+2021-06-02 07:55:15,875 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:15,975 [ 1] INFO  Unity: SetDirection:(22, 98, 0)
+2021-06-02 07:55:15,975 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:16,058 [ 1] INFO  Unity: SetDirection:(4, 100, 0)
+2021-06-02 07:55:16,058 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:16,157 [ 1] INFO  Unity: SetDirection:(-17, 99, 0)
+2021-06-02 07:55:16,157 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:16,257 [ 1] INFO  Unity: SetDirection:(-37, 93, 0)
+2021-06-02 07:55:16,257 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:16,357 [ 1] INFO  Unity: SetDirection:(-55, 83, 0)
+2021-06-02 07:55:16,357 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:16,389 [ 1] INFO  Unity: Stop
+2021-06-02 07:55:16,389 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-06-02 07:55:16,774 [ 1] INFO  Unity: SetDirection:(-69, 72, 0)
+2021-06-02 07:55:16,775 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-06-02 07:55:33,927 [ 1] INFO  Unity: MoveForward
+2021-06-02 07:55:33,927 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-06-02 07:55:35,121 [ 1] INFO  Unity: SetPosition:(5186, 4479, 807)
+2021-06-02 07:55:35,122 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:35,386 [ 1] INFO  Unity: Stop
+2021-06-02 07:55:35,386 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-06-02 07:55:37,069 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Ride
+2021-06-02 07:55:38,025 [ 1] INFO  Unity: MoveForward
+2021-06-02 07:55:38,026 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-06-02 07:55:38,588 [ 1] INFO  Unity: SetDirection:(-81, 58, 0)
+2021-06-02 07:55:38,588 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:38,737 [ 1] INFO  Unity: SetDirection:(-91, 41, 0)
+2021-06-02 07:55:38,738 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:38,837 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
+2021-06-02 07:55:38,837 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:38,928 [ 1] INFO  Unity: SetDirection:(-100, 3, 0)
+2021-06-02 07:55:38,928 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:39,144 [ 1] INFO  Unity: SetDirection:(-99, -14, 0)
+2021-06-02 07:55:39,144 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:40,568 [ 1] INFO  Unity: SetDirection:(-95, -32, 0)
+2021-06-02 07:55:40,568 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:40,668 [ 1] INFO  Unity: SetDirection:(-87, -49, 0)
+2021-06-02 07:55:40,668 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:40,767 [ 1] INFO  Unity: SetDirection:(-75, -66, 0)
+2021-06-02 07:55:40,768 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:40,866 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
+2021-06-02 07:55:40,867 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:40,966 [ 1] INFO  Unity: SetDirection:(-42, -91, 0)
+2021-06-02 07:55:40,966 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:41,066 [ 1] INFO  Unity: SetDirection:(-22, -97, 0)
+2021-06-02 07:55:41,066 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:41,181 [ 1] INFO  Unity: SetDirection:(-2, -100, 0)
+2021-06-02 07:55:41,182 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:41,280 [ 1] INFO  Unity: SetDirection:(17, -99, 0)
+2021-06-02 07:55:41,280 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:41,479 [ 1] INFO  Unity: SetDirection:(34, -94, 0)
+2021-06-02 07:55:41,480 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:42,572 [ 1] INFO  Unity: SetDirection:(17, -99, 0)
+2021-06-02 07:55:42,573 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:42,672 [ 1] INFO  Unity: SetDirection:(-1, -100, 0)
+2021-06-02 07:55:42,672 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:42,755 [ 1] INFO  Unity: SetDirection:(-19, -98, 0)
+2021-06-02 07:55:42,755 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:42,854 [ 1] INFO  Unity: SetDirection:(-39, -92, 0)
+2021-06-02 07:55:42,854 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:42,954 [ 1] INFO  Unity: SetDirection:(-56, -83, 0)
+2021-06-02 07:55:42,954 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:43,069 [ 1] INFO  Unity: SetDirection:(-70, -72, 0)
+2021-06-02 07:55:43,070 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:43,816 [ 1] INFO  Unity: SetPosition:(4258, 3817, 807)
+2021-06-02 07:55:43,816 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,030 [ 1] INFO  Unity: SetDirection:(-81, -58, 0)
+2021-06-02 07:55:44,030 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,163 [ 1] INFO  Unity: SetDirection:(-91, -41, 0)
+2021-06-02 07:55:44,163 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,263 [ 1] INFO  Unity: SetDirection:(-98, -21, 0)
+2021-06-02 07:55:44,263 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,362 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
+2021-06-02 07:55:44,363 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,461 [ 1] INFO  Unity: SetDirection:(-98, 20, 0)
+2021-06-02 07:55:44,461 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,544 [ 1] INFO  Unity: SetDirection:(-93, 37, 0)
+2021-06-02 07:55:44,544 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,627 [ 1] INFO  Unity: SetDirection:(-85, 53, 0)
+2021-06-02 07:55:44,627 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,726 [ 1] INFO  Unity: SetDirection:(-72, 69, 0)
+2021-06-02 07:55:44,726 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,825 [ 1] INFO  Unity: SetDirection:(-56, 83, 0)
+2021-06-02 07:55:44,826 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:44,925 [ 1] INFO  Unity: SetDirection:(-38, 93, 0)
+2021-06-02 07:55:44,926 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:45,024 [ 1] INFO  Unity: SetDirection:(-18, 98, 0)
+2021-06-02 07:55:45,024 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:45,124 [ 1] INFO  Unity: SetDirection:(1, 100, 0)
+2021-06-02 07:55:45,124 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:45,307 [ 1] INFO  Unity: SetDirection:(18, 98, 0)
+2021-06-02 07:55:45,307 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:46,234 [ 1] INFO  Unity: SetDirection:(37, 93, 0)
+2021-06-02 07:55:46,234 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:46,333 [ 1] INFO  Unity: SetDirection:(53, 85, 0)
+2021-06-02 07:55:46,334 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:46,416 [ 1] INFO  Unity: SetDirection:(67, 74, 0)
+2021-06-02 07:55:46,416 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:46,515 [ 1] INFO  Unity: SetDirection:(80, 60, 0)
+2021-06-02 07:55:46,516 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:46,681 [ 1] INFO  Unity: SetDirection:(90, 44, 0)
+2021-06-02 07:55:46,681 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:47,178 [ 1] INFO  Unity: SetDirection:(80, 59, 0)
+2021-06-02 07:55:47,179 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:47,278 [ 1] INFO  Unity: SetDirection:(68, 74, 0)
+2021-06-02 07:55:47,278 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:47,377 [ 1] INFO  Unity: SetDirection:(54, 84, 0)
+2021-06-02 07:55:47,377 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:47,460 [ 1] INFO  Unity: SetDirection:(38, 92, 0)
+2021-06-02 07:55:47,460 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:47,559 [ 1] INFO  Unity: SetDirection:(20, 98, 0)
+2021-06-02 07:55:47,560 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:47,907 [ 1] INFO  Unity: SetDirection:(38, 93, 0)
+2021-06-02 07:55:47,908 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:48,006 [ 1] INFO  Unity: SetDirection:(56, 83, 0)
+2021-06-02 07:55:48,007 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:48,106 [ 1] INFO  Unity: SetDirection:(72, 70, 0)
+2021-06-02 07:55:48,106 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:48,188 [ 1] INFO  Unity: SetDirection:(83, 56, 0)
+2021-06-02 07:55:48,189 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:48,288 [ 1] INFO  Unity: SetDirection:(93, 38, 0)
+2021-06-02 07:55:48,289 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:48,371 [ 1] INFO  Unity: SetDirection:(98, 21, 0)
+2021-06-02 07:55:48,371 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:48,470 [ 1] INFO  Unity: SetDirection:(100, 2, 0)
+2021-06-02 07:55:48,470 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:48,620 [ 1] INFO  Unity: SetDirection:(99, -15, 0)
+2021-06-02 07:55:48,620 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:49,001 [ 1] INFO  Unity: SetDirection:(94, -34, 0)
+2021-06-02 07:55:49,001 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:49,116 [ 1] INFO  Unity: SetDirection:(85, -52, 0)
+2021-06-02 07:55:49,116 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:49,199 [ 1] INFO  Unity: SetDirection:(75, -66, 0)
+2021-06-02 07:55:49,199 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:49,283 [ 1] INFO  Unity: SetDirection:(62, -78, 0)
+2021-06-02 07:55:49,283 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:49,382 [ 1] INFO  Unity: SetDirection:(46, -89, 0)
+2021-06-02 07:55:49,383 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:49,554 [ 1] INFO  Unity: SetDirection:(29, -96, 0)
+2021-06-02 07:55:49,554 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-06-02 07:55:49,686 [ 1] INFO  Unity: Stop
+2021-06-02 07:55:49,687 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-06-02 07:55:55,883 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Ride
+2021-06-02 07:55:55,885 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Ride
+2021-06-02 07:55:58,824 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Ride
+2021-06-02 07:56:00,562 [ 1] INFO  Unity: MoveForward
+2021-06-02 07:56:00,563 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-06-02 07:56:01,566 [ 1] INFO  Unity: Stop
+2021-06-02 07:56:01,566 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-06-02 07:56:24,891 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-06-02 07:56:24,892 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
 
+2021-06-02 07:56:24,902 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 11 Position: (4798, 4182, 807) Direction: (29, -96, 0) Speed: 0

@@ -30,6 +30,7 @@ public class UIMessageBox : MonoBehaviour {
 
     public void Init(string title, string message, MessageBoxType type = MessageBoxType.Information, string btnOK = "", string btnCancel = "")
     {
+        SoundManager.Instance.PlaySound(type == MessageBoxType.Error ? SoundDefine.SFX_Message_Error : SoundDefine.SFX_Message_Info);
         if (!string.IsNullOrEmpty(title)) this.title.text = title;
         this.message.text = message;
         icons[0].enabled = type == MessageBoxType.Information;
@@ -47,6 +48,7 @@ public class UIMessageBox : MonoBehaviour {
 
     void OnClickYes()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Confirm);
         Destroy(gameObject);
         if (OnYes != null)
             OnYes();
@@ -54,6 +56,7 @@ public class UIMessageBox : MonoBehaviour {
 
     void OnClickNo()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
         Destroy(gameObject);
         if (OnNo != null)
             OnNo();

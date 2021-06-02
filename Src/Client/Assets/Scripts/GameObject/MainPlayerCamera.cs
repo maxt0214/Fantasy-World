@@ -14,9 +14,9 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     private void LateUpdate()
     {
-        if (player == null)
+        if (player == null && User.Instance.currentCharacterObj != null)
         {
-            player = User.Instance.currentCharacterObj;
+            player = User.Instance.currentCharacterObj.gameObject;
         }
         if (player == null) return;
 

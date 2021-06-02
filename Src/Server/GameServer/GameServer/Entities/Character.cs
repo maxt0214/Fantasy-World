@@ -27,6 +27,19 @@ namespace GameServer.Entities
 
         public Chat chat;
 
+        public int ride
+        {
+            get
+            {
+                return Info.Ride;
+            }
+            set
+            {
+                if (Info.Ride == value) return;
+                Info.Ride = value;
+            }
+        }
+
         public Character(CharacterType type,TCharacter cha):
             base(new Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Vector3Int(100,0,0))
         {
@@ -42,6 +55,7 @@ namespace GameServer.Entities
             Info.Class = (CharacterClass)cha.Class;
             Info.mapId = cha.MapID;
             Info.Gold = cha.Gold;
+            Info.Ride = 0;
             Info.Entity = EntityData;
             Define = DataManager.Instance.Characters[Info.ConfigId];
 

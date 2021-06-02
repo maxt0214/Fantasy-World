@@ -25,6 +25,7 @@ public class UILoginPage : MonoBehaviour {
 	//Will take care of user log in
 	public void OnClickLogin()
     {
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 		if (string.IsNullOrEmpty(userName.text))
 		{
 			MessageBox.Show("Please Enter Your User Name");
@@ -42,6 +43,7 @@ public class UILoginPage : MonoBehaviour {
 
 	public void OnLogin(SkillBridge.Message.Result res, string errMsg)
 	{
+		SoundManager.Instance.PlayMusic(SoundDefine.Music_Select);
 		if (res == SkillBridge.Message.Result.Failed)
 		{
 			MessageBox.Show(errMsg + " Login Failed.");

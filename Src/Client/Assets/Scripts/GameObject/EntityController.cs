@@ -4,6 +4,7 @@ using UnityEngine;
 using Entities;
 using SkillBridge.Message;
 using Managers;
+using System;
 
 public class EntityController : MonoBehaviour , IEntityNotify
 {
@@ -25,6 +26,10 @@ public class EntityController : MonoBehaviour , IEntityNotify
     public float jumpForce = 3f;
 
     public bool isLocalPlayer = false;
+
+    public RideController rideController;
+    public int currRide = 0;
+    public Transform rideBone;
 
     private void Start()
     {
@@ -70,7 +75,7 @@ public class EntityController : MonoBehaviour , IEntityNotify
             UpdateTransform();
     }
 
-    public void OnEntityEvent(EntityEvent entityEvent)
+    public void OnEntityEvent(EntityEvent entityEvent, int param)
     {
         switch(entityEvent)
         {
@@ -87,7 +92,11 @@ public class EntityController : MonoBehaviour , IEntityNotify
             case EntityEvent.Jump:
                 anim.SetTrigger("Jump");
                 break;
+            case EntityEvent.Ride:
+                Ride(param);
+                break;
         }
+        if (rideController != null) rideController.OnEntityEvent(entityEvent, param);
     }
 
     public void OnEntityRemoved()
@@ -100,5 +109,34 @@ public class EntityController : MonoBehaviour , IEntityNotify
     public void OnEntityChange(Entity entity)
     {
         Debug.LogFormat("OnEntityChange: EntityID:{0} Pos:{1} Dir:{2}", entity.entityId, entity.EntityData.Position, entity.EntityData.Direction);
+    }
+
+    public void Ride(int rideId)
+    {
+        if (currRide == rideId) return;
+        currRide = rideId;
+        if(rideId > 0)
+        {
+            rideController = GameObjectManager.Instance.LoadRide(rideId,transform);
+        } else
+        {
+            Destroy(rideController.gameObject);
+            rideController = null;
+        }
+
+        if(rideController == null)
+        {
+            anim.transform.localPosition = Vector3.zero;
+            anim.SetLayerWeight(1,0);
+        } else
+        {
+            rideController.SetRider(this);
+            anim.SetLayerWeight(1,1);
+        }
+    }
+
+    public void SetRidePosition(Vector3 pos)
+    {
+        anim.transform.position = pos + (anim.transform.position - rideBone.position);
     }
 }

@@ -32,6 +32,7 @@ public class UIInputBox : MonoBehaviour
 
     public void Init(string title, string message, string btnOK = "", string btnCancel = "", string emptyPrompt = "")
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_Message_Info);
         if (!string.IsNullOrEmpty(title)) this.title.text = title;
         this.message.text = message;
         prompts.text = null;
@@ -47,6 +48,7 @@ public class UIInputBox : MonoBehaviour
 
     void OnClickYes()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Confirm);
         prompts.text = "";
         if(string.IsNullOrEmpty(input.text))
         {
@@ -67,6 +69,7 @@ public class UIInputBox : MonoBehaviour
 
     void OnClickNo()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
         Destroy(gameObject);
         if (OnCancel != null)
             OnCancel();
