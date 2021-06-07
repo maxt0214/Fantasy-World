@@ -23,6 +23,7 @@ public class NPCController : MonoBehaviour
         anim = GetComponent<Animator>(); 
         npc = NPCManager.Instance.GetNPCDefine(NPCID);
         originalColor = currRenderer.sharedMaterial.color;
+        NPCManager.Instance.UpdateNPCPosition(NPCID,transform.position);
         StartCoroutine(Actions());
         RefreshNpcStatus();
         QuestManager.Instance.onQuestStatusChanged += OnQuestStatusChanged;
@@ -94,8 +95,17 @@ public class NPCController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if((User.Instance.currentCharacterObj.transform.position - transform.position).magnitude < 5)
+        if (Vector3.Distance(transform.position, User.Instance.currentCharacterObj.transform.position) > 3f)
+        {
+            User.Instance.currentCharacterObj.StartNav(transform.position);
+            User.Instance.currentCharacterObj.NavagationOver += Interact;
+        }
+
+        if(Vector3.Distance(transform.position, User.Instance.currentCharacterObj.transform.position) < 3f)
+        {
+            User.Instance.currentCharacterObj.StopNav();
             Interact();
+        }
     }
 
     private void OnMouseEnter()

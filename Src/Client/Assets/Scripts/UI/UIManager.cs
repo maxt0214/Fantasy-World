@@ -73,4 +73,9 @@ public class UIManager : Singleton<UIManager>
             }
         }
     }
+
+    public void Close<T>()
+    {
+        Close(typeof(T));
+    }
 }

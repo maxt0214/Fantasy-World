@@ -352,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1200, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3269247269496685277
@@ -427,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269247269502728448
@@ -460,8 +460,8 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9cdf50e78f84cd44498bdc93925ab83e, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
+    m_BestFit: 1
+    m_MinSize: 25
     m_MaxSize: 30
     m_Alignment: 0
     m_AlignByGeometry: 1
@@ -469,11 +469,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Demons in the Sunset Forest are bothering people in the Blin Town. Would
-    you, the great adventurer, be so kind and slay all these annoying demons? People
-    from the town will thank you greatly!
-
-'
+  m_Text: 
 --- !u!114 &3269247269502728450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269247269547927537
@@ -609,8 +605,8 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9cdf50e78f84cd44498bdc93925ab83e, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
+    m_BestFit: 1
+    m_MinSize: 25
     m_MaxSize: 30
     m_Alignment: 0
     m_AlignByGeometry: 1
@@ -618,7 +614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Slay 10 Demons in the Sunset Forest
+  m_Text: 
 --- !u!114 &3269247269547927539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,7 +906,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exp: 500'
+  m_Text: 'Exp:'
 --- !u!114 &3269247269603186328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,7 +955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3269247269649196384
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1054,7 +1050,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3269247269649196398}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3269247271143978078}
+        m_MethodName: OnClickTrackQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3269247269663247813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1473,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3269247270796111277}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5828201
+  m_Size: 0.6054628
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1780,8 +1787,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3269247270297530741}
   m_HandleRect: {fileID: 3269247270297530740}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.29831472
+  m_Value: 0.99999994
+  m_Size: 0.29830578
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2294,7 +2301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269247270299759972
@@ -2804,7 +2811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1050, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269247270472297658
@@ -2837,9 +2844,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9cdf50e78f84cd44498bdc93925ab83e, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
@@ -2950,7 +2957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1050, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269247270647032183
@@ -2983,9 +2990,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9cdf50e78f84cd44498bdc93925ab83e, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
@@ -3305,7 +3312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3269247270742199692
@@ -3670,7 +3677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677.2936, y: 0}
+  m_AnchoredPosition: {x: 677.3144, y: 0}
   m_SizeDelta: {x: 1050, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3269247270850368817
@@ -3703,7 +3710,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9cdf50e78f84cd44498bdc93925ab83e, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 60
     m_Alignment: 3
@@ -3855,7 +3862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gold: 1000'
+  m_Text: 'Gold:'
 --- !u!114 &3269247270874095525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4561,6 +4568,8 @@ MonoBehaviour:
   - {fileID: 3269247269681162865}
   expReward: {fileID: 3269247269603186329}
   goldReward: {fileID: 3269247270874095522}
+  navBtn: {fileID: 3269247269649196385}
+  abandonBtn: {fileID: 3269247271393649033}
 --- !u!1 &3269247271176262560
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,7 +4960,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Track Quest
+  m_Text: Navigate To NPC
 --- !u!114 &3269247271346857449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5096,7 +5105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000091552734}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3269247271373428761
@@ -5154,7 +5163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3269247271393649032
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5249,7 +5258,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3269247271393649046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3269247271143978078}
+        m_MethodName: OnClickAbandonQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3269247271412594437
 GameObject:
   m_ObjectHideFlags: 0
@@ -5794,6 +5814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e4fa616a12814abc40d1b02814b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Root: {fileID: 0}
   Title: {fileID: 4685902976067859270}
   itemPrefab: {fileID: 2723784440900681340, guid: 4a81b0864d40cde4c92e4f2280a8c552,
     type: 3}
@@ -6262,7 +6283,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6762470486981357453}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.2983147
+  m_Size: 0.29830578
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7569,7 +7590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[MAIN]  Deep Into The Sunset Forest'
+  m_Text: '[MAIN]  Quest Title'
 --- !u!114 &6762470487961375707
 MonoBehaviour:
   m_ObjectHideFlags: 0

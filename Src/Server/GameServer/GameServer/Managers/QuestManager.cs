@@ -78,7 +78,7 @@ namespace GameServer.Managers
                 {
                     if(dbQuest.Status != (int)QuestStatus.Complete)
                     {
-                        sender.Session.Response.questAccept.Errormsg = "Quest Has Not Yet Been Finished!";
+                        sender.Session.Response.questSubmit.Errormsg = "Quest Has Not Yet Been Finished!";
                         return Result.Failed;
                     }
                     dbQuest.Status = (int)QuestStatus.Finished;

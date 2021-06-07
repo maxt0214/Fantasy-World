@@ -12,7 +12,9 @@ using Newtonsoft.Json;
 
 public class DataManager : Singleton<DataManager>
 {
-    public string DataPath;
+    public string DataPath;//client
+    public string CommonPath;//common data
+    public string ServerPath;//server
     public Dictionary<int, MapDefine> Maps = null;
     public Dictionary<int, CharacterDefine> Characters = null;
     public Dictionary<int, TeleporterDefine> Teleporters = null;
@@ -29,6 +31,8 @@ public class DataManager : Singleton<DataManager>
     public DataManager()
     {
         DataPath = "Data/";
+        CommonPath = "../Data/Data/";
+        ServerPath = "../Server/GameServer/GameServer/bin/Debug/Data/";
         Debug.LogFormat("DataManager > DataManager()");
     }
 
@@ -140,19 +144,22 @@ public class DataManager : Singleton<DataManager>
     {
         string json = JsonConvert.SerializeObject(Teleporters, Formatting.Indented);
         File.WriteAllText(DataPath + "TeleporterDefine.txt", json);
-        //Copy to common.data and server
-        //File.WriteAllText("../Data/Data/TeleporterDefine.txt", json);
-        File.WriteAllText("../Server/GameServer/GameServer/bin/Debug/Data/TeleporterDefine.txt", json);
+        //Copy to server
+        File.WriteAllText(ServerPath + "TeleporterDefine.txt", json);
     }
 
     public void SaveSpawnPoints()
     {
         string json = JsonConvert.SerializeObject(SpawnPoints, Formatting.Indented);
         File.WriteAllText(DataPath + "SpawnPointDefine.txt", json);
-        //Copy to common.data and server
-        File.WriteAllText("../Data/Data/SpawnPointDefine.txt", json);
-        File.WriteAllText("../Server/GameServer/GameServer/bin/Debug/Data/SpawnPointDefine.txt", json);
+        //Copy to server
+        File.WriteAllText(ServerPath + "TeleporterDefine.txt", json);
     }
 
+    public void SaveReachableAreas(Dictionary<int, List<Vector3Int>> area)
+    {
+        string json = JsonConvert.SerializeObject(area, Formatting.Indented);
+        File.WriteAllText(ServerPath + "Walkable.txt", json);
+    }
 #endif
 }

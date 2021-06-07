@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.Data;
+using UnityEngine;
 
 namespace Managers
 {
@@ -9,6 +10,7 @@ namespace Managers
         public delegate bool NPCActionHandler(NPCDefine npc);
 
         public Dictionary<NPCFunction, NPCActionHandler> npcEvents = new Dictionary<NPCFunction, NPCActionHandler>();
+        public Dictionary<int, Vector3> npcPositions = new Dictionary<int, Vector3>();
 
         public void RegisterNPCEvent(NPCFunction function, NPCActionHandler action)
         {
@@ -23,7 +25,9 @@ namespace Managers
 
         public NPCDefine GetNPCDefine(int npcID)
         {
-            return DataManager.Instance.NPCs[npcID];
+            NPCDefine def;
+            DataManager.Instance.NPCs.TryGetValue(npcID, out def);
+            return def;
         }
 
         public bool Interactive(int npcID)
@@ -65,6 +69,18 @@ namespace Managers
                 return false;
 
             return QuestManager.Instance.OpenNpcQuest(npc.ID);
+        }
+
+        public void UpdateNPCPosition(int npc, Vector3 pos)
+        {
+            npcPositions[npc] = pos;
+        }
+
+        public Vector3 GetNPCPosition(int npc)
+        {
+            Vector3 pos;
+            npcPositions.TryGetValue(npc, out pos);
+            return pos;
         }
     }
 }

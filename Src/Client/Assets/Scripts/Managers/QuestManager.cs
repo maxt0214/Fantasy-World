@@ -121,7 +121,7 @@ namespace Managers
                 }
                 if (npcId == quest.Define.SubmitNPC && quest.Info.Status == QuestStatus.InProgress)
                 {
-                    if (!npcQuests[npcId][NPCQuestStatus.Complete].Contains(quest)) npcQuests[npcId][NPCQuestStatus.Incomplete].Add(quest);
+                    if (!npcQuests[npcId][NPCQuestStatus.Incomplete].Contains(quest)) npcQuests[npcId][NPCQuestStatus.Incomplete].Add(quest);
                 }
             }
         }

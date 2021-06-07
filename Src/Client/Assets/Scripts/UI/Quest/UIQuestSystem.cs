@@ -73,11 +73,6 @@ public class UIQuestSystem : UIWindow
                 mainQuestList.AddItem(questItem);
             else
                 branchQuestList.AddItem(questItem);
-
-            foreach(var fitter in UIQuestInfo.transform.GetComponentsInChildren<ContentSizeFitter>())
-            {
-                fitter.SetLayoutVertical();
-            }
         }
     }
 
