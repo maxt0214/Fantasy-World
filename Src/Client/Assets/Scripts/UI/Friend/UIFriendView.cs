@@ -24,7 +24,7 @@ public class UIFriendView : UIWindow
 
     private void OnDestroy()
     {
-
+        FriendService.Instance.OnFriendUpdate -= RefreshUI;
     }
 
     private void OnSelectTab(int tabIndx)
@@ -71,7 +71,7 @@ public class UIFriendView : UIWindow
         int friendId;
         if (!int.TryParse(inputText, out friendId))
             friendName = inputText;
-        if (friendId == User.Instance.CurrentCharacter.Id || friendName == User.Instance.CurrentCharacter.Name)
+        if (friendId == User.Instance.CurrentCharacterInfo.Id || friendName == User.Instance.CurrentCharacterInfo.Name)
         {
             prompt = "You Sure You Wanna Add Yourself As Your Friend?";
             return false;

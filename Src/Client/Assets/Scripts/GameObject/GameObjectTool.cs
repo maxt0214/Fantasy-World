@@ -44,6 +44,26 @@ public static class GameObjectTool
         };
     }
 
+    public static NVector3 ToLogicN(this Vector3Int v)
+    {
+        return new NVector3()
+        {
+            X = v.x,
+            Y = v.y,
+            Z = v.z
+        };
+    }
+
+    public static Vector3Int ToLogicInt(this NVector3 v)
+    {
+        return new Vector3Int
+        {
+            x = v.X,
+            y = v.Y,
+            z = v.Z
+        };
+    }
+
     public static bool UpdateEntity(NEntity entity, Vector3 pos, Quaternion rotation, float spd)
     {
         bool updated = false;

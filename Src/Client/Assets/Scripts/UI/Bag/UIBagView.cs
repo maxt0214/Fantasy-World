@@ -38,7 +38,7 @@ public class UIBagView : UIWindow
 
     IEnumerator InitBag()
     {
-        goldAmount.text = User.Instance.CurrentCharacter.Gold.ToString();
+        goldAmount.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
 
         for (int i = 0; i < BagManager.Instance.Items.Length; i++)
         {

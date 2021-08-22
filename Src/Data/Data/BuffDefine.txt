@@ -1,0 +1,65 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "Stunning",
+    "Description": "Stun For 2 Seconds",
+    "Icon": "UI/Skill/warrior_buff_xy",
+    "TargetType": "Single",
+    "Effect": "Stun",
+    "Trigger": "SkillHit",
+    "Duration": 2.0
+  },
+  "2": {
+    "ID": 2,
+    "Name": "Brave",
+    "Description": "50% Def Increase",
+    "Icon": "UI/Skill/warrior_buff_yy",
+    "TargetType": "Self",
+    "Trigger": "SkillCast",
+    "Duration": 3.0,
+    "DEFRatio": 0.5
+  },
+  "3": {
+    "ID": 3,
+    "Name": "Penetration",
+    "Description": "50% Def Decrease",
+    "Icon": "UI/Skill/warrior_debuff_pj",
+    "TargetType": "Single",
+    "Trigger": "SkillHit",
+    "Duration": 5.0,
+    "DEFRatio": -0.5
+  },
+  "4": {
+    "ID": 4,
+    "Name": "Burning",
+    "Description": "每秒造成XXX点法术伤害",
+    "Icon": "UI/Skill/wizzard_debuff_hy",
+    "TargetType": "Single",
+    "Trigger": "SkillHit",
+    "Duration": 5.0,
+    "Interval": 1.0,
+    "APFactor": 0.25
+  },
+  "5": {
+    "ID": 5,
+    "Name": "Bleeding",
+    "Description": "每秒造成XXX点物理伤害",
+    "Icon": "UI/Skill/archer_debuff_lx",
+    "TargetType": "Single",
+    "Trigger": "SkillHit",
+    "Duration": 3.0,
+    "Interval": 1.0,
+    "ADFactor": 0.125
+  },
+  "6": {
+    "ID": 6,
+    "Name": "Posioning",
+    "Description": "每秒造成XXX点法术伤害",
+    "Icon": "UI/Skill/archer_debuff_zd",
+    "TargetType": "Single",
+    "Trigger": "SkillHit",
+    "Duration": 5.0,
+    "Interval": 1.0,
+    "APFactor": 0.16667
+  }
+}

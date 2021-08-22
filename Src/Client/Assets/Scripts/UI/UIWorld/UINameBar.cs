@@ -9,11 +9,14 @@ public class UINameBar : MonoBehaviour
     public Text playerInfo;
     public Character character;
 
+    public UIBuffSlots buffSlots;
+
     void Start()
     {
         if(character != null)
         {
             UpdatePlayerInfo();
+            buffSlots.InitBuffSlots(character);
         }
     }
 

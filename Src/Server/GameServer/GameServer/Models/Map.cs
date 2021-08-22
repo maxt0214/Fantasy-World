@@ -35,6 +35,8 @@ namespace GameServer.Models
         }
         internal MapDefine Define;
 
+        public Battle.Battle Battle;
+
         /// <summary>
         /// Paired as character Id, Character
         /// </summary>
@@ -48,11 +50,13 @@ namespace GameServer.Models
             Define = define;
             monsterManager.Init(this);
             spawnManager.Init(this);
+            Battle = new Battle.Battle(this);
         }
 
         public void Update()
         {
             spawnManager.Update();
+            Battle.Update();
         }
 
         /// <summary>
@@ -136,6 +140,20 @@ namespace GameServer.Models
             foreach(var kv in MapCharacters)
             {
                 AddCharacterEnterMap(kv.Value.connection, monster.Info);
+            }
+        }
+
+        internal void BroadcastBattleResponse(NetMessageResponse response)
+        {
+            foreach (var kv in MapCharacters)
+            {
+                if (response.castSkill != null)
+                    kv.Value.connection.Session.Response.castSkill = response.castSkill;
+                if (response.skillHits != null)
+                    kv.Value.connection.Session.Response.skillHits = response.skillHits;
+                if (response.buffRes != null)
+                    kv.Value.connection.Session.Response.buffRes = response.buffRes;
+                kv.Value.connection.SendResponse();
             }
         }
     }

@@ -82,5 +82,10 @@ namespace GameServer.Entities
             Direction = entity.Direction;
             speed = entity.Speed;
         }
+
+        public virtual void Update()
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Common.Data;
+﻿using Common.Battle;
+using Common.Data;
 using Managers;
 using Models;
 using SkillBridge.Message;
@@ -17,6 +18,13 @@ public class UIEquip : UIWindow
     public GameObject equipedItemPrefab;
     public Transform[] equipSlots;
 
+    public Text HpTxt;
+    public Slider HpBar;
+    public Text MpTxt;
+    public Slider MpBar;
+
+    public Text[] Attributes;
+
     private void Start()
     {
         RefreshUI();
@@ -34,6 +42,8 @@ public class UIEquip : UIWindow
         InitEquipList();
         ClearEquipedList();
         InitEquipedList();
+
+        InitAttributes();
     }
 
     private void ClearEquipList()
@@ -48,7 +58,7 @@ public class UIEquip : UIWindow
     {
         foreach(var kv in ItemManager.Instance.Items)
         {
-            if(kv.Value.itemDef.Type == ItemType.Equip && kv.Value.itemDef.Class == User.Instance.CurrentCharacter.Class)
+            if(kv.Value.itemDef.Type == ItemType.Equip && kv.Value.itemDef.Class == User.Instance.CurrentCharacterInfo.Class)
             {
                 if (EquipManager.Instance.ContainsId(kv.Key))
                     continue;
@@ -90,5 +100,26 @@ public class UIEquip : UIWindow
     public void Unequip(Item item)
     {
         EquipManager.Instance.UnequipItem(item);
+    }
+
+    private void InitAttributes()
+    {
+        var playerAttri = User.Instance.currentCharacter.Attributes;
+
+        HpTxt.text = string.Format("{0}/{1}", (int)playerAttri.HP, (int)playerAttri.MaxHP);
+        MpTxt.text = string.Format("{0}/{1}", (int)playerAttri.MP, (int)playerAttri.MaxMP);
+
+        HpBar.maxValue = playerAttri.MaxHP;
+        HpBar.value = playerAttri.HP;
+        MpBar.maxValue = playerAttri.MaxMP;
+        MpBar.value = playerAttri.MP;
+
+        for(int i = (int)AttributeType.STR; i < (int)AttributeType.CAP; i++)
+        {
+            if(i == (int)AttributeType.CRI)
+                Attributes[i-2].text = string.Format("{0}%",(playerAttri.CRI * 100).ToString("F1"));
+            else
+                Attributes[i-2].text = ((int)playerAttri.Final.Data[i]).ToString();
+        }
     }
 }

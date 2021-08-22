@@ -22,7 +22,7 @@ namespace Managers
         {
             guildInfo = guild;
             if (guild == null) return;
-            myMemberInfo = members.FirstOrDefault(m => m.characterId == User.Instance.CurrentCharacter.Id);
+            myMemberInfo = members.FirstOrDefault(m => m.characterId == User.Instance.CurrentCharacterInfo.Id);
         }
 
         public void ShowGuild()

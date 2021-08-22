@@ -86,23 +86,39 @@ message NCharacterInfo {
 	CHARACTER_TYPE type = 5;
 	CHARACTER_CLASS class = 6;
 	int32 level = 7;
-	int32 mapId = 8;
-	NEntity entity = 9;
-	int64 gold = 10;
+	int64 exp = 8;
+	NDynamicAttribte dynamicAttri = 9;
+	int32 mapId = 10;
+	NEntity entity = 11;
+	int64 gold = 12;
 
-	repeated NItemInfo Items = 11;
-	NBagInfo Bag = 12;
-	bytes Equips = 13;
-	repeated NQuestInfo quests = 14;
-	repeated NFriendInfo friends = 15;
-	NGuildInfo guild = 16;
-	int32 ride = 17;
+	repeated NItemInfo Items = 13;
+	NBagInfo Bag = 14;
+	bytes Equips = 15;
+	repeated NQuestInfo quests = 16;
+	repeated NFriendInfo friends = 17;
+	NGuildInfo guild = 18;
+	int32 ride = 19;
+
+	repeated NSkillInfo skills = 20;
+}
+
+message NDynamicAttribte 
+{
+	int32 HP = 1;
+	int32 MP = 2;
 }
 
 message NItemInfo 
 {
 	int32 id = 1;
 	int32 count = 2;
+}
+
+message NSkillInfo 
+{
+	int32 id = 1;
+	int32 lv = 2;
 }
 
 message NVector3
@@ -129,8 +145,9 @@ enum STATUS_TYPE
 {
 	MONEY = 0;
 	EXP = 1;
-	SKILL_POINT = 2;
-	ITEM = 3;
+	LV = 2;
+	SKILL_POINT = 3;
+	ITEM = 4;
 }
 
 message NStatus 
@@ -218,6 +235,8 @@ message NetMessageRequest{
 	GuildAdminRequest guildAdmin = 29;
 
 	ChatRequest chat = 30;
+
+	CastSkillRequest castSkill = 31;
 }
 
 message NetMessageResponse{
@@ -258,6 +277,10 @@ message NetMessageResponse{
 	GuildAdminResponse guildAdmin = 29;
 
 	ChatResponse chat = 30;
+
+	CastSkillResponse castSkill = 50;
+	SkillHitResponse skillHits = 51;
+	BuffResponse buffRes = 52;
 
 	StatusNotify statusNotify = 100;
 }
@@ -721,4 +744,93 @@ message ChatResponse
 	repeated ChatMessage privateMessage = 6;
 	repeated ChatMessage teamMessage = 7;
 	repeated ChatMessage guildMessage = 8;
+}
+
+//Battle
+enum SKILL_RESULT 
+{
+	VALID = 0;
+	INVALID_MP = 1;
+	COOL_DOWN = 2;
+	INVALID_TARGET = 3;
+	OUT_OF_RANGE = 4;
+	INVALID_SKILL = 5;
+	CASTING = 6;
+}
+
+enum SKILL_STATUS 
+{
+	NONE = 0;
+	PREPARING = 1;
+	CASTING = 2;
+}
+
+message NCastSkillInfo 
+{
+	int32 skillId = 1;
+	int32 casterId = 2;
+	int32 targetId = 3;
+	NVector3 position = 4;
+}
+
+message NHitInfo 
+{
+	int32 skillId = 1;
+	int32 casterId = 2;
+	int32 hitId = 3;
+	bool ifBullet = 4;
+	repeated NDamageInfo damages = 5;
+}
+
+message NDamageInfo 
+{
+	int32 entityId = 1;
+	int32 dmg = 2;
+	bool crit = 3;
+	bool dead_after_dmg = 4;
+}
+
+message CastSkillRequest
+{
+	NCastSkillInfo info = 1;
+}
+
+message CastSkillResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	NCastSkillInfo info = 3;
+}
+
+message SkillHitResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated NHitInfo hits = 3;
+}
+
+
+enum BUFF_ACTION 
+{
+	NONE = 0;
+	ADD = 1;
+	REMOVE = 2;
+	APPLY = 3;
+}
+
+message NBuffInfo
+{
+	int32 uid = 1; //unique id of this buff entity
+	int32 tid = 2; //type id marks which buff this is
+	BUFF_ACTION action = 3;
+	int32 casterId = 4;
+	int32 ownerId = 5;
+	NDamageInfo damage = 6;
+}
+
+message BuffResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated NBuffInfo buffs = 3;
 }

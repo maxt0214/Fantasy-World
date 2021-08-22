@@ -100,5 +100,18 @@ namespace Managers
                     OnEquipChanged();
             }
         }
+
+        public List<EquipDefine> GetEquips() 
+        {
+            var equips = new List<EquipDefine>();
+            for(int i = 0; i < (int)EquipSlot.SlotCap; i++)
+            {
+                if(equipSlots[i] != null)
+                {
+                    equips.Add(equipSlots[i].equipDef);
+                }
+            }
+            return equips;
+        }
     }
 }

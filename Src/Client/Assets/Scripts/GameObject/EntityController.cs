@@ -6,7 +6,7 @@ using SkillBridge.Message;
 using Managers;
 using System;
 
-public class EntityController : MonoBehaviour , IEntityNotify
+public class EntityController : MonoBehaviour , IEntityNotify , IEntityController
 {
     public Animator anim;
     private AnimationState currentBaseState;
@@ -30,6 +30,8 @@ public class EntityController : MonoBehaviour , IEntityNotify
     public RideController rideController;
     public int currRide = 0;
     public Transform rideBone;
+
+    public EntityEffectManager EffectMgr;
 
     private void Start()
     {
@@ -135,8 +137,42 @@ public class EntityController : MonoBehaviour , IEntityNotify
         }
     }
 
+    private void OnMouseDown()
+    {
+        Creature target = entity as Creature;
+        if (target.IsLocalPlayer) return;
+        BattleManager.Instance.Target = target;
+    }
+
     public void SetRidePosition(Vector3 pos)
     {
         anim.transform.position = pos + (anim.transform.position - rideBone.position);
+    }
+
+    public void PlayAnim(string name)
+    {
+        anim.SetTrigger(name);
+    }
+
+    public void SetStandby(bool ifStandby)
+    {
+        anim.SetBool("Standby",ifStandby);
+    }
+
+    public void UpdateDirection()
+    {
+        direction = GameObjectTool.LogicUnitToWorld(entity.direction);
+        transform.forward = direction;
+    }
+
+    public void PlayEffect(EffectType type, string name, Creature target, float duration)
+    {
+        Transform trans = target.Controller.GetTransform();
+        EffectMgr.PlayEffect(type, name, trans, duration);
+    }
+
+    public Transform GetTransform()
+    {
+        return transform;
     }
 }

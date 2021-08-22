@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using SkillBridge.Message;
 using Common.Data;
 using UnityEngine;
+using Entities;
 
 namespace Models
 {
@@ -22,7 +23,9 @@ namespace Models
             userInfo = info;
         }
 
-        public NCharacterInfo CurrentCharacter { get; set; }
+        public Character currentCharacter { get; set; }
+
+        public NCharacterInfo CurrentCharacterInfo { get; set; }
         public MapDefine currMap { get; set; }
 
         public PlayerInputController currentCharacterObj { get; set; }
@@ -31,7 +34,7 @@ namespace Models
 
         public void AddGold(int toAdd)
         {
-            CurrentCharacter.Gold += toAdd;
+            CurrentCharacterInfo.Gold += toAdd;
         }
 
         public int currRide = 0;
@@ -52,6 +55,15 @@ namespace Models
                 currRide = 0;
                 currentCharacterObj.SendEntityEvent(EntityEvent.Ride);
             }
+        }
+
+        public delegate void CharacterInitHandler();
+        public event CharacterInitHandler OnCharacterInit;
+
+        public void CharacterInited()
+        {
+            if (OnCharacterInit != null)
+                OnCharacterInit();
         }
     }
 }

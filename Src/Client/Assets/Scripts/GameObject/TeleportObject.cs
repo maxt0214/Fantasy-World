@@ -46,7 +46,7 @@ public class TeleportObject : MonoBehaviour
         Gizmos.color = Color.green;
         if(mesh != null)
         {
-            Gizmos.DrawMesh(mesh, transform.position, transform.rotation, transform.localScale);
+            Gizmos.DrawMesh(mesh, transform.position + new Vector3(0, transform.localScale.y / 2, 0), transform.rotation, transform.localScale);
         }
         UnityEditor.Handles.color = Color.red;
         UnityEditor.Handles.ArrowHandleCap(0, transform.position, transform.rotation, 5, EventType.Repaint);

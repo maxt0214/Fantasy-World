@@ -100,7 +100,7 @@ namespace Managers
 
             if (channelSelected == LocalChannel.Guild)
             {
-                if (User.Instance.CurrentCharacter.Guild == null)
+                if (User.Instance.CurrentCharacterInfo.Guild == null)
                 {
                     AddSystemMessage("You Did Not Join Any Guild");
                     return false;
@@ -167,7 +167,7 @@ namespace Managers
 
         private string FormatFromPlayer(ChatMessage msg)
         {
-            if (msg.FromId == User.Instance.CurrentCharacter.Id)
+            if (msg.FromId == User.Instance.CurrentCharacterInfo.Id)
             {
                 return string.Format("<a name=\"\" class=\"player\">[Me]</a>");
             }

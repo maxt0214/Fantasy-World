@@ -81,6 +81,7 @@ namespace Managers {
                 ec.entity = chara;
                 ec.isLocalPlayer = chara.IsLocalPlayer;
                 ec.Ride(chara.Info.Ride);
+                chara.Controller = ec;
             }
 
             var pc = gameObject.GetComponent<PlayerInputController>();

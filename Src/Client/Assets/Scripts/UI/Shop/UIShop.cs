@@ -61,7 +61,7 @@ public class UIShop : UIWindow
     public void SetShop(ShopDefine shopDef)
     {
         shop = shopDef;
-        playerGold.text = User.Instance.CurrentCharacter.Gold.ToString();
+        playerGold.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
         shopTitle.text = shop.Name;
     }
 

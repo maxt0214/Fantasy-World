@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/17/2021 06:49:11
+-- Date Created: 06/07/2021 12:11:32
 -- Generated from EDMX file: C:\Users\mxt62\OneDrive\Documents\GitHub\Fantasy-World\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
@@ -67,8 +67,8 @@ GO
 IF OBJECT_ID(N'[dbo].[CharacterFriends]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CharacterFriends];
 GO
-IF OBJECT_ID(N'[dbo].[TGuilds]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TGuilds];
+IF OBJECT_ID(N'[dbo].[Guilds]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Guilds];
 GO
 IF OBJECT_ID(N'[dbo].[GuildMembers]', 'U') IS NOT NULL
     DROP TABLE [dbo].[GuildMembers];
@@ -105,11 +105,13 @@ CREATE TABLE [dbo].[Characters] (
     [Class] int  NOT NULL,
     [Level] int  NOT NULL,
     [Exp] bigint  NOT NULL,
+    [Gold] bigint  NOT NULL,
+    [HP] int  NOT NULL,
+    [MP] int  NOT NULL,
     [MapID] int  NOT NULL,
     [MapPosX] int  NOT NULL,
     [MapPosY] int  NOT NULL,
     [MapPosZ] int  NOT NULL,
-    [Gold] bigint  NOT NULL,
     [Equips] binary(28)  NOT NULL,
     [GuildId] int  NOT NULL,
     [Player_ID] int  NOT NULL,

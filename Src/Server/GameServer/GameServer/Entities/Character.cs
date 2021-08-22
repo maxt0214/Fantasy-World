@@ -10,7 +10,7 @@ using Common;
 
 namespace GameServer.Entities
 {
-    class Character : CharacterBase, IPostResponser
+    class Character : Creature, IPostResponser
     {
         public TCharacter Data;
 
@@ -41,16 +41,16 @@ namespace GameServer.Entities
         }
 
         public Character(CharacterType type,TCharacter cha):
-            base(new Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Vector3Int(100,0,0))
+            base(type, cha.TID, cha.Level, new Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Vector3Int(100,0,0))
         {
             Data = cha;
             Id = cha.ID;
-            Info = new NCharacterInfo();
             Info.Type = type;
             Info.Id = cha.ID;
             Info.EntityId = entityId;
             Info.Name = cha.Name;
             Info.Level = 10;//cha.Level;
+            Info.Exp = cha.Exp;
             Info.ConfigId = cha.TID;
             Info.Class = (CharacterClass)cha.Class;
             Info.mapId = cha.MapID;
@@ -75,6 +75,55 @@ namespace GameServer.Entities
             guild = GuildManager.Instance.GetGuild(Data.GuildId);
 
             chat = new Chat(this);
+
+            Info.dynamicAttri.Hp = cha.HP;
+            Info.dynamicAttri.Mp = cha.MP;
+        }
+
+        public void AddExp(int exp)
+        {
+            Exp += exp;
+            CheckLevelUp();
+        }
+
+        private void CheckLevelUp()
+        {
+            long expNeeded = (long)Math.Pow(Level, 3) * 10 + Level * 40 + 50;
+            if(Exp > expNeeded)
+            {
+                LevelUp();
+            }
+        }
+
+        private void LevelUp()
+        {
+            Level += 1;
+            Log.InfoFormat("Character[{0}]:{1} Leveled Up To: {2}", Info.Id, Info.Name, Level);
+            CheckLevelUp();
+        }
+
+        public long Exp
+        {
+            get { return Data.Exp; }
+            private set
+            {
+                if (Exp == value) return;
+                StatusManager.ChangeExpStatus((int)(value - Data.Exp));
+                Data.Exp = value;
+                Info.Exp = value;
+            }
+        }
+
+        public int Level
+        {
+            get { return Data.Level; }
+            private set
+            {
+                if (Level == value) return;
+                StatusManager.ChangeLevelStatus(value - Data.Level);
+                Data.Level = value;
+                Info.Level = value;
+            }
         }
 
         public long Gold
@@ -89,6 +138,7 @@ namespace GameServer.Entities
                     return;
                 StatusManager.ChangeGoldStatus((int)(value - Data.Gold));
                 Data.Gold = value;
+                Info.Gold = value;
             }
         }
 

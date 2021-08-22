@@ -8,6 +8,7 @@ using UnityEngine;
 using Models;
 using Common.Data;
 using Managers;
+using Entities;
 
 namespace Services
 {
@@ -41,12 +42,19 @@ namespace Services
 
             foreach(var chara in response.Characters)
             {
-                //Every time we enter the game, the server will send back this list of characters in which the first one is our player.
-                if(User.Instance.CurrentCharacter == null || (chara.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == chara.Id))
+                if(User.Instance.CurrentCharacterInfo == null || (chara.Type == CharacterType.Player && User.Instance.CurrentCharacterInfo.Id == chara.Id)) //local player
                 {
-                    User.Instance.CurrentCharacter = chara;
+                    User.Instance.CurrentCharacterInfo = chara;
+                    if (User.Instance.currentCharacter == null)
+                        User.Instance.currentCharacter = new Character(chara);
+                    else
+                        User.Instance.currentCharacter.UpdateInfo(chara);
+
+                    User.Instance.CharacterInited();
+                    CharacterManager.Instance.AddCharacter(User.Instance.currentCharacter);
+                    continue;
                 }
-                CharacterManager.Instance.AddCharacter(chara);
+                CharacterManager.Instance.AddCharacter(new Character(chara)); //Oter Characters
             }
 
             if(CurrMapId != response.mapId)
@@ -59,7 +67,7 @@ namespace Services
         private void OnCharacterLeaveMap(object sender, MapCharacterLeaveResponse response)
         {
             Debug.LogFormat("OnCharacterLeaveMap: Character EntityID{0}", response.entityId);
-            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+            if (response.entityId != User.Instance.CurrentCharacterInfo.EntityId)
                 CharacterManager.Instance.RemoveCharacter(response.entityId);
             else
                 CharacterManager.Instance.Clear();

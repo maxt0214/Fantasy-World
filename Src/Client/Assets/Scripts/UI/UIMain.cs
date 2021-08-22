@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using Models;
 using Services;
 using Managers;
+using Entities;
+using System;
 
 public class UIMain : MonoSingleton<UIMain>
 {
@@ -14,15 +16,23 @@ public class UIMain : MonoSingleton<UIMain>
 
     public UITeamView TeamWindow;
 
+    public UICreatureInfo targetInfo;
+
+    public UISKillSlots skillSlots;
+
     protected override void OnStart()
     {
         UpdateAvatar();
+        targetInfo.gameObject.SetActive(false);
+        BattleManager.Instance.OnTargetChanged += OnTargetChanged;
+        User.Instance.OnCharacterInit += skillSlots.RefreshUI;
+        skillSlots.RefreshUI();
     }
 
     private void UpdateAvatar()
     {
-        playerName.text = User.Instance.CurrentCharacter.Name;
-        playerLevel.text = User.Instance.CurrentCharacter.Level.ToString();
+        playerName.text = User.Instance.CurrentCharacterInfo.Name;
+        playerLevel.text = User.Instance.CurrentCharacterInfo.Level.ToString();
     }
 
     public void OnClickOpenBag()
@@ -62,11 +72,23 @@ public class UIMain : MonoSingleton<UIMain>
 
     public void OnClickSkill()
     {
-
+        UIManager.Instance.Show<UISkillView>();
     }
 
     public void ShowTeamUI(bool ifShow)
     {
         TeamWindow.ShowTeam(ifShow);
+    }
+
+    private void OnTargetChanged(Creature target)
+    {
+        if (target != null)
+        {
+            if(!targetInfo.isActiveAndEnabled) targetInfo.gameObject.SetActive(true);
+            targetInfo.Target = target;
+        } else
+        {
+            targetInfo.gameObject.SetActive(false);
+        }
     }
 }

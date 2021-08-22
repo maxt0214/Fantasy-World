@@ -46,7 +46,7 @@ public class UIRide : UIWindow
     {
         foreach (var ride in RideManager.Instance.Rides)
         {
-            if(ride.itemDef.Class == CharacterClass.None || ride.itemDef.Class == User.Instance.CurrentCharacter.Class)
+            if(ride.itemDef.Class == CharacterClass.None || ride.itemDef.Class == User.Instance.CurrentCharacterInfo.Class)
             {
                 var gameObj = Instantiate(itemPrefab, memberRoot);
                 var rideItem = gameObj.GetComponent<UIRideItem>();

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 698167648599651798}
   - component: {fileID: 698167648599651799}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: DEF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 698167648656846560}
   - component: {fileID: 698167648656846561}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: AD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 698167648708493452}
   - component: {fileID: 698167648708493453}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: MDEF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.75, y: 0.1}
   m_AnchorMax: {x: 0.95, y: 0.8}
-  m_AnchoredPosition: {x: 0, y: 0.95047}
+  m_AnchoredPosition: {x: 0, y: 0.9505005}
   m_SizeDelta: {x: 0, y: 1.9009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698167648753603216
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 698167648781222276}
   - component: {fileID: 698167648781222277}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: CRI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -956,7 +956,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SPD
+  m_Text: CRI
 --- !u!1 &698167648809013223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1092,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SPD
+  m_Text: DEX
 --- !u!1 &698167648834500067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 698167648976310578}
   - component: {fileID: 698167648976310579}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: SPD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 698167649292337490}
   - component: {fileID: 698167649292337489}
   m_Layer: 5
-  m_Name: OtherStats
+  m_Name: SecondaryStats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2244,7 +2244,7 @@ GameObject:
   - component: {fileID: 698167649298424764}
   - component: {fileID: 698167649298424765}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: DEX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2635,7 +2635,7 @@ GameObject:
   - component: {fileID: 698167649529196540}
   - component: {fileID: 698167649529196541}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: AP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3236,7 +3236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Base Stat
+  m_Text: Primary
 --- !u!114 &698167649659519682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3549,7 +3549,7 @@ GameObject:
   - component: {fileID: 698167649814507363}
   - component: {fileID: 698167649814507364}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: INT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3893,7 +3893,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 698167650541780628}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.14641549
+  m_Size: 0.14642896
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4108,7 +4108,7 @@ GameObject:
   - component: {fileID: 698167649964039262}
   - component: {fileID: 698167649964039261}
   m_Layer: 5
-  m_Name: BaseStat
+  m_Name: PrimaryStats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4863,7 +4863,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SPD
+  m_Text: DEF
 --- !u!1 &698167650252690551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4978,7 +4978,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Other Stat
+  m_Text: Secondary
 --- !u!114 &698167650272472598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5547,7 +5547,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INT
+  m_Text: AP
 --- !u!1 &698167650483223228
 GameObject:
   m_ObjectHideFlags: 0
@@ -5598,7 +5598,7 @@ GameObject:
   - component: {fileID: 698167650488445651}
   - component: {fileID: 698167650488445652}
   m_Layer: 5
-  m_Name: Stat_Val
+  m_Name: STR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6044,7 +6044,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: STR
+  m_Text: AD
 --- !u!1 &698167650693265788
 GameObject:
   m_ObjectHideFlags: 0
@@ -6251,7 +6251,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SPD
+  m_Text: MDEF
 --- !u!1 &1544408379324137013
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +6366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcd7527fa1dc28469dfe3b9d2127dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Root: {fileID: 0}
   equipListView: {fileID: 698167648809013222}
   equipItemPrefab: {fileID: 2944005105548047569, guid: d828978e3e185474ea9d2ed5853a7159,
     type: 3}
@@ -6379,6 +6380,20 @@ MonoBehaviour:
   - {fileID: 698167650179751012}
   - {fileID: 698167650453132180}
   - {fileID: 698167650331310039}
+  HpTxt: {fileID: 698167649684170587}
+  HpBar: {fileID: 698167649551274785}
+  MpTxt: {fileID: 698167648886174654}
+  MpBar: {fileID: 698167649891312357}
+  Attributes:
+  - {fileID: 698167650488445652}
+  - {fileID: 698167649814507364}
+  - {fileID: 698167649298424765}
+  - {fileID: 698167648656846561}
+  - {fileID: 698167649529196541}
+  - {fileID: 698167648599651799}
+  - {fileID: 698167648708493453}
+  - {fileID: 698167648976310579}
+  - {fileID: 698167648781222277}
 --- !u!1 &1544408379602162055
 GameObject:
   m_ObjectHideFlags: 0

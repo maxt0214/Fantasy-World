@@ -11,6 +11,8 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\SpawnRuleDefine.txt ..\Client\Data\
 @copy Data\QuestDefine.txt ..\Client\Data\
 @copy Data\RideDefine.txt ..\Client\Data\
+@copy Data\BuffDefine.txt ..\Client\Data\
+@copy Data\SkillDefine.txt ..\Client\Data\
 
 @copy Data\CharacterDefine.txt ..\Bin\Data\
 @copy Data\EquipDefine.txt ..\Bin\Data\
@@ -23,6 +25,8 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\SpawnRuleDefine.txt ..\Bin\Data\
 @copy Data\QuestDefine.txt ..\Bin\Data\
 @copy Data\RideDefine.txt ..\Bin\Data\
+@copy Data\BuffDefine.txt ..\Bin\Data\
+@copy Data\SkillDefine.txt ..\Bin\Data\
 
 @copy Data\CharacterDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\EquipDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
@@ -34,5 +38,7 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\SpawnRuleDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\QuestDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\RideDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
+@copy Data\BuffDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
+@copy Data\SkillDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 
 pause

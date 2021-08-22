@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Common;
 using SkillBridge.Message;
 using Entities;
 using UnityEngine;
 using UnityEngine.Events;
+using Models;
 
 namespace Managers
 {
@@ -42,14 +42,13 @@ namespace Managers
             characters.Clear();
         }
 
-        public void AddCharacter(NCharacterInfo chara)
+        public void AddCharacter(Character chara)
         {
-            Debug.LogFormat("AddCharacter: {0}: {1} Map: {2} Entity: {3}", chara.Id, chara.Name, chara.mapId, chara.Entity.String());
-            var character = new Character(chara);
-            characters[chara.EntityId] = character;
-            EntityManager.Instance.AddEntity(character);
+            Debug.LogFormat("AddCharacter: {0}: {1} Map: {2} Entity: {3}", chara.Id, chara.Name, chara.Info.mapId, chara.Info.Entity.String());
+            characters[chara.Info.EntityId] = chara;
+            EntityManager.Instance.AddEntity(chara);
             if (OnCharacterEnter != null)
-                OnCharacterEnter(character);
+                OnCharacterEnter(chara);
         }
 
         public void RemoveCharacter(int entityId)
@@ -70,5 +69,42 @@ namespace Managers
             characters.TryGetValue(eid,out chara);
             return chara;
         }
+
+        public Character NearestCharaFrom(Vector3Int origin, float maxRange)
+        {
+            float currDis = maxRange;
+            Character target = null;
+            foreach (var chara in characters.Values)
+            {
+                var toCheck = Vector3.Distance(origin, chara.position);
+                if (toCheck < currDis)
+                {
+                    currDis = toCheck;
+                    target = chara;
+                }
+            }
+
+            return target;
+        }
+
+        //public Character[] NearestCharasFrom(Vector3 origin, int targetCount, float maxRange)
+        //{
+        //    int validTargetCount = 0;
+        //    foreach(var chara in characters.Values)
+        //    {
+        //        if (validTargetCount >= targetCount)
+        //            break;
+        //        if (Vector3.Distance(origin, GameObjectTool.LogicUnitToWorld(chara.position)) < maxRange)
+        //            validTargetCount++;
+        //    }
+
+        //    Character[] targets = new Character[validTargetCount];
+        //    foreach (var chara in characters.Values)
+        //    {
+                
+        //    }
+
+        //    return targets;
+        //}
     }
 }

@@ -31,6 +31,7 @@ public class UIManager : Singleton<UIManager>
         UIResources.Add(typeof(UIChatPopUp), new UIElement() { resource = "UI/UIChatPopUp", cache = true });
         UIResources.Add(typeof(UIRide), new UIElement() { resource = "UI/UIRide", cache = true });
         UIResources.Add(typeof(UISystemConfig), new UIElement() { resource = "UI/UISystemConfig", cache = true });
+        UIResources.Add(typeof(UISkillView), new UIElement() { resource = "UI/UISkillView", cache = true });
     }
 
     public T Show<T>()

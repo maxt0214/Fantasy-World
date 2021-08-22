@@ -75,6 +75,7 @@ namespace GameServer.Services
             MapManager.Instance[source.MapID].CharacterLeave(character);
             character.Position = target.Position;
             character.Direction = target.Direction;
+            Log.InfoFormat("Character[{0}] teleported from Teleport[{1}] In Map[{2}] to Teleport[{3}] in Map[{4}]", character.Id, source.ID, source.MapID, target.ID, target.MapID);
             MapManager.Instance[target.MapID].CharacterEnter(sender,character);
         }
     }

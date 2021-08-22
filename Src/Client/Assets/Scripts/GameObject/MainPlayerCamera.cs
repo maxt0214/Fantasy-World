@@ -10,7 +10,10 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     public GameObject player;
 
-    public float rotateAngle = 1f;
+    public float followSpd = 5f;
+    public float rotateAngle = 5f;
+
+    Quaternion yaw = Quaternion.identity;
 
     private void LateUpdate()
     {
@@ -20,12 +23,23 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
         }
         if (player == null) return;
 
-        transform.position = player.transform.position;
-        transform.rotation = player.transform.rotation;
+        transform.position = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime * followSpd);
 
-        //float xRot = Input.GetAxis("Mouse X");
-        //float yRot = Input.GetAxis("Mouse Y");
-        //xRot = Mathf.Clamp(xRot, -30, 20);
-        //transform.Rotate(yRot * rotateAngle, xRot * rotateAngle, 0);
+        if(Input.GetMouseButton(1))
+        {
+            Vector3 angleBase = transform.localRotation.eulerAngles;
+            transform.localRotation = Quaternion.Euler(angleBase.x - Input.GetAxis("Mouse Y") * rotateAngle, angleBase.y - Input.GetAxis("Mouse X") * rotateAngle, 0);
+            Vector3 angle = transform.localRotation.eulerAngles - player.transform.localRotation.eulerAngles;
+            angle.z = 0;
+            yaw = Quaternion.Euler(angle);
+        } else
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, player.transform.rotation * yaw, Time.deltaTime * followSpd);
+        }
+
+        if(Input.GetAxis("Vertical") > 0.01f)
+        {
+            yaw = Quaternion.Lerp(yaw, Quaternion.identity, Time.deltaTime * followSpd);
+        }
     }
 }

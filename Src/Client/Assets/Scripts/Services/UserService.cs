@@ -222,7 +222,7 @@ namespace Services
             {
                 if(response.Character != null)
                 {
-                    User.Instance.CurrentCharacter = response.Character;
+                    User.Instance.CurrentCharacterInfo = response.Character;
                     ItemManager.Instance.Init(response.Character.Items);
                     BagManager.Instance.Init(response.Character.Bag);
                     EquipManager.Instance.Init(response.Character.Equips);
@@ -236,7 +236,7 @@ namespace Services
         public void SendLeaveGame(bool exitGame = false)
         {
             ifExitGame = exitGame;
-            Debug.LogFormat("UserLeaveGameRequest::Character ID: {0} Name:{1}", User.Instance.CurrentCharacter.Id, User.Instance.CurrentCharacter.Name);
+            Debug.LogFormat("UserLeaveGameRequest::Character ID: {0} Name:{1}", User.Instance.CurrentCharacterInfo.Id, User.Instance.CurrentCharacterInfo.Name);
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.gameLeave = new UserGameLeaveRequest();
@@ -247,7 +247,8 @@ namespace Services
         private void OnUserLeaveGame(object sender, UserGameLeaveResponse response)
         {
             MapService.Instance.CurrMapId = 0;
-            User.Instance.CurrentCharacter = null;
+            User.Instance.CurrentCharacterInfo = null;
+            User.Instance.currentCharacter = null;
             Debug.LogFormat("OnUserLeaveGame:{0} [{1}]", response.Result, response.Errormsg);
 
             if(ifExitGame)

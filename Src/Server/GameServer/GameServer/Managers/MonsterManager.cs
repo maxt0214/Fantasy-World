@@ -18,7 +18,7 @@ namespace GameServer.Managers
             this.map = map;
         }
 
-        internal Monster Create(int monId, int spawnLevel, NVector3 spawnPos, NVector3 spawnDir)
+        public Monster Create(int monId, int spawnLevel, NVector3 spawnPos, NVector3 spawnDir)
         {
             Monster monster = new Monster(monId, spawnLevel, spawnPos, spawnDir);
             EntityManager.Instance.AddEntity(map.ID, monster);

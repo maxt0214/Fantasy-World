@@ -36,6 +36,16 @@ namespace GameServer.Managers
             }
         }
 
+        public void ChangeExpStatus(int exp)
+        {
+            AddStatus(StatusType.Exp, 0, exp, StatusAction.Add);
+        }
+
+        public void ChangeLevelStatus(int lv)
+        {
+            AddStatus(StatusType.Lv, 0, lv, StatusAction.Add);
+        }
+
         public void ChangeItemStatus(int id, int count, StatusAction action)
         {
             AddStatus(StatusType.Item, id, count, action);

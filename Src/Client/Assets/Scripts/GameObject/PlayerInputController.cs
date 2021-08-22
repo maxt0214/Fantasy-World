@@ -31,24 +31,6 @@ public class PlayerInputController : MonoBehaviour
     {
         motionState = CharacterState.Idle;
 
-        //For local test. character entity should be initialized before the character enters the game
-        if (characterEntity == null)
-        {
-            var charaInfo = new NCharacterInfo();
-            charaInfo.Id = 1;
-            charaInfo.Name = "Test Character";
-            charaInfo.ConfigId = 1;
-            charaInfo.Entity = new NEntity();
-            charaInfo.Entity.Position = new NVector3();
-            charaInfo.Entity.Direction = new NVector3();
-            charaInfo.Entity.Direction.X = 0;
-            charaInfo.Entity.Direction.Y = 100;
-            charaInfo.Entity.Direction.Z = 0;
-            characterEntity = new Character(charaInfo);
-
-            if (entityController != null) entityController.entity = characterEntity;
-        }
-
         if(agent == null)
         {
             agent = gameObject.AddComponent<NavMeshAgent>();
@@ -121,8 +103,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (characterEntity == null)
-            return;
+        if (characterEntity == null) return;
 
         if(autoNav)
         {
@@ -196,6 +177,8 @@ public class PlayerInputController : MonoBehaviour
     float lastSync;
     private void LateUpdate()
     {
+        if (characterEntity == null) return;
+
         //Sync Position To Remote
         Vector3 distanceTraveled = rb.transform.position - lastPos;
         speed = (int)(distanceTraveled.magnitude * 100f / Time.deltaTime);
