@@ -56,9 +56,11 @@ namespace Common.Battle
 
     public enum SkillType
     {
-        Normal = 0,
+        All = -1,
 
-        Skill = 1,
+        Normal = 1,
+
+        Skill = 2,
     }
 
     public enum DmgType
@@ -75,5 +77,12 @@ namespace Common.Battle
         SkillHit = 1,
 
         SkillCast = 2
+    }
+
+    public enum CreatureState
+    {
+        None,
+        Idle,
+        InBattle
     }
 }

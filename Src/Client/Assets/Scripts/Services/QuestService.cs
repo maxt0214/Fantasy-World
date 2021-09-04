@@ -64,7 +64,12 @@ namespace Services
             }
             else
             {
-                MessageBox.Show("Fail To Submit The Quest! Try Again!", "Error", MessageBoxType.Error);
+                if(response.Quest.Status == QuestStatus.Finished)
+                    MessageBox.Show("Quest already finished!", "Error", MessageBoxType.Error);
+                else if(response.Quest.Status == QuestStatus.InProgress)
+                    MessageBox.Show("You have not yet completed the quest!", "Error", MessageBoxType.Error);
+                else if (response.Quest.Status == QuestStatus.Failed)
+                    MessageBox.Show("You failed the quest!", "Error", MessageBoxType.Error);
             }
         }
     }

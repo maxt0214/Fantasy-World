@@ -15,6 +15,7 @@ public class DataManager : Singleton<DataManager>
     public string DataPath;//client
     public string CommonPath;//common data
     public string ServerPath;//server
+    public string BuildPath;
     public Dictionary<int, MapDefine> Maps = null;
     public Dictionary<int, CharacterDefine> Characters = null;
     public Dictionary<int, TeleporterDefine> Teleporters = null;
@@ -29,12 +30,14 @@ public class DataManager : Singleton<DataManager>
     public Dictionary<int, RideDefine> Rides = null;
     public Dictionary<int, Dictionary<int, SkillDefine>> Skills = null;
     public Dictionary<int, BuffDefine> Buffs = null;
+    public Dictionary<int, StoryDefine> Stories = null;
 
     public DataManager()
     {
         DataPath = "Data/";
         CommonPath = "../Data/Data/";
         ServerPath = "../Server/GameServer/GameServer/bin/Debug/Data/";
+        BuildPath = "../Bin/Data/";
         Debug.LogFormat("DataManager > DataManager()");
     }
 
@@ -81,6 +84,9 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(DataPath + "BuffDefine.txt");
         Buffs = JsonConvert.DeserializeObject<Dictionary<int, BuffDefine>>(json);
+
+        json = File.ReadAllText(DataPath + "StoryDefine.txt");
+        Stories = JsonConvert.DeserializeObject<Dictionary<int, StoryDefine>>(json);
     }
 
 
@@ -155,6 +161,11 @@ public class DataManager : Singleton<DataManager>
         Buffs = JsonConvert.DeserializeObject<Dictionary<int, BuffDefine>>(json);
 
         yield return null;
+
+        json = File.ReadAllText(DataPath + "StoryDefine.txt");
+        Stories = JsonConvert.DeserializeObject<Dictionary<int, StoryDefine>>(json);
+
+        yield return null;
     }
 
 #if UNITY_EDITOR
@@ -162,16 +173,16 @@ public class DataManager : Singleton<DataManager>
     {
         string json = JsonConvert.SerializeObject(Teleporters, Formatting.Indented);
         File.WriteAllText(DataPath + "TeleporterDefine.txt", json);
-        //Copy to server
         File.WriteAllText(ServerPath + "TeleporterDefine.txt", json);
+        File.WriteAllText(BuildPath + "TeleporterDefine.txt", json);
     }
 
     public void SaveSpawnPoints()
     {
         string json = JsonConvert.SerializeObject(SpawnPoints, Formatting.Indented);
         File.WriteAllText(DataPath + "SpawnPointDefine.txt", json);
-        //Copy to server
-        File.WriteAllText(ServerPath + "TeleporterDefine.txt", json);
+        File.WriteAllText(ServerPath + "SpawnPointDefine.txt", json);
+        File.WriteAllText(BuildPath + "SpawnPointDefine.txt", json);
     }
 
     public void SaveReachableAreas(Dictionary<int, List<Vector3Int>> area)

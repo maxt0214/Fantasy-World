@@ -32,11 +32,19 @@
   "4": {
     "ID": 4,
     "Name": "Sunset Dungeon",
-    "Type": "Normal",
+    "Type": "Story",
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "Map03",
     "MiniMap": "SunsetDungeon",
     "Music": "bgm-map03"
+  },
+  "5": {
+    "ID": 5,
+    "Name": "Arena",
+    "Type": "Arena",
+    "SubType": "Arena",
+    "Resource": "Arena",
+    "Music": "bgm-town"
   }
 }

@@ -1,4 +1,5 @@
 ﻿using Common.Data;
+using Managers;
 using Services;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,7 +34,12 @@ public class TeleportObject : MonoBehaviour
             } else
             {
                 if (DataManager.Instance.Teleporters.ContainsKey(td.LinkTo))
-                    MapService.Instance.TeleportFrom(td.ID);
+                {
+                    if (td.MapID != 4)
+                        MapService.Instance.TeleportFrom(td.ID);
+                    else
+                        StoryManager.Instance.FinishStory();
+                }
                 else
                     Debug.LogErrorFormat("Teleporter:{0} is linked to Teleporter:{1} which does not exist!", ID, td.LinkTo);
             }

@@ -38,6 +38,8 @@ namespace GameServer
             GuildService.Instance.Init();
             ChatService.Instance.Init();
             BattleService.Instance.Init();
+            ArenaService.Instance.Init();
+            StoryService.Instance.Init();
             thread = new Thread(new ThreadStart(this.Update));
             return true;
         }
@@ -59,12 +61,17 @@ namespace GameServer
 
         public void Update()
         {
+            var mapMgr = MapManager.Instance;
+            var arenaMgr = ArenaManager.Instance;
+            var storyMgr = StoryManager.Instance;
             while (running)
             {
                 Time.Tick();
                 Thread.Sleep(100);
                 //Console.WriteLine("{0} {1} {2} {3} {4}", Time.deltaTime, Time.frameCount, Time.ticks, Time.time, Time.realtimeSinceStartup);
-                MapManager.Instance.Update();
+                mapMgr.Update();
+                arenaMgr.Update();
+                storyMgr.Update();
             }
         }
     }

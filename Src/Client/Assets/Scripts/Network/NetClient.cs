@@ -414,6 +414,7 @@ namespace Network
 
         void ProceeMessage()
         {
+            if (MessageDistributer.Instance == null) Debug.LogError("Here");
             MessageDistributer.Instance.Distribute();
         }
 

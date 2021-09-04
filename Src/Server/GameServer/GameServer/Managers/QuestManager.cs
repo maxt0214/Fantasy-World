@@ -13,17 +13,22 @@ namespace GameServer.Managers
 {
     class QuestManager
     {
-        Character Owner;
+        private Character Owner;
+
+        public Dictionary<int, Quest> Quests = new Dictionary<int, Quest>();
+
         public QuestManager(Character owner)
         {
             Owner = owner;
         }
 
-        public void GetQuestInfos(List<NQuestInfo> list)
+        public void InitQuests(List<NQuestInfo> list)
         {
             foreach(var quest in Owner.Data.Quests)
             {
-                list.Add(GetQuestInfo(quest));
+                var info = GetQuestInfo(quest);
+                list.Add(info);
+                Quests.Add(quest.QuestID, new Quest(quest, DataManager.Instance.Quests[quest.QuestID], info, Owner));
             }
         }
 
@@ -38,86 +43,42 @@ namespace GameServer.Managers
             };
         }
 
-        public Result AcceptQuest(NetConnection<NetSession> sender, int questId)
+        public Quest AcceptQuest(int questId)
         {
-            Character chara = sender.Session.Character;
-
-            QuestDefine quest;
-            if(DataManager.Instance.Quests.TryGetValue(questId,out quest))
-            {
-                var dbQuest = DBService.Instance.Entities.CharacterQuests.Create();
-                dbQuest.QuestID = quest.ID;
-
-                if(quest.Target1 == QuestTarget.None)
-                {
-                    dbQuest.Status = (int)QuestStatus.Complete;
-                } else
-                {
-                    dbQuest.Status = (int)QuestStatus.InProgress;
-                }
-                sender.Session.Response.questAccept.Quest = GetQuestInfo(dbQuest);
-                chara.Data.Quests.Add(dbQuest);
-                DBService.Instance.Save();
-                return Result.Success;
-            } else
-            {
-                sender.Session.Response.questAccept.Errormsg = "Quest Does not Exist";
-                return Result.Failed;
-            }
-        }
-
-        public Result SubmitQuest(NetConnection<NetSession> sender, int questId)
-        {
-            Character chara = sender.Session.Character;
-
             QuestDefine quest;
             if (DataManager.Instance.Quests.TryGetValue(questId, out quest))
-            {
-                var dbQuest = chara.Data.Quests.Where(q => q.QuestID == questId).FirstOrDefault();
-                if(dbQuest != null)
-                {
-                    if(dbQuest.Status != (int)QuestStatus.Complete)
-                    {
-                        sender.Session.Response.questSubmit.Errormsg = "Quest Has Not Yet Been Finished!";
-                        return Result.Failed;
-                    }
-                    dbQuest.Status = (int)QuestStatus.Finished;
-                    sender.Session.Response.questSubmit.Quest = GetQuestInfo(dbQuest);
-                    DBService.Instance.Save();
-
-                    //Reward Player
-                    if(quest.RewardGold > 0)
-                    {
-                        chara.Gold += quest.RewardGold;
-                    }
-                    if(quest.RewardExp > 0)
-                    {
-                        //chara.Exp += quest.RewardExp;
-                    }
-
-                    if(quest.RewardItem1 > 0)
-                    {
-                        chara.itemManager.AddItem(quest.RewardItem1, quest.RewardItem1Count);
-                    }
-                    if (quest.RewardItem2 > 0)
-                    {
-                        chara.itemManager.AddItem(quest.RewardItem2, quest.RewardItem2Count);
-                    }
-                    if (quest.RewardItem3 > 0)
-                    {
-                        chara.itemManager.AddItem(quest.RewardItem3, quest.RewardItem3Count);
-                    }
-                    DBService.Instance.Save();
-                    return Result.Success;
-                }
-                sender.Session.Response.questAccept.Errormsg = "Quest Does Not Exist [2]";//Not exist in database
-                return Result.Failed;
-            }
+                return CreateQuest(questId, quest);
             else
+                return null;
+        }
+
+        private Quest CreateQuest(int questId, QuestDefine questDef)
+        {
+            if(!Quests.TryGetValue(questId, out Quest quest))
             {
-                sender.Session.Response.questAccept.Errormsg = "Quest Does Not Exist [1]";//Not exist in quest define
-                return Result.Failed;
+                var dbQuest = DBService.Instance.Entities.CharacterQuests.Create();
+                dbQuest.QuestID = questDef.ID;
+
+                quest = new Quest(dbQuest,questDef,GetQuestInfo(dbQuest),Owner);
+                Quests.Add(questId,quest);
+                quest.Init();
+                Owner.Data.Quests.Add(dbQuest);
+                DBService.Instance.Save();
+                return quest;
             }
+            return quest;
+        }
+
+        public Quest SubmitQuest(int questId)
+        {
+            Quest quest;
+            if (Quests.TryGetValue(questId, out quest))
+            {
+                quest.Submit();
+                DBService.Instance.Save();
+                return quest;
+            }
+            return quest;
         }
     }
 }

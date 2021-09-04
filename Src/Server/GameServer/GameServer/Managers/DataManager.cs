@@ -24,6 +24,7 @@ namespace GameServer.Managers
         public Dictionary<int, RideDefine> Rides = null;
         public Dictionary<int, Dictionary<int, SkillDefine>> Skills = null;
         public Dictionary<int, BuffDefine> Buffs = null;
+        public Dictionary<int, StoryDefine> Stories = null;
 
         public DataManager()
         {
@@ -74,6 +75,9 @@ namespace GameServer.Managers
 
             json = File.ReadAllText(DataPath + "BuffDefine.txt");
             Buffs = JsonConvert.DeserializeObject<Dictionary<int, BuffDefine>>(json);
+
+            json = File.ReadAllText(DataPath + "StoryDefine.txt");
+            Stories = JsonConvert.DeserializeObject<Dictionary<int, StoryDefine>>(json);
         }
     }
 }

@@ -48,7 +48,7 @@ namespace GameServer.Battle
         {
             Info = info;
             Owner = owner;
-            Def = DataManager.Instance.Skills[(int)Owner.Define.Class][Info.Id];
+            Def = DataManager.Instance.Skills[Owner.Define.TID][Info.Id];
         }
 
         public SkillResult Castable(BattleContext context)
@@ -56,7 +56,7 @@ namespace GameServer.Battle
             if (Status != SkillStatus.None)
                 return SkillResult.Casting;
 
-            if(Def.TargetType == TargetType.Single)
+            if(Def.TargetType == TargetType.Single || Def.TargetType == TargetType.None)
             {
                 if (context.Target == null || context.Target == Owner)
                     return SkillResult.InvalidTarget;
@@ -66,7 +66,7 @@ namespace GameServer.Battle
                     return SkillResult.OutOfRange;
             }
 
-            if(Def.TargetType == Common.Battle.TargetType.Area)
+            if(Def.TargetType == TargetType.Area)
             {
                 if (context.CastingSkill.Position == null)
                     return SkillResult.InvalidTarget;
@@ -194,7 +194,12 @@ namespace GameServer.Battle
 
             NDamageInfo dmgInfo = CalcSkillDmg(context.Caster, target);
             Log.InfoFormat("Skill[{0}].HitTarget[{1}] Dmg:{2} Crit:{3}", Def.Name, target.Name, dmgInfo.Dmg, dmgInfo.Crit);
-            target.DealDamage(dmgInfo);
+            target.DealDamage(dmgInfo, context.Caster);
+            if(dmgInfo.DeadAfterDmg)
+            {
+                if (context.Caster != null)
+                    context.Caster.OnKilled(target);
+            }
             hitInfo.Damages.Add(dmgInfo);
 
             AddBuff(TriggerType.SkillHit, target);

@@ -8,13 +8,16 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
 {
     public GameObject nameBarPrefab;
     public GameObject npcStatPrefab;
+    public GameObject popupPrefab;
 
     public Dictionary<Transform, GameObject> elementNames = new Dictionary<Transform, GameObject>();
     public Dictionary<Transform, GameObject> elementStats = new Dictionary<Transform, GameObject>();
 
-    private void Update()
+    protected override void OnStart()
     {
-        
+        nameBarPrefab.SetActive(false);
+        npcStatPrefab.SetActive(false);
+        popupPrefab.SetActive(false);
     }
 
     public void AddCharacterNameBar(Transform owner, Character chara)
@@ -26,6 +29,7 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
         if (UIelement == null)
             Debug.LogErrorFormat("{0} does not contain a UIWorldElement", nameBarPrefab.name);
         UIelement.owner = owner;
+        UIelement.OffSetHeight(chara.Define.Height);
 
         var UINameBar = newNameBar.GetComponent<UINameBar>();
         if(UINameBar == null)
@@ -69,5 +73,13 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
             Destroy(elementStats[owner]);
             elementStats.Remove(owner);
         }
+    }
+
+    public void ShowPopUpText(PopUpType type, Vector3 pos, float val, bool ifCrit)
+    {
+        GameObject go = Instantiate(popupPrefab, pos, Quaternion.identity, transform);
+        go.name = string.Format("PopUp_{0}",type);
+        go.GetComponent<UIPopUpText>().InitPopUp(type,val,ifCrit);
+        go.SetActive(true);
     }
 }

@@ -9,9 +9,10 @@ namespace Common.Data
         public CharacterClass Class { get; set; }
         public string Resource { get; set; }
         public string Description { get; set; }
-
+        public string AI { get; set; }
+        public int InitLevel { get; set; }
+        public float Height { get; set; }
         public int Speed { get; set; }
-
         public float MaxHP { get; set; }
         public float MaxMP { get; set; }
         public float GrowthSTR { get; set; }

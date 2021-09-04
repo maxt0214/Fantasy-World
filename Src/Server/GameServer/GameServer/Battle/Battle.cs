@@ -18,6 +18,7 @@ namespace GameServer.Battle
         public Dictionary<int, Creature> Entities = new Dictionary<int, Creature>();
 
         Queue<NCastSkillInfo> Actions = new Queue<NCastSkillInfo>();
+        List<NCastSkillInfo> CastInfos = new List<NCastSkillInfo>();
         List<NHitInfo> HitInfos = new List<NHitInfo>();
         List<NBuffInfo> BuffInfos = new List<NBuffInfo>();
 
@@ -42,6 +43,7 @@ namespace GameServer.Battle
 
         public void Update()
         {
+            CastInfos.Clear();
             HitInfos.Clear();
             BuffInfos.Clear();
             if (Actions.Count > 0)
@@ -81,13 +83,6 @@ namespace GameServer.Battle
             if (context.Target != null) JoinBattle(context.Target);
 
             context.Caster.CastSkill(context, action.skillId);
-
-            NetMessageResponse response = new NetMessageResponse();
-            response.castSkill = new CastSkillResponse();
-            response.castSkill.Info = context.CastingSkill;
-            response.castSkill.Result = context.Result == SkillResult.Valid ? Result.Success : Result.Failed;
-            response.castSkill.Errormsg = context.Result.ToString();
-            Map.BroadcastBattleResponse(response);
         }
 
         public void JoinBattle(Creature joiner)
@@ -98,6 +93,11 @@ namespace GameServer.Battle
         public void LeaveBattle(Creature leaver)
         {
             Entities.Remove(leaver.entityId);
+        }
+
+        public void AddCastInfo(NCastSkillInfo castSkillInfo)
+        {
+            CastInfos.Add(castSkillInfo);
         }
 
         public void AddHitInfo(NHitInfo hitInfo)
@@ -112,9 +112,18 @@ namespace GameServer.Battle
 
         private void BroadcastActionMessages()
         {
-            if (HitInfos.Count == 0 && BuffInfos.Count == 0) return;
+            if (HitInfos.Count == 0 && BuffInfos.Count == 0 && CastInfos.Count == 0) return;
             NetMessageResponse response = new NetMessageResponse();
-            if(HitInfos.Count > 0)
+
+            if (CastInfos.Count > 0)
+            {
+                response.castSkill = new CastSkillResponse();
+                response.castSkill.Infoes.AddRange(CastInfos);
+                response.castSkill.Result = Result.Success;
+                response.castSkill.Errormsg = "";
+            }
+
+            if (HitInfos.Count > 0)
             {
                 response.skillHits = new SkillHitResponse();
                 response.skillHits.Hits.AddRange(HitInfos);
@@ -129,6 +138,7 @@ namespace GameServer.Battle
                 response.buffRes.Result = Result.Success;
                 response.buffRes.Errormsg = "";
             }
+
             Map.BroadcastBattleResponse(response);
         }
 

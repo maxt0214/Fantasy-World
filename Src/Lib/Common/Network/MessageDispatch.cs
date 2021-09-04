@@ -40,6 +40,15 @@ namespace Network
             if (message.castSkill != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.castSkill); }
             if (message.skillHits != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.skillHits); }
             if (message.buffRes != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.buffRes); }
+            if (message.arenaChallengeReq != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaChallengeReq); }
+            if (message.arenaChallengeRes != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaChallengeRes); }
+            if (message.arenaStart != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaStart); }
+            if (message.arenaOver != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaOver); }
+            if (message.arenaReady != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaReady); }
+            if (message.arenaRoundStart != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaRoundStart); }
+            if (message.arenaRoundOver != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaRoundOver); }
+            if (message.storyStart != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.storyStart); }
+            if (message.storyOver != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.storyOver); }
         }
 
         //Requests are handled on the server
@@ -74,6 +83,11 @@ namespace Network
             if (message.guildAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildAdmin); }
             if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); }
             if (message.castSkill != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.castSkill); }
+            if (message.arenaChallengeReq != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaChallengeReq); }
+            if (message.arenaChallengeRes != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaChallengeRes); }
+            if (message.arenaReady != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.arenaReady); }
+            if (message.storyStart != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.storyStart); }
+            if (message.storyOver != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.storyOver); }
         }
     }
 }

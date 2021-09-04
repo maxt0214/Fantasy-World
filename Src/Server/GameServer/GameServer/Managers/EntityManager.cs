@@ -12,24 +12,41 @@ namespace GameServer.Managers
         public Dictionary<int,Entity> AllEntities = new Dictionary<int, Entity>();
         public Dictionary<int, List<Entity>> MapEntities = new Dictionary<int, List<Entity>>();
 
-        public void AddEntity(int mapId, Entity entity)
+        public int CalcMapIdx(int mid, int instanceId)
+        {
+            return mid * 10000 + instanceId;
+        }
+
+        public void AddEntity(int mapId, int instanceId, Entity entity)
         {
             entity.EntityData.Id = ++idx;
             AllEntities.Add(entity.entityId, entity);
 
+            AddEntitiesToMap(mapId, instanceId, entity);
+        }
+
+        public void AddEntitiesToMap(int mapId, int instanceId, Entity entity)
+        {
             List<Entity> entities = null;
-            if(!MapEntities.TryGetValue(mapId, out entities))
+            var idx = CalcMapIdx(mapId,instanceId);
+            if (!MapEntities.TryGetValue(idx, out entities))
             {
                 entities = new List<Entity>();
-                MapEntities[mapId] = entities;
+                MapEntities[idx] = entities;
             }
             entities.Add(entity);
         }
 
-        public void RemoveEntity(int mapId, Entity entity)
+        public void RemoveEntity(int mapId, int instanceID, Entity entity)
         {
             AllEntities.Remove(entity.entityId);
-            MapEntities[mapId].Remove(entity);
+            RemoveEntityInMap(mapId, instanceID, entity);
+        }
+
+        public void RemoveEntityInMap(int mid, int instanceID, Entity entity)
+        {
+            var idx = CalcMapIdx(mid, instanceID);
+            MapEntities[idx].Remove(entity);
         }
 
         public Entity GetEntity(int eid)
@@ -44,11 +61,11 @@ namespace GameServer.Managers
             return GetEntity(eid) as Creature;
         }
 
-        public List<T> GetMapEntities<T>(int mapId, Predicate<Entity> match) where T : Creature
+        public List<T> GetMapEntities<T>(int mapId, int instanceID, Predicate<Entity> match) where T : Creature
         {
             List<T> res = new List<T>();
-
-            foreach(var entity in MapEntities[mapId])
+            var idx = CalcMapIdx(mapId,instanceID);
+            foreach(var entity in MapEntities[idx])
             {
                 if (entity is T && match.Invoke(entity))
                     res.Add((T)entity);
@@ -56,9 +73,9 @@ namespace GameServer.Managers
             return res;
         }
 
-        public List<T> GetMapEntitiesInRange<T>(int mapId, Vector3Int pos, int range) where T : Creature
+        public List<T> GetMapEntitiesInRange<T>(int mapId, Vector3Int pos, int range, int instanceID = 0) where T : Creature
         {
-            return GetMapEntities<T>(mapId, entity =>
+            return GetMapEntities<T>(mapId, instanceID, entity =>
             {
                 T creature = entity as T;
                 return creature.DistanceTo(pos) < range;

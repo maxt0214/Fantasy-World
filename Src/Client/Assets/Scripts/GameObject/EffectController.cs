@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 
- public enum EffectType
- {
-    None = 0,
-    Bullet = 1
- }
+public enum EffectType
+{
+   None = 0,
+   Bullet = 1,
+   Position = 2,
+   Hit = 3
+}
 
 public class EffectController : MonoBehaviour
 {
@@ -35,16 +37,21 @@ public class EffectController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Init(EffectType type, Transform source, Transform target, float duration)
+    public void Init(EffectType type, Transform source, Transform target, Vector3 offset, float duration)
     {
         this.type = type;
         this.target = target;
-        lifeSpan = duration;
+        if(duration > 0)
+            lifeSpan = duration;
+        time = 0;
         if(type == EffectType.Bullet)
         {
             startPos = transform.position;
-            offset = new Vector3(0, transform.position.y - source.position.y, 0);
-            targetPos = this.target.position + offset;
+            this.offset = offset;
+            targetPos = this.target.position + this.offset;
+        } else if(type == EffectType.Hit)
+        {
+            transform.position = target.position + offset;
         }
     }
 
@@ -59,6 +66,11 @@ public class EffectController : MonoBehaviour
             }
             transform.LookAt(targetPos);
             if(Vector3.Distance(targetPos,transform.position) < 0.5f)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            if(lifeSpan > 0 && time > lifeSpan)
             {
                 Destroy(gameObject);
                 return;

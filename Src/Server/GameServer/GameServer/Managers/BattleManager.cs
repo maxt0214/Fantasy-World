@@ -10,8 +10,6 @@ namespace GameServer.Managers
 {
     class BattleManager : Singleton<BattleManager>
     {
-        static long bid = 0;
-
         public void Init()
         {
 

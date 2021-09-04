@@ -38,6 +38,8 @@ public class LoadingManager : MonoBehaviour {
 		GuildService.Instance.Init();
 		ChatService.Instance.Init();
 		BattleService.Instance.Init();
+		ArenaService.Instance.Init();
+		StoryService.Instance.Init();
 
 		ShopManager.Instance.Init();
 

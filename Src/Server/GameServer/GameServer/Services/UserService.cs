@@ -197,6 +197,7 @@ namespace GameServer.Services
             CharacterManager.Instance.RemoveCharacter(character.Id);
             character.Clear();
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            character.OnLeft?.Invoke(character.entityId);
         }
     }
 }

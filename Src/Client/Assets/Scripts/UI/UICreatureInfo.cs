@@ -50,6 +50,7 @@ public class UICreatureInfo : MonoBehaviour
         currHp = target.Attributes.HP;
         currMp = target.Attributes.MP;
 
+        Title.text = target.Name;
         HpBar.maxValue = target.Attributes.MaxHP;
         HpBar.value = target.Attributes.HP;
         MpBar.maxValue = target.Attributes.MaxMP;
@@ -64,6 +65,7 @@ public class UICreatureInfo : MonoBehaviour
 
         targetHp = (int)target.Attributes.HP;
         targetMp = (int)target.Attributes.MP;
+        Title.text = target.Name;
 
         if (Time.time < dropTime)
             return;

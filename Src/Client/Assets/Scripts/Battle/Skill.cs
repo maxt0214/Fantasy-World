@@ -38,7 +38,7 @@ namespace Battle
         {
             Info = info;
             Owner = owner;
-            Def = DataManager.Instance.Skills[(int)Owner.Define.Class][Info.Id];
+            Def = DataManager.Instance.Skills[Owner.Define.TID][Info.Id];
             cd = 0;
         }
 
@@ -100,7 +100,21 @@ namespace Battle
                 Status = SkillStatus.Preparing;
             } else
             {
-                Status = SkillStatus.Casting;
+                CastSkillStarted();
+            }
+        }
+
+        private void CastSkillStarted()
+        {
+            Status = SkillStatus.Casting;
+            if (!string.IsNullOrEmpty(Def.AOEEffect))
+            {
+                if (Def.TargetType == TargetType.Area)
+                    Owner.PlayEffect(EffectType.Position, Def.AOEEffect, TargetPosition);
+                else if (Def.TargetType == TargetType.Single)
+                    Owner.PlayEffect(EffectType.Position, Def.AOEEffect, Target);
+                else if(Def.TargetType == TargetType.Self)
+                    Owner.PlayEffect(EffectType.Position, Def.AOEEffect, Owner);
             }
         }
 
@@ -126,7 +140,7 @@ namespace Battle
             }
             else
             {
-                Status = SkillStatus.Casting;
+                CastSkillStarted();
                 Debug.LogFormat("Skill[{0}].UpdateCastPrep Over!", Def.Name);
             }
         }
@@ -219,7 +233,11 @@ namespace Battle
             {
                 var target = EntityManager.Instance.GetEntity(dmg.entityId) as Creature;
                 if (target == null) continue;
-                target.DealDamage(dmg);
+                target.DealDamage(dmg,true);
+                if(Def.HitEffect != null)
+                {
+                    target.PlayEffect(EffectType.Hit, Def.HitEffect,target);
+                }
             }
         }
 
@@ -248,6 +266,27 @@ namespace Battle
                 HitMap[hitId] = damages;
             else
                 DealHitDamage(damages);
+        }
+
+        public static string GetSkillErrorMessage(SkillResult skillResult)
+        {
+            switch (skillResult)
+            {
+                case SkillResult.CoolDown:
+                    return "This Skill Is Cooling Down!";
+                case SkillResult.InvalidMp:
+                    return "Insufficient MP";
+                case SkillResult.InvalidTarget:
+                    return "Invalid Target";
+                case SkillResult.OutOfRange:
+                    return "Target Out Of Range";
+                case SkillResult.InvalidSkill:
+                    return "Invalid Skill: You Don't Have This Skill";
+                case SkillResult.Casting:
+                    return "This Skill Is Still In The Progress Of Casting";
+            }
+
+            return "";
         }
     }
 }

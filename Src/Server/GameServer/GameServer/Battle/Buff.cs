@@ -113,7 +113,7 @@ namespace GameServer.Battle
 
             NDamageInfo dmgInfo = CalcBuffDmg(Context.Caster);
             Log.InfoFormat("Buff[{0}].AffectedTarget[{1}] Dmg:{2} Crit:{3}", Def.Name, Owner.Name, dmgInfo.Dmg, dmgInfo.Crit);
-            Owner.DealDamage(dmgInfo);
+            Owner.DealDamage(dmgInfo,Context.Caster);
 
             NBuffInfo buffInfo = new NBuffInfo()
             {

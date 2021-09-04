@@ -3,6 +3,7 @@ using Common.Data;
 using GameServer.Battle;
 using GameServer.Core;
 using GameServer.Managers;
+using GameServer.Models;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,16 @@ namespace GameServer.Entities
         public BuffManager BuffMgr;
         public EffectManager EffectMgr;
 
-        public bool ifDead = false;
+        public delegate void CreatureDeadHandler(int eid);
+        public CreatureDeadHandler OnDead;
+
+        public delegate void CreaturekillHandler(CharacterDefine def);
+        public CreaturekillHandler OnKill;
+
+        public CreatureState BattleStat;
+        public CharacterState MotionStat;
+
+        public Map Map;
 
         public Creature(CharacterType type, int configId, int level, Vector3Int pos, Vector3Int dir) :
            base(pos, dir)
@@ -95,16 +105,63 @@ namespace GameServer.Entities
                 context.Result = SkillResult.InvalidSkill;
             else
                 context.Result = skill.Cast(context);
+
+            if(context.Result == SkillResult.Valid)
+            {
+                BattleStat = CreatureState.InBattle;
+            }
+
+            if(context.CastingSkill == null) //Monster
+            {
+                if(context.Result == SkillResult.Valid)
+                {
+                    context.CastingSkill = new NCastSkillInfo()
+                    {
+                        casterId = entityId,
+                        targetId = context.Target.entityId,
+                        skillId = skill.Def.ID,
+                        Position = new NVector3(),
+                        Result = context.Result,
+                    };
+                    context.Battle.AddCastInfo(context.CastingSkill);
+                }
+            } else //Players
+            {
+                context.CastingSkill.Result = context.Result;
+                context.Battle.AddCastInfo(context.CastingSkill);
+            }
         }
 
-        public void DealDamage(NDamageInfo damage)
+        public void DealDamage(NDamageInfo damage, Creature source)
         {
+            BattleStat = CreatureState.InBattle;
             Attributes.HP -= damage.Dmg;
             if(IsDead())
             {
-                ifDead = true;
+                OnDead?.Invoke(entityId);
                 damage.DeadAfterDmg = true;
             }
+            OnDamaged(damage,source);
+        }
+
+        internal virtual void OnDamaged(NDamageInfo damage, Creature source)
+        {
+        }
+
+        public virtual void OnEnteredMap(Map map)
+        {
+            Map = map;
+        }
+
+        public virtual void OnLeftMap(Map map)
+        {
+            Map = null;
+            map.Battle.LeaveBattle(this);
+        }
+
+        public void OnKilled(Creature target)
+        {
+            OnKill?.Invoke(target.Define);
         }
     }
 }

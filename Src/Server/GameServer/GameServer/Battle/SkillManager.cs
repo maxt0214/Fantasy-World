@@ -13,6 +13,8 @@ namespace GameServer.Battle
         public List<Skill> Skills { get; private set; }
         public List<NSkillInfo> Infos { get; private set; }
 
+        public Skill atk { get; private set; }
+
         public SkillManager(Creature owner)
         {
             Owner = owner;
@@ -37,6 +39,10 @@ namespace GameServer.Battle
                 info.Lv = 1;
                 Infos.Add(info);
                 Skill skill = new Skill(info, Owner);
+                if(kv.Value.SkillType == Common.Battle.SkillType.Normal)
+                {
+                    atk = skill;
+                }
                 AddSkill(skill);
             }
         }

@@ -30,8 +30,13 @@ namespace Battle
             if(shotTime > duration)
             {
                 skill.DealHitDamage(hit);
-                destroyed = true;
+                Destroy();
             }
+        }
+
+        public void Destroy()
+        {
+            destroyed = true;
         }
     }
 }

@@ -124,6 +124,18 @@ namespace GameServer.Core
         public int sqrMagnitude => x * x + y * y + z * z;
 
         /// <summary>
+        /// Returns the normal of this vector
+        /// </summary>
+        public Vector3Int normalized
+        {
+            get
+            {
+                var m = magnitude;
+                return new Vector3Int((int)(x * 100f / magnitude), (int)(y * 100f / magnitude), (int)(z * 100f / magnitude));
+            }
+        }
+
+        /// <summary>
         ///   <para>Shorthand for writing Vector3Int (0, 0, 0).</para>
         /// </summary>
         public static Vector3Int zero => s_Zero;

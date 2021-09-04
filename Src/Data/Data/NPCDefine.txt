@@ -18,7 +18,8 @@
     "Name": "Albert",
     "Description": "Dungeon Related",
     "Type": "Functional",
-    "Function": "InvokeDungeon"
+    "Function": "InvokeDungeon",
+    "Param": 1
   },
   "4": {
     "ID": 4,

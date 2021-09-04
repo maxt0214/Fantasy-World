@@ -17,9 +17,12 @@ public class EntityEffectManager : MonoBehaviour
     {
         effects.Clear();
         
-        for(int i = 0; i < Root.childCount; i++)
+        if(Root != null && Root.childCount > 0)
         {
-            effects[Root.GetChild(i).name] = Root.GetChild(i).gameObject;
+            for (int i = 0; i < Root.childCount; i++)
+            {
+                effects[Root.GetChild(i).name] = Root.GetChild(i).gameObject;
+            }
         }
 
         for (int i = 0; i < Props.Length; i++)
@@ -37,12 +40,12 @@ public class EntityEffectManager : MonoBehaviour
         }
     }
 
-    public void PlayEffect(EffectType type, string name, Transform target, float duration)
+    public void PlayEffect(EffectType type, string name, Transform target, Vector3 pos, float duration)
     {
-        if (type == EffectType.Bullet)
+        if (type == EffectType.Bullet || type == EffectType.Hit || type == EffectType.Position)
         {
             EffectController effect = InstantiateEffect(name);
-            effect.Init(type, transform, target, duration);
+            effect.Init(type, transform, target, pos, duration);
             effect.gameObject.SetActive(true);
         }
         else

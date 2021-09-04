@@ -7,7 +7,8 @@ namespace Common.Data
     public enum QuestType 
     {
         Main,
-        Branch
+        Branch,
+        Dungeon
     }
 
     public enum QuestTarget

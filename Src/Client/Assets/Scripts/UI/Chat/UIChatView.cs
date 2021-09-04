@@ -16,15 +16,21 @@ public class UIChatView : UIWindow
 
     public Dropdown channelSelection;
 
+    private int inputId = -1;
+
     private void Start()
     {
         channelTabs.OnTabSelected += OnChannelDisplayedSelected;
         ChatManager.Instance.OnChat += RefreshUI;
+        inputId = InputManager.Instance.RegisterInputSource();
     }
 
     private void Update()
     {
-        InputManager.Instance.InputMode = chatInput.isFocused;
+        if(inputId != -1)
+        {
+            InputManager.Instance.EnableInputSource(inputId, chatInput.isFocused);
+        }
     }
 
     private void OnDestroy()

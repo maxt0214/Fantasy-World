@@ -165,11 +165,16 @@ namespace Entities
             buffMgr.OnUpdate(delta);
         }
 
-        public void DealDamage(NDamageInfo damage)
+        public void DealDamage(NDamageInfo damage, bool playHurt)
         {
             Debug.LogFormat("DeltDamage: Creature{0} DmgToken:{1}", entityId, damage.Dmg);
             Attributes.HP -= damage.Dmg;
-            PlayAnim("Hurt");
+            if(playHurt) PlayAnim("Hurt");
+
+            if(Controller != null)
+            {
+                UIWorldElementManager.Instance.ShowPopUpText(PopUpType.Dmg, Controller.GetTransform().position + GetDmgPromptOffset(), - damage.Dmg, damage.Crit);
+            }
         }
 
         public void InitSkillHit(NHitInfo hitInfo)
@@ -189,7 +194,7 @@ namespace Entities
                     RemoveBuff(buff.Uid);
                     break;
                 case BuffAction.Apply:
-                    DealDamage(buff.Damage);
+                    DealDamage(buff.Damage,false);
                     break;
             }
         }
@@ -222,11 +227,28 @@ namespace Entities
             effectMgr.RemoveBuffEffect(effect);
         }
 
-        public void PlayEffect(EffectType type, string name, Creature target, float duration)
+        public void PlayEffect(EffectType type, string name, Creature target, float duration = 0)
         {
             if (string.IsNullOrEmpty(name)) return;
             if (Controller != null)
                 Controller.PlayEffect(type,name,target,duration);
+        }
+
+        public void PlayEffect(EffectType type, string name, NVector3 pos)
+        {
+            if (string.IsNullOrEmpty(name)) return;
+            if (Controller != null)
+                Controller.PlayEffect(type, name, pos, 0);
+        }
+
+        public Vector3 GetHitOffset()
+        {
+            return new Vector3(0, Define.Height * 0.8f, 0);
+        }
+
+        public Vector3 GetDmgPromptOffset()
+        {
+            return new Vector3(0, Define.Height, 0);
         }
     }
 }

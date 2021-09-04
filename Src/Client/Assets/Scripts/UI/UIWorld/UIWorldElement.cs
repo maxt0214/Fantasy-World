@@ -23,4 +23,9 @@ public class UIWorldElement : MonoBehaviour
             transform.forward = Camera.main.transform.forward;
         }
     }
+
+    public void OffSetHeight(float offset)
+    {
+        height += offset;
+    }
 }

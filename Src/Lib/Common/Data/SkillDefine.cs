@@ -26,9 +26,11 @@ namespace Common.Data
         public float BulletSpd { get; set; }
         public string BulletRes { get; set; }
         public int AOERange { get; set; }
+        public string AOEEffect { get; set; }
         public float Duration { get; set; }
         public float EffectInterval { get; set; }
         public List<float> HitTimes { get; set; }
+        public string HitEffect { get; set; }
         public List<int> Buff { get; set; }
         public float DmgMultiplier { get; set; }
         public float ContinousDmg { get; set; }

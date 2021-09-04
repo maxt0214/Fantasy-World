@@ -236,7 +236,14 @@ message NetMessageRequest{
 
 	ChatRequest chat = 30;
 
-	CastSkillRequest castSkill = 31;
+	CastSkillRequest castSkill = 50;
+
+	ArenaChallengeRequest arenaChallengeReq = 60;
+	ArenaChallengeResponse arenaChallengeRes = 61;
+	ArenaReadyRequest arenaReady = 62;
+
+	StoryStartRequest storyStart = 70;
+	StoryOverRequest storyOver = 71;
 }
 
 message NetMessageResponse{
@@ -282,6 +289,17 @@ message NetMessageResponse{
 	SkillHitResponse skillHits = 51;
 	BuffResponse buffRes = 52;
 
+	ArenaChallengeRequest arenaChallengeReq = 60;
+	ArenaChallengeResponse arenaChallengeRes = 61;
+	ArenaStartResponse arenaStart = 62;
+	ArenaOverResponse arenaOver = 63;
+	ArenaReadyResponse arenaReady = 64;
+	ArenaRoundStartResponse arenaRoundStart = 65;
+	ArenaRoundOverResponse arenaRoundOver = 66;
+	
+	StoryStartResponse storyStart = 70;
+	StoryOverResponse storyOver = 71;
+	
 	StatusNotify statusNotify = 100;
 }
 
@@ -771,6 +789,7 @@ message NCastSkillInfo
 	int32 casterId = 2;
 	int32 targetId = 3;
 	NVector3 position = 4;
+	SKILL_RESULT result = 5;
 }
 
 message NHitInfo 
@@ -799,7 +818,7 @@ message CastSkillResponse
 {
 	RESULT result = 1;
 	string errormsg = 2;
-	NCastSkillInfo info = 3;
+	repeated NCastSkillInfo info = 3;
 }
 
 message SkillHitResponse
@@ -833,4 +852,113 @@ message BuffResponse
 	RESULT result = 1;
 	string errormsg = 2;
 	repeated NBuffInfo buffs = 3;
+}
+
+//Arena
+message ArenaPlayer 
+{
+	int32 cid = 1;
+	string name = 2;
+	int32 score = 3;
+	int32 rank = 4;
+}
+
+message ArenaInfo 
+{
+	int32 arenaId = 1;
+	ArenaPlayer red = 2;
+	ArenaPlayer blue = 3;
+}
+
+message ArenaChallengeRequest 
+{
+	ArenaInfo info = 1;
+}
+
+message ArenaChallengeResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	ArenaInfo info = 3;
+}
+
+message ArenaStartResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	ArenaInfo info = 3;
+}
+
+message ArenaOverResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	ArenaInfo info = 3;
+}
+
+message ArenaReadyRequest
+{
+	int32 arenaId = 1;
+	int32 entityId = 2;
+}
+
+message ArenaReadyResponse
+{
+	int32 round = 1;
+	ArenaInfo arena_info = 2;
+}
+
+message ArenaRoundStartResponse
+{
+	int32 round = 1;
+	ArenaInfo arena_info = 2;
+}
+
+message ArenaRoundOverResponse
+{
+	int32 round = 1;
+	ArenaInfo arena_info = 2;
+}
+
+enum ARENA_STATUS 
+{
+	NONE = 0;
+	WAITING = 1;
+	IN_PROGRESS = 2;
+	SETTLING = 3;
+}
+
+enum ARENA_ROUND_STATUS 
+{
+	NONE = 0;
+	READY = 1;
+	IN_PROGRESS = 2;
+	SETTLING = 3;
+}
+
+//Story
+message StoryStartRequest 
+{
+	int32 storyId = 1;
+}
+
+message StoryStartResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	int32 storyId = 3;
+	int32 instanceId = 4;
+}
+
+message StoryOverRequest 
+{
+	int32 storyId = 1;
+	int32 instanceId = 2;
+}
+
+message StoryOverResponse 
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	int32 storyId = 3;
 }

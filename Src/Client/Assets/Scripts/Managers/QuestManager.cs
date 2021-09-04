@@ -19,7 +19,7 @@ namespace Managers
 
     public class QuestManager : Singleton<QuestManager>
     {
-        public List<NQuestInfo> quesInfos;
+        public List<NQuestInfo> questInfos;
         public Dictionary<int,Quest> allQuests = new Dictionary<int, Quest>();
 
         public Dictionary<int, Dictionary<NPCQuestStatus, List<Quest>>> npcQuests = new Dictionary<int, Dictionary<NPCQuestStatus, List<Quest>>>();
@@ -27,7 +27,7 @@ namespace Managers
 
         public void Init(List<NQuestInfo> quests)
         {
-            quesInfos = quests;
+            questInfos = quests;
             allQuests.Clear();
             npcQuests.Clear();
             InitQuests();
@@ -35,7 +35,7 @@ namespace Managers
 
         private void InitQuests()
         {
-            foreach (var questInfo in quesInfos)
+            foreach (var questInfo in questInfos)
             {
                 Quest newQuest = new Quest(questInfo);
                 allQuests[newQuest.Info.QuestId] = newQuest;
@@ -221,6 +221,23 @@ namespace Managers
         {
             var quest = RefreshQuestStatus(questInfo);
             MessageBox.Show(quest.Define.DialogFinish);
+        }
+
+        public NQuestInfo GetQuestInfo(int questId)
+        {
+            foreach(var questInfo in questInfos)
+            {
+                if (questInfo.QuestId == questId)
+                    return questInfo;
+            }
+            return null;
+        }
+
+        public Quest GetQuest(int questId)
+        {
+            Quest quest;
+            allQuests.TryGetValue(questId, out quest);
+            return quest;
         }
     }
 }

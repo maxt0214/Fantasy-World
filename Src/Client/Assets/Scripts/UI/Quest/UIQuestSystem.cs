@@ -55,6 +55,9 @@ public class UIQuestSystem : UIWindow
     {
         foreach(var kv in QuestManager.Instance.allQuests)
         {
+            if (kv.Value.Define.Type == QuestType.Dungeon)
+                continue;
+
             if(showAvailableList) //Available Quests
             {
                 if (kv.Value.Info != null) //NQuestInfo exists. This is a quest we already accepted. Skip

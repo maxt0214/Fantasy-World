@@ -1,8 +1,673 @@
-2021-08-22 16:39:59,986 [ 1] INFO  Unity: Loading Manager Awake
-2021-08-22 16:40:00,007 [ 1] INFO  Unity: DataManager > DataManager()
-2021-08-22 16:40:02,138 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2021-08-22 16:40:02,139 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2021-09-03 22:07:36,931 [ 1] INFO  Unity: Loading Manager Awake
+2021-09-03 22:07:36,951 [ 1] INFO  Unity: DataManager > DataManager()
+2021-09-03 22:07:46,641 [ 1] INFO  Unity: UserLoginRequest::user :maxt0214 psw:maxt0436
+2021-09-03 22:07:46,642 [ 1] INFO  Unity: ConnectToServer() Start 
+2021-09-03 22:07:46,643 [ 1] INFO  Unity: DoConnect
+2021-09-03 22:07:46,644 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2021-09-03 22:07:46,646 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2021-09-03 22:07:46,650 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2021-09-03 22:07:47,674 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2021-09-03 22:07:47,676 [ 1] INFO  Unity: Login Succeed! Tranferring to character creation scene!
+2021-09-03 22:07:47,679 [ 1] INFO  Unity: LoadLevel: CharacterCreation
+2021-09-03 22:07:47,947 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-09-03 22:07:49,519 [ 1] INFO  Unity: UserEnterGameRequest::Character ID: 1
+2021-09-03 22:07:49,713 [ 1] INFO  Unity: OnUserEnterGame:Success [None]
+2021-09-03 22:07:49,715 [ 1] INFO  Unity: ItemManager:Init[1]
+2021-09-03 22:07:49,716 [ 1] INFO  Unity: ItemManager:Init[2]
+2021-09-03 22:07:49,716 [ 1] INFO  Unity: ItemManager:Init[3]
+2021-09-03 22:07:49,716 [ 1] INFO  Unity: ItemManager:Init[4]
+2021-09-03 22:07:49,717 [ 1] INFO  Unity: ItemManager:Init[9]
+2021-09-03 22:07:49,717 [ 1] INFO  Unity: ItemManager:Init[10]
+2021-09-03 22:07:49,717 [ 1] INFO  Unity: ItemManager:Init[6]
+2021-09-03 22:07:49,730 [ 1] INFO  Unity: OnCharacterEnterMap:Map:1 Count:1
+2021-09-03 22:07:49,739 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2021-09-03 22:07:49,741 [ 1] INFO  Unity: LoadLevel: MainCity
+2021-09-03 22:07:50,220 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
+2021-09-03 22:07:50,290 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-09-03 22:07:50,379 [ 1] INFO  Unity: SendChannelSetTo: Local
+2021-09-03 22:07:53,020 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,118 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,200 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,300 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,399 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,482 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,565 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,647 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,747 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:53,879 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:07:54,344 [ 1] INFO  Unity: MoveForward
+2021-09-03 22:07:54,344 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-09-03 22:07:54,627 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:07:54,742 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:07:55,603 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:07:55,720 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:07:56,498 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:07:57,292 [ 1] INFO  Unity: Stop
+2021-09-03 22:07:57,293 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:07:59,429 [ 1] INFO  Unity: SendStartStory: ID:1
+2021-09-03 22:07:59,461 [ 1] INFO  Unity: OnCharacterLeaveMap: Character EntityID1
+2021-09-03 22:07:59,462 [ 1] INFO  Unity: RemoveCharacter:1
+2021-09-03 22:07:59,465 [ 1] INFO  Unity: OnCharacterEnterMap:Map:4 Count:1
+2021-09-03 22:07:59,467 [ 1] INFO  Unity: AddCharacter: 1: Elf Map: 4 Entity: (1:pos:(-2548,-3044,-70),dir:(71,71,0),spd:0
+2021-09-03 22:07:59,485 [ 1] INFO  Unity: Character[Elf] TID:3 ID:1 is created
+2021-09-03 22:07:59,486 [ 1] INFO  Unity: LoadLevel: Map03
+2021-09-03 22:07:59,490 [ 1] INFO  Unity: SendStoryStart: ID:1 Map:0
+2021-09-03 22:07:59,491 [ 1] WARN  Unity: Failed to create agent because it is not close enough to the NavMesh
+UnityEngine.GameObject:AddComponent()
+PlayerInputController:Start() (at Assets/Scripts/GameObject/PlayerInputController.cs:47)
+
+2021-09-03 22:07:59,492 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (-2548, -3044, -70) Direction: (71, 71, 0) Speed: 0
+2021-09-03 22:07:59,750 [ 1] INFO  Unity: LevelLoadCompleted:1
+2021-09-03 22:08:33,023 [ 1] INFO  Unity: OnCharacterEnterMap:Map:4 Count:1
+2021-09-03 22:08:33,024 [ 1] INFO  Unity: AddCharacter: 0: Demon Map: 4 Entity: (6:pos:(334,-3011,0),dir:(-5,100,0),spd:0
+2021-09-03 22:08:33,044 [ 1] INFO  Unity: Character[Demon] TID:1001 ID:6 is created
+2021-09-03 22:08:33,045 [ 1] INFO  Unity: OnCharacterEnterMap:Map:4 Count:1
+2021-09-03 22:08:33,046 [ 1] INFO  Unity: AddCharacter: 0: Rocky Titan Map: 4 Entity: (7:pos:(3165,-241,0),dir:(-92,-39,0),spd:0
+2021-09-03 22:08:33,088 [ 1] INFO  Unity: Character[Rocky Titan] TID:1002 ID:7 is created
+2021-09-03 22:08:33,117 [ 1] INFO  Unity: OnCharacterEnterMap:Map:4 Count:1
+2021-09-03 22:08:33,118 [ 1] INFO  Unity: AddCharacter: 0: Little Demon Map: 4 Entity: (8:pos:(-454,-344,-380),dir:(71,71,0),spd:0
+2021-09-03 22:08:33,131 [ 1] INFO  Unity: Character[Little Demon] TID:1003 ID:8 is created
+2021-09-03 22:08:33,132 [ 1] INFO  Unity: OnCharacterEnterMap:Map:4 Count:1
+2021-09-03 22:08:33,133 [ 1] INFO  Unity: AddCharacter: 0: Grim Reaper Map: 4 Entity: (9:pos:(131,-489,-380),dir:(-66,75,0),spd:0
+2021-09-03 22:08:33,176 [ 1] INFO  Unity: Character[Grim Reaper] TID:1005 ID:9 is created
+2021-09-03 22:08:37,686 [ 1] INFO  Unity: MoveForward
+2021-09-03 22:08:37,686 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-09-03 22:08:39,162 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:40,121 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:41,497 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:41,662 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:42,011 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:42,109 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:42,259 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:42,442 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:42,839 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:42,905 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:43,021 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:43,337 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:44,413 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:44,561 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:44,661 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:44,760 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:45,406 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:47,594 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:48,918 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:49,714 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:49,879 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:49,995 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:50,095 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:50,227 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:53,839 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:54,677 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:56,184 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:57,692 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:59,151 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:59,761 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:08:59,944 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:00,044 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:00,126 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:00,226 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:00,358 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:00,640 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:00,772 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:02,265 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:03,938 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:05,494 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:07,995 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:08,113 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:08,128 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:09,205 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:09,304 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:09,420 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:09,736 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:09,918 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:09,934 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,100 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,102 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,249 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,399 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,547 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,697 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,712 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,779 [ 1] INFO  Unity: Stop
+2021-09-03 22:09:10,779 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:09:10,812 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:10,828 [ 1] INFO  Unity: MoveForward
+2021-09-03 22:09:10,829 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-09-03 22:09:10,911 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:10,913 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,110 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,145 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,524 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,624 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,706 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,790 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,823 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:11,905 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:12,121 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:12,337 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:12,750 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:12,916 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:13,911 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:15,119 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:15,285 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:15,435 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:17,191 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:17,653 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:17,753 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:17,853 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:17,952 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:18,052 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:18,184 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:19,046 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:20,397 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:21,721 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:21,806 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:21,821 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:21,921 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:22,019 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:22,119 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:22,202 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:22,302 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:22,401 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:22,600 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:23,214 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:23,562 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:23,892 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:24,225 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:24,522 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:24,721 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:24,871 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:24,935 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:25,185 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:25,599 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:25,947 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:26,279 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:26,344 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:26,726 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:28,035 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:29,360 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:29,707 [ 1] INFO  Unity: Stop
+2021-09-03 22:09:29,707 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:09:30,038 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:30,154 [ 1] INFO  Unity: MoveForward
+2021-09-03 22:09:30,154 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-09-03 22:09:30,270 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:30,668 [ 1] INFO  Unity: Stop
+2021-09-03 22:09:30,668 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:09:31,432 [ 1] INFO  Unity: SendCastSkill: SkillId:301 CasterId:1 Target:9 EffectLoc:SkillBridge.Message.NVector3
+2021-09-03 22:09:31,565 [ 1] INFO  Unity: OnSkillCasted: SkillId:301 CasterId:1 Target:9 EffectLoc:(0,0,0)
+2021-09-03 22:09:32,347 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:32,375 [ 1] INFO  Unity: Skill[Attack].CastBullet[Grim Reaper]
+2021-09-03 22:09:32,708 [ 1] INFO  Unity: PlayEffect:EFX_Archer_AtkA_Bip001Prop2_prefab
+2021-09-03 22:09:32,709 [ 1] INFO  Unity: PlayEffect:Character_1_Elf Effect:EFX_Archer_AtkA_Bip001Prop2_prefab
+2021-09-03 22:09:32,886 [ 1] INFO  Unity: OnSkillCasted: SkillId:10054 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:32,887 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:32,887 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:32,888 [ 1] INFO  Unity: DeltDamage: Creature9 DmgToken:1
+2021-09-03 22:09:32,951 [ 1] INFO  Unity: Skill[Attack].UpdateCastSkill Over!
+2021-09-03 22:09:33,003 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:33,004 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(131,-489,-380),dir:(7,99,-11),spd:300
+
+2021-09-03 22:09:33,597 [ 1] INFO  Unity: Skill[ËÀÍö·Éµ¯].CastBullet[Elf]
+2021-09-03 22:09:33,667 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:33,947 [ 1] INFO  Unity: Skill[ËÀÍö·Éµ¯].UpdateCastSkill Over!
+2021-09-03 22:09:33,998 [ 1] INFO  Unity: OnSkillCasted: SkillId:10053 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:33,998 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:33,999 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:33,999 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:37
+2021-09-03 22:09:34,102 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:34,102 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:34,531 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:34,549 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:34,550 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:Idle Entity:(9:pos:(161,-63,-427),dir:(7,99,-11),spd:0
+
+2021-09-03 22:09:34,550 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:34,551 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:18
+2021-09-03 22:09:34,958 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:34,959 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:35,092 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:35,093 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:35,123 [ 1] INFO  Unity: Skill[¹íÓ°±³´Ì].UpdateCastSkill Over!
+2021-09-03 22:09:35,208 [ 1] INFO  Unity: OnSkillCasted: SkillId:10052 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:35,209 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:35,523 [ 1] INFO  Unity: Skill[ËÀÍö¼â½Ð].UpdateCastSkill Over!
+2021-09-03 22:09:35,540 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:35,541 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:30
+2021-09-03 22:09:35,542 [ 1] INFO  Unity: DeltDamage: Creature8 DmgToken:1
+2021-09-03 22:09:36,021 [ 1] INFO  Unity: PlayEffect:
+2021-09-03 22:09:36,021 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:
+2021-09-03 22:09:36,021 [ 1] INFO  Unity: PlayEffect:EFX_M1005_SkillA_prefab
+2021-09-03 22:09:36,021 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_SkillA_prefab
+2021-09-03 22:09:37,172 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:37,173 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:37,601 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:37,619 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:37,620 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:37,652 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:37,652 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:38,712 [ 1] INFO  Unity: PlayEffect:EFX_M1005_SkillB_prefab
+2021-09-03 22:09:38,713 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_SkillB_prefab
+2021-09-03 22:09:40,238 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:40,239 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:40,652 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:40,686 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:40,687 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:10
+2021-09-03 22:09:40,735 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:40,735 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:41,083 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:41,182 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:41,264 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:41,331 [ 1] INFO  Unity: MoveBack
+2021-09-03 22:09:41,331 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:MoveBack
+2021-09-03 22:09:41,364 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:41,497 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:41,796 [ 1] INFO  Unity: PlayEffect:EFX_M1005_Bip001RHand_SkillC_prefab
+2021-09-03 22:09:41,796 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_Bip001RHand_SkillC_prefab
+2021-09-03 22:09:41,953 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:42,004 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:42,004 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(161,-63,-427),dir:(69,71,-4),spd:300
+
+2021-09-03 22:09:42,069 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:42,103 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:42,103 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(184,-39,-428),dir:(74,66,-3),spd:300
+
+2021-09-03 22:09:42,120 [ 1] INFO  Unity: PlayEffect:EFX_M1005_SkillC_prefab
+2021-09-03 22:09:42,120 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_SkillC_prefab
+2021-09-03 22:09:42,151 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:42,219 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:42,219 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(207,-17,-428),dir:(79,61,-3),spd:300
+
+2021-09-03 22:09:42,251 [ 1] INFO  Unity: Stop
+2021-09-03 22:09:42,251 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:09:42,252 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:42,268 [ 1] INFO  Unity: MoveForward
+2021-09-03 22:09:42,268 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:MoveFwd
+2021-09-03 22:09:42,576 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:42,675 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:42,758 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:42,874 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:42,875 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:42,876 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:Idle Entity:(9:pos:(336,83,-432),dir:(79,61,-3),spd:0
+
+2021-09-03 22:09:43,155 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:43,255 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:43,306 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:43,306 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(336,83,-432),dir:(-98,-17,-1),spd:300
+
+2021-09-03 22:09:43,354 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:43,421 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:43,422 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(303,77,-432),dir:(-98,-17,-1),spd:300
+
+2021-09-03 22:09:43,454 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:43,521 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:43,522 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(271,71,-432),dir:(-98,-15,-1),spd:300
+
+2021-09-03 22:09:43,536 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:43,620 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:43,637 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:43,638 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(239,66,-432),dir:(-99,-10,-1),spd:300
+
+2021-09-03 22:09:43,719 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:43,737 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:43,737 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:43,835 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:44,150 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:44,167 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:44,168 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:44,283 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:44,284 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:Idle Entity:(9:pos:(79,49,-433),dir:(-99,-10,-1),spd:0
+
+2021-09-03 22:09:44,398 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:44,499 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:44,499 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(79,49,-433),dir:(-77,62,-1),spd:300
+
+2021-09-03 22:09:44,514 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:44,582 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:44,582 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:44,598 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:44,599 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(53,69,-433),dir:(-77,62,-1),spd:300
+
+2021-09-03 22:09:45,160 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:45,261 [ 1] INFO  Unity: OnSkillCasted: SkillId:10052 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:45,262 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:45,358 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:300 Event:None
+2021-09-03 22:09:45,360 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:45,360 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-122,210,-435),dir:(-79,60,0),spd:300
+
+2021-09-03 22:09:45,476 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:45,477 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-147,229,-435),dir:(-77,63,0),spd:300
+
+2021-09-03 22:09:45,574 [ 1] INFO  Unity: Skill[ËÀÍö¼â½Ð].UpdateCastSkill Over!
+2021-09-03 22:09:45,592 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:45,592 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:45,593 [ 1] INFO  Unity: DeltDamage: Creature8 DmgToken:1
+2021-09-03 22:09:46,303 [ 1] INFO  Unity: Stop
+2021-09-03 22:09:46,303 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:09:46,354 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:46,354 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-350,395,-435),dir:(-61,78,0),spd:300
+
+2021-09-03 22:09:46,801 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:46,802 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:47,098 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,198 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,214 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:47,232 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:47,233 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:47,298 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,396 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,447 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:47,448 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:Idle Entity:(9:pos:(-530,626,-435),dir:(-61,78,0),spd:0
+
+2021-09-03 22:09:47,479 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,562 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,646 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,745 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,746 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:47,747 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:47,844 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:47,927 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:48,027 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:48,109 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:48,192 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:48,291 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:48,391 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:48,540 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:None
+2021-09-03 22:09:48,807 [ 1] INFO  Unity: PlayEffect:
+2021-09-03 22:09:48,807 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:
+2021-09-03 22:09:48,807 [ 1] INFO  Unity: PlayEffect:EFX_M1005_SkillA_prefab
+2021-09-03 22:09:48,807 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_SkillA_prefab
+2021-09-03 22:09:48,970 [ 1] INFO  Unity: MoveBack
+2021-09-03 22:09:48,971 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:MoveBack
+2021-09-03 22:09:48,988 [ 1] INFO  Unity: OnSkillCasted: SkillId:10053 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:48,989 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:49,651 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:49,751 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:49,751 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-530,626,-435),dir:(-70,69,16),spd:300
+
+2021-09-03 22:09:49,866 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:49,867 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:49,997 [ 1] INFO  Unity: Skill[¹íÓ°±³´Ì].UpdateCastSkill Over!
+2021-09-03 22:09:50,015 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:50,098 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:50,099 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:50,279 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:50,314 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:50,314 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:24
+2021-09-03 22:09:50,383 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:50,398 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:50,431 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:50,431 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:50,532 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:50,532 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:Idle Entity:(9:pos:(-669,763,-403),dir:(-70,69,16),spd:0
+
+2021-09-03 22:09:50,532 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:50,533 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-669,763,-403),dir:(-60,68,40),spd:300
+
+2021-09-03 22:09:50,763 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:50,779 [ 1] INFO  Unity: Stop
+2021-09-03 22:09:50,779 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:09:50,845 [ 1] INFO  Unity: MoveBack
+2021-09-03 22:09:50,845 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:MoveBack
+2021-09-03 22:09:50,846 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:50,847 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:50,848 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-727,829,-364),dir:(-53,72,43),spd:300
+
+2021-09-03 22:09:50,962 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:50,962 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-744,852,-350),dir:(-54,72,41),spd:300
+
+2021-09-03 22:09:51,227 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:51,277 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:51,277 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-796,922,-309),dir:(-55,70,44),spd:300
+
+2021-09-03 22:09:51,591 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:51,724 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:51,724 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-868,1013,-251),dir:(-56,69,43),spd:300
+
+2021-09-03 22:09:51,956 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:-300 Event:None
+2021-09-03 22:09:52,056 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:52,056 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-922,1080,-208),dir:(-57,68,43),spd:300
+
+2021-09-03 22:09:52,186 [ 1] INFO  Unity: Stop
+2021-09-03 22:09:52,187 [ 1] INFO  Unity: MapEntitySnc Request: Entity ID:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3 Spd:0 Event:Idle
+2021-09-03 22:09:52,270 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:52,271 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:MoveFwd Entity:(9:pos:(-959,1124,-180),dir:(-59,73,31),spd:300
+
+2021-09-03 22:09:52,933 [ 1] INFO  Unity: OnSkillCasted: SkillId:10054 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:52,934 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:53,033 [ 1] INFO  Unity: OnEntityChange: EntityID:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3
+2021-09-03 22:09:53,034 [ 1] INFO  Unity: MapEntitySyncResponse: NumOfEntity:1
+   [9] EVENT:Idle Entity:(9:pos:(-1075,1268,-118),dir:(-59,73,31),spd:0
+
+2021-09-03 22:09:53,034 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:53,034 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:53,330 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:53,331 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:53,445 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:53,480 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:53,480 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:53,645 [ 1] INFO  Unity: Skill[ËÀÍö·Éµ¯].CastBullet[Elf]
+2021-09-03 22:09:53,662 [ 1] INFO  Unity: Skill[ËÀÍö·Éµ¯].UpdateCastSkill Over!
+2021-09-03 22:09:53,695 [ 1] INFO  Unity: OnSkillHit: Count:2
+2021-09-03 22:09:53,696 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:28
+2021-09-03 22:09:53,698 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:28
+2021-09-03 22:09:54,391 [ 1] INFO  Unity: PlayEffect:EFX_M1005_SkillB_prefab
+2021-09-03 22:09:54,391 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_SkillB_prefab
+2021-09-03 22:09:55,335 [ 1] INFO  Unity: OnSkillCasted: SkillId:10052 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:55,335 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:55,649 [ 1] INFO  Unity: Skill[ËÀÍö¼â½Ð].UpdateCastSkill Over!
+2021-09-03 22:09:55,667 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:55,667 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:1
+2021-09-03 22:09:56,114 [ 1] INFO  Unity: OnSkillCasted: SkillId:10051 CasterId:9 Target:1 EffectLoc:(0,0,0)
+2021-09-03 22:09:56,114 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandby(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:159)
+Entities.Creature:SetStandby(Boolean) (at Assets/Scripts/Entities/Creature.cs:151)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:143)
+Services.BattleService:OnSkillCasted(Object, CastSkillResponse) (at Assets/Scripts/Services/BattleService.cs:60)
+Network.MessageDistributer`1:RaiseEvent(Object, CastSkillResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDispatch.cs:40)
+Network.MessageDistributer`1:Distribute() (at C:/Users/mxt62/OneDrive/Documents/GitHub/Fantasy-World/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:418)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:436)
+
+2021-09-03 22:09:56,412 [ 1] INFO  Unity: PlayEffect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:56,412 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_AtkA_prefab
+2021-09-03 22:09:56,527 [ 1] INFO  Unity: Skill[»Ó»÷].UpdateCastSkill Over!
+2021-09-03 22:09:56,562 [ 1] INFO  Unity: OnSkillHit: Count:1
+2021-09-03 22:09:56,562 [ 1] INFO  Unity: DeltDamage: Creature1 DmgToken:15
+2021-09-03 22:09:57,473 [ 1] INFO  Unity: PlayEffect:
+2021-09-03 22:09:57,473 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:
+2021-09-03 22:09:57,474 [ 1] INFO  Unity: PlayEffect:EFX_M1005_SkillA_prefab
+2021-09-03 22:09:57,474 [ 1] INFO  Unity: PlayEffect:Character_0_Grim Reaper Effect:EFX_M1005_SkillA_prefab
+2021-09-03 22:09:58,447 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2021-09-03 22:09:58,448 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
 
+2021-09-03 22:09:58,462 [ 1] INFO  Unity: Character_1_Elf OnDestroy: ID: 1 Position: (-1091, 1287, -110) Direction: (65, -76, 0) Speed: 0
+2021-09-03 22:09:58,464 [ 1] INFO  Unity: Character_0_Demon OnDestroy: ID: 6 Position: (334, -3011, 0) Direction: (-5, 100, 0) Speed: 0
+2021-09-03 22:09:58,466 [ 1] INFO  Unity: Character_0_Rocky Titan OnDestroy: ID: 7 Position: (3165, -241, 0) Direction: (-92, -39, 0) Speed: 0
+2021-09-03 22:09:58,466 [ 1] INFO  Unity: Character_0_Little Demon OnDestroy: ID: 8 Position: (-454, -344, -380) Direction: (71, 71, 0) Speed: 0
+2021-09-03 22:09:58,467 [ 1] INFO  Unity: Character_0_Grim Reaper OnDestroy: ID: 9 Position: (-1075, 1268, -118) Direction: (-61, 73, 31) Speed: 0

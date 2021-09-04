@@ -8,10 +8,10 @@
   },
   "2": {
     "ID": 2,
-    "Name": "MainCity->Dungeon",
+    "Name": "MainCity->Sunset Forest",
     "LinkTo": 8,
     "MapID": 1,
-    "Description": "From Blin Town to Sunset Dungeon"
+    "Description": "From Blin Town to Sunset Forest"
   },
   "3": {
     "ID": 3,
@@ -40,13 +40,36 @@
   },
   "7": {
     "ID": 7,
+    "Name": "SunsetForest->MainCity",
+    "LinkTo": 4,
+    "MapID": 3,
+    "Description": "From Sunset Forest to Blin Town"
+  },
+  "8": {
+    "ID": 8,
+    "Name": "->SunsetForest",
+    "MapID": 3,
+    "Description": "To Sunset Forest"
+  },
+  "9": {
+    "ID": 9,
+    "Name": "Arena A",
+    "MapID": 5
+  },
+  "10": {
+    "ID": 10,
+    "Name": "Arena B",
+    "MapID": 5
+  },
+  "11": {
+    "ID": 11,
     "Name": "Dungeon->MainCity",
     "LinkTo": 4,
     "MapID": 4,
     "Description": "From Sunset Dungeon to Blin Town"
   },
-  "8": {
-    "ID": 8,
+  "12": {
+    "ID": 12,
     "Name": "->Dungeon",
     "MapID": 4,
     "Description": "To Sunset Dungeon"

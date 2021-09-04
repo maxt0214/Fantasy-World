@@ -48,19 +48,29 @@ namespace Services
 
         private void OnSkillCasted(object sender, CastSkillResponse response)
         {
-            Debug.LogFormat("OnSkillCasted: SkillId:{0} CasterId:{1} Target:{2} EffectLoc:{3}", response.Info.skillId, response.Info.casterId, response.Info.targetId, response.Info.Position.String());
-            if(response.Result == Result.Success)
+            foreach (var castInfo in response.Infoes)
             {
-                var caster = EntityManager.Instance.GetEntity(response.Info.casterId) as Creature;
-                if(caster != null)
+                if (castInfo.Result == SkillResult.Valid)
                 {
-                    var target = EntityManager.Instance.GetEntity(response.Info.targetId) as Creature;
-                    caster.CastSkill(response.Info.skillId, target, response.Info.Position);
+                    Debug.LogFormat("OnSkillCasted: SkillId:{0} CasterId:{1} Target:{2} EffectLoc:{3}", castInfo.skillId, castInfo.casterId, castInfo.targetId, castInfo.Position.String());
+                    var caster = EntityManager.Instance.GetEntity(castInfo.casterId) as Creature;
+                    if (caster != null)
+                    {
+                        var target = EntityManager.Instance.GetEntity(castInfo.targetId) as Creature;
+                        caster.CastSkill(castInfo.skillId, target, castInfo.Position);
+                    }
                 }
-            } else
-            {
-                if (User.Instance.currentCharacter.entityId == response.Info.casterId) ChatManager.Instance.AddSystemMessage(response.Errormsg);
+                else
+                {
+                    if (User.Instance.currentCharacter.entityId == castInfo.casterId)
+                    {
+                        var prompt = Skill.GetSkillErrorMessage(castInfo.Result);
+                        if (!string.IsNullOrEmpty(prompt))
+                            MessageBox.Show(prompt);
+                    }
+                }
             }
+            
         }
 
         private void OnHitsReceived(object sender, SkillHitResponse response)

@@ -46,7 +46,7 @@ public class EntityController : MonoBehaviour , IEntityNotify , IEntityControlle
             rb.useGravity = false;
     }
     
-    private void UpdateTransform()
+    public void UpdateTransform()
     {
         position = GameObjectTool.LogicUnitToWorld(entity.position);
         direction = GameObjectTool.LogicUnitToWorld(entity.direction);
@@ -168,11 +168,22 @@ public class EntityController : MonoBehaviour , IEntityNotify , IEntityControlle
     public void PlayEffect(EffectType type, string name, Creature target, float duration)
     {
         Transform trans = target.Controller.GetTransform();
-        EffectMgr.PlayEffect(type, name, trans, duration);
+        if(type == EffectType.Position || type == EffectType.Hit)
+            FXManager.Instance.PlayEffect(type, name, trans, target.GetHitOffset(), duration);
+        else
+            EffectMgr.PlayEffect(type, name, trans, target.GetHitOffset(), duration);
     }
 
     public Transform GetTransform()
     {
         return transform;
+    }
+
+    public void PlayEffect(EffectType type, string name, NVector3 pos, float duration)
+    {
+        if (type == EffectType.Position || type == EffectType.Hit)
+            FXManager.Instance.PlayEffect(type, name, null, GameObjectTool.LogicUnitToWorld(pos), duration);
+        else
+            EffectMgr.PlayEffect(type, name, null, GameObjectTool.LogicUnitToWorld(pos), duration);
     }
 }

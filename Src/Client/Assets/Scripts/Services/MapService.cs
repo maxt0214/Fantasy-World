@@ -14,18 +14,22 @@ namespace Services
 {
     class MapService : Singleton<MapService>, IDisposable
     {
-
         public int CurrMapId { get; set; }
+        private bool loadingLevel = false;
 
         public MapService()
         {
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(OnCharacterEnterMap);
             MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(OnCharacterLeaveMap);
             MessageDistributer.Instance.Subscribe<MapEntitySyncResponse>(OnMapEntitySync);
+
+            SceneManager.Instance.onProgress += OnLoaded;
         }
 
         public void Dispose()
         {
+            SceneManager.Instance.onProgress -= OnLoaded;
+
             MessageDistributer.Instance.Unsubscribe<MapEntitySyncResponse>(OnMapEntitySync);
             MessageDistributer.Instance.Unsubscribe<MapCharacterLeaveResponse>(OnCharacterLeaveMap);
             MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(OnCharacterEnterMap);
@@ -49,18 +53,17 @@ namespace Services
                         User.Instance.currentCharacter = new Character(chara);
                     else
                         User.Instance.currentCharacter.UpdateInfo(chara);
-
                     User.Instance.CharacterInited();
                     CharacterManager.Instance.AddCharacter(User.Instance.currentCharacter);
+
+                    if (CurrMapId != response.mapId)
+                    {
+                        EnterMap(response.mapId);
+                        CurrMapId = response.mapId;
+                    }
                     continue;
                 }
-                CharacterManager.Instance.AddCharacter(new Character(chara)); //Oter Characters
-            }
-
-            if(CurrMapId != response.mapId)
-            {
-                EnterMap(response.mapId);
-                CurrMapId = response.mapId;
+                CharacterManager.Instance.AddCharacter(new Character(chara)); //Other Characters
             }
         }
 
@@ -68,17 +71,27 @@ namespace Services
         {
             Debug.LogFormat("OnCharacterLeaveMap: Character EntityID{0}", response.entityId);
             if (response.entityId != User.Instance.CurrentCharacterInfo.EntityId)
+            {
                 CharacterManager.Instance.RemoveCharacter(response.entityId);
+            }
             else
+            {
+                if(User.Instance.currentCharacterObj != null)
+                {
+                    User.Instance.currentCharacterObj.OnLeftLevel();
+                }
                 CharacterManager.Instance.Clear();
+            }
         }
 
         private void EnterMap(int mapId)
         {
             if (DataManager.Instance.Maps.ContainsKey(mapId))
             {
+                loadingLevel = true;
                 var map = DataManager.Instance.Maps[mapId];
                 User.Instance.currMap = map;
+                User.Instance.currentCharacter.ready = false;
                 SceneManager.Instance.LoadScene(map.Resource);
                 SoundManager.Instance.PlayMusic(map.Music);
             }
@@ -88,6 +101,8 @@ namespace Services
 
         public void SendMapEntitySync(EntityEvent entityEvent, NEntity entityData, int param)
         {
+            if (loadingLevel) return;
+
             Debug.LogFormat("MapEntitySnc Request: Entity ID:{0} Pos:{1} Dir:{2} Spd:{3} Event:{4}", entityData.Id, entityData.Position, entityData.Direction, entityData.Speed, entityEvent);
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -104,6 +119,8 @@ namespace Services
 
         private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
         {
+            if (loadingLevel) return;
+
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("MapEntitySyncResponse: NumOfEntity:{0}", response.entitySyncs.Count);
             sb.AppendLine();
@@ -125,6 +142,21 @@ namespace Services
             message.Request.mapTeleport = new MapTeleportRequest();
             message.Request.mapTeleport.teleporterId = teleID;
             NetClient.Instance.SendMessage(message);
+        }
+
+        private void OnLoaded(float progress)
+        {
+            if(progress == 1f)
+            {
+                if(User.Instance.currentCharacter != null)
+                    User.Instance.currentCharacter.ready = true;
+
+                if (User.Instance.currentCharacterObj != null)
+                {
+                    User.Instance.currentCharacterObj.OnJoinedLevel();
+                }
+                loadingLevel = false;
+            }
         }
     }
 }

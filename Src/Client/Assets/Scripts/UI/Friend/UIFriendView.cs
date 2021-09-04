@@ -116,4 +116,22 @@ public class UIFriendView : UIWindow
             TeamService.Instance.SendInviteFriendToTeamRequest(selectedFriend.friendInfo.friendInfo.Id, selectedFriend.friendInfo.friendInfo.Name);
         };
     }
+
+    public void OnClickChallengeFriend()
+    {
+        if (selectedFriend == null)
+        {
+            MessageBox.Show("Please Select A Friend To Invite");
+            return;
+        }
+        if (selectedFriend.friendInfo.Status == 0)
+        {
+            MessageBox.Show("Please Select A Friend Who Is Online");
+            return;
+        }
+        MessageBox.Show(string.Format("Do You Wanna Challengt Your Friend [{0}] To Arena?", selectedFriend.friendInfo.friendInfo.Name), "Challenge Invitation", MessageBoxType.Confirm, "Invite", "Cancel").OnYes = () =>
+        {
+            ArenaService.Instance.SendArenaChallenge(selectedFriend.friendInfo.friendInfo.Id, selectedFriend.friendInfo.friendInfo.Name);
+        };
+    }
 }

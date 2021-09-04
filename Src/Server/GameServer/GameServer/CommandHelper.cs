@@ -16,9 +16,14 @@ namespace GameServer
             while (run)
             {
                 Console.Write(">");
+                string line = Console.ReadLine().ToLower().Trim();
+                if (string.IsNullOrWhiteSpace(line))
+                {
+                    Help();
+                    continue;
+                }
                 try
                 {
-                    string line = Console.ReadLine().ToLower().Trim();
                     string[] cmd = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                     switch (cmd[0])
                     {

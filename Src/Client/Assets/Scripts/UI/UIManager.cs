@@ -32,6 +32,7 @@ public class UIManager : Singleton<UIManager>
         UIResources.Add(typeof(UIRide), new UIElement() { resource = "UI/UIRide", cache = true });
         UIResources.Add(typeof(UISystemConfig), new UIElement() { resource = "UI/UISystemConfig", cache = true });
         UIResources.Add(typeof(UISkillView), new UIElement() { resource = "UI/UISkillView", cache = true });
+        UIResources.Add(typeof(UIDungeonView), new UIElement() { resource = "UI/UIDungeonView", cache = true });
     }
 
     public T Show<T>()

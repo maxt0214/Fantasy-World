@@ -7,6 +7,7 @@ using SkillBridge.Message;
 using Services;
 using Managers;
 using UnityEngine.Events;
+using System;
 
 [RequireComponent(typeof(EntityController))]
 public class PlayerInputController : MonoBehaviour
@@ -27,6 +28,16 @@ public class PlayerInputController : MonoBehaviour
 
     public UnityAction NavagationOver;
 
+    public bool rbEnabled
+    {
+        get { return !rb.isKinematic; }
+        set
+        {
+            rb.isKinematic = !value;
+            rb.detectCollisions = value;
+        }
+    }
+
     private void Start()
     {
         motionState = CharacterState.Idle;
@@ -35,6 +46,7 @@ public class PlayerInputController : MonoBehaviour
         {
             agent = gameObject.AddComponent<NavMeshAgent>();
             agent.stoppingDistance = 0.5f;
+            agent.updatePosition = false;
         }
     }
 
@@ -46,6 +58,7 @@ public class PlayerInputController : MonoBehaviour
 
     private IEnumerator BeginNavagation(Vector3 destiny)
     {
+        agent.updatePosition = true;
         agent.SetDestination(destiny);
         yield return null;
         autoNav = true;
@@ -70,6 +83,7 @@ public class PlayerInputController : MonoBehaviour
             characterEntity.Stop();
             SendEntityEvent(EntityEvent.Idle);
         }
+        agent.updatePosition = false;
         NavPathRenderer.Instance.SetPath(null, Vector3.zero);
 
         if (NavagationOver != null)
@@ -103,7 +117,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (characterEntity == null) return;
+        if (characterEntity == null && !characterEntity.ready) return;
 
         if(autoNav)
         {
@@ -177,7 +191,7 @@ public class PlayerInputController : MonoBehaviour
     float lastSync;
     private void LateUpdate()
     {
-        if (characterEntity == null) return;
+        if (characterEntity == null && !characterEntity.ready) return;
 
         //Sync Position To Remote
         Vector3 distanceTraveled = rb.transform.position - lastPos;
@@ -211,5 +225,19 @@ public class PlayerInputController : MonoBehaviour
             entityController.OnEntityEvent(entityEvent, param);
         }
         MapService.Instance.SendMapEntitySync(entityEvent, characterEntity.EntityData, param);
+    }
+
+    public void OnJoinedLevel()
+    {
+        rb.velocity = Vector3.zero;
+        entityController.UpdateTransform();
+        lastPos = rb.transform.position;
+        rbEnabled = true;
+    }
+
+    public void OnLeftLevel()
+    {
+        rbEnabled = false;
+        rb.velocity = Vector3.zero;
     }
 }

@@ -20,6 +20,17 @@ public class UIMain : MonoSingleton<UIMain>
 
     public UISKillSlots skillSlots;
 
+    private bool show = true;
+    public bool Show
+    {
+        get { return show; }
+        set
+        {
+            show = value;
+            gameObject.SetActive(show);
+        }
+    }
+
     protected override void OnStart()
     {
         UpdateAvatar();

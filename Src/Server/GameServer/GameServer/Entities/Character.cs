@@ -67,7 +67,7 @@ namespace GameServer.Entities
             Info.Bag.Items = cha.Bag.items;
             Info.Equips = Data.Equips;
             QuestManager = new QuestManager(this);
-            QuestManager.GetQuestInfos(Info.Quests);
+            QuestManager.InitQuests(Info.Quests);
             StatusManager = new StatusManager(this);
             FriendManager = new FriendManager(this);
             FriendManager.GetFriendInfos(Info.Friends);
@@ -105,7 +105,7 @@ namespace GameServer.Entities
         public long Exp
         {
             get { return Data.Exp; }
-            private set
+            set
             {
                 if (Exp == value) return;
                 StatusManager.ChangeExpStatus((int)(value - Data.Exp));
@@ -190,13 +190,16 @@ namespace GameServer.Entities
             chat.PostProcess(response);
         }
 
+        public delegate void CharacterLeftHandler(int eid);
+        public CharacterLeftHandler OnLeft;
+
         /// <summary>
         /// Will Be Called When The Character Left
         /// </summary>
         public void Clear()
         {
             FriendManager.OfflineNotify();
-            if(team != null) team.MemberLeft(this);
+            if (team != null) team.MemberLeft(this);
             if(guild != null) guild.MemberOffline();
         }
     }

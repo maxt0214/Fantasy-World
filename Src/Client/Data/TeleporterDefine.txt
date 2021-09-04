@@ -2,137 +2,76 @@
   "1": {
     "ID": 1,
     "Name": "MainCity->Wild",
-    "MapID": 1,
     "LinkTo": 6,
-    "Descript": null,
-    "Position": {
-      "X": 858,
-      "Y": 2604,
-      "Z": 808
-    },
-    "Direction": {
-      "X": 0,
-      "Y": 100,
-      "Z": 0
-    }
+    "MapID": 1,
+    "Description": "From Blin Town to Sunset Forest"
   },
   "2": {
     "ID": 2,
-    "Name": "MainCity->Dungeon",
-    "MapID": 1,
+    "Name": "MainCity->Sunset Forest",
     "LinkTo": 8,
-    "Descript": null,
-    "Position": {
-      "X": 7221,
-      "Y": 2596,
-      "Z": 803
-    },
-    "Direction": {
-      "X": 0,
-      "Y": -100,
-      "Z": 0
-    }
+    "MapID": 1,
+    "Description": "From Blin Town to Sunset Forest"
   },
   "3": {
     "ID": 3,
     "Name": "->MainCity",
     "MapID": 1,
-    "LinkTo": 0,
-    "Descript": null,
-    "Position": {
-      "X": 2026,
-      "Y": 2584,
-      "Z": 799
-    },
-    "Direction": {
-      "X": 100,
-      "Y": 0,
-      "Z": 0
-    }
+    "Description": "To Blin Town"
   },
   "4": {
     "ID": 4,
     "Name": "->MainCity",
     "MapID": 1,
-    "LinkTo": 0,
-    "Descript": null,
-    "Position": {
-      "X": 6311,
-      "Y": 2597,
-      "Z": 803
-    },
-    "Direction": {
-      "X": -100,
-      "Y": 0,
-      "Z": 0
-    }
+    "Description": "To Blin Town"
   },
   "5": {
     "ID": 5,
     "Name": "Wild->MainCity",
-    "MapID": 2,
     "LinkTo": 3,
-    "Descript": null,
-    "Position": {
-      "X": 2437,
-      "Y": 3980,
-      "Z": 0
-    },
-    "Direction": {
-      "X": 0,
-      "Y": 100,
-      "Z": 0
-    }
+    "MapID": 2,
+    "Description": "From Sunset Forest to Blin Town"
   },
   "6": {
     "ID": 6,
     "Name": "->Wild",
     "MapID": 2,
-    "LinkTo": 0,
-    "Descript": null,
-    "Position": {
-      "X": 2992,
-      "Y": 3996,
-      "Z": 0
-    },
-    "Direction": {
-      "X": 100,
-      "Y": 0,
-      "Z": 0
-    }
+    "Description": "To Sunset Forest"
   },
   "7": {
     "ID": 7,
-    "Name": "Dungeon->MainCity",
-    "MapID": 4,
+    "Name": "SunsetForest->MainCity",
     "LinkTo": 4,
-    "Descript": null,
-    "Position": {
-      "X": -2154,
-      "Y": 2125,
-      "Z": 119
-    },
-    "Direction": {
-      "X": -71,
-      "Y": 71,
-      "Z": 0
-    }
+    "MapID": 3,
+    "Description": "From Sunset Forest to Blin Town"
   },
   "8": {
     "ID": 8,
+    "Name": "->SunsetForest",
+    "MapID": 3,
+    "Description": "To Sunset Forest"
+  },
+  "9": {
+    "ID": 9,
+    "Name": "Arena A",
+    "MapID": 5
+  },
+  "10": {
+    "ID": 10,
+    "Name": "Arena B",
+    "MapID": 5
+  },
+  "11": {
+    "ID": 11,
+    "Name": "Dungeon->MainCity",
+    "LinkTo": 4,
+    "MapID": 4,
+    "Description": "From Sunset Dungeon to Blin Town"
+  },
+  "12": {
+    "ID": 12,
     "Name": "->Dungeon",
     "MapID": 4,
-    "LinkTo": 0,
-    "Descript": null,
-    "Position": {
-      "X": -2548,
-      "Y": -3044,
-      "Z": -70
-    },
-    "Direction": {
-      "X": 71,
-      "Y": 71,
-      "Z": 0
-    }
+    "Description": "To Sunset Dungeon"
   }
 }

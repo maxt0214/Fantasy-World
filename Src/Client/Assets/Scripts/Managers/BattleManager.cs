@@ -30,7 +30,8 @@ namespace Managers
 
         public void SetTarget(Creature t)
         {
-            OnTargetChanged?.Invoke(t);
+            if (OnTargetChanged != null)
+                OnTargetChanged(t);
             target = t;
         }
 

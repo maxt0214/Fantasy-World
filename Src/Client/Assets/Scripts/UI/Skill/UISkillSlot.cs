@@ -66,21 +66,9 @@ public class UISkillSlot : MonoBehaviour, IPointerClickHandler
     {
         SkillResult res = skill.Castable(BattleManager.Instance.Target, BattleManager.Instance.EffectLoc);
 
-        switch (res)
-        {
-            case SkillResult.CoolDown:
-                MessageBox.Show("Skill Is Cooling Down!");
-                return;
-            case SkillResult.InvalidMp:
-                MessageBox.Show("Insufficient MP");
-                return;
-            case SkillResult.InvalidTarget:
-                MessageBox.Show("Invalid Target");
-                return;
-            case SkillResult.OutOfRange:
-                MessageBox.Show("Target Out Of Range");
-                return;
-        }
+        var prompt = Skill.GetSkillErrorMessage(res);
+        if (!string.IsNullOrEmpty(prompt))
+            MessageBox.Show(prompt);
 
         BattleManager.Instance.CastSkill(skill);
     }
