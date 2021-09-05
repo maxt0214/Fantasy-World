@@ -49,7 +49,7 @@ namespace Services
         {
             Debug.Log("ConnectToServer() Start ");
             //NetClient.Instance.CryptKey = SessionId;
-            NetClient.Instance.Init("127.0.0.1", 8000);
+            NetClient.Instance.Init("24.189.57.100", 8359);
             NetClient.Instance.Connect();
         }
 

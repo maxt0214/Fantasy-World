@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="ServerIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">127.0.0.1</Value>
+      <Value Profile="(Default)">192.168.0.184</Value>
     </Setting>
     <Setting Name="ServerPort" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">8000</Value>
+      <Value Profile="(Default)">8359</Value>
     </Setting>
   </Settings>
 </SettingsFile>

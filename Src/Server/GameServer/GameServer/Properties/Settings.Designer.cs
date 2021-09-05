@@ -25,7 +25,7 @@ namespace GameServer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.0.184")]
         public string ServerIP {
             get {
                 return ((string)(this["ServerIP"]));
@@ -37,7 +37,7 @@ namespace GameServer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("8000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("8359")]
         public int ServerPort {
             get {
                 return ((int)(this["ServerPort"]));

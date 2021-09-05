@@ -27,9 +27,9 @@ namespace GameServer.Services
         void OnLogin(NetConnection<NetSession> sender, UserLoginRequest request)
         {
             Log.InfoFormat("User Login Request: User: {0}, Pass: {1}", request.User, request.Passward);
+
             //Generate message to send to client
             sender.Session.Response.userLogin = new UserLoginResponse();
-
             TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
             if (user == null) //User not existed. Login failed
             {
@@ -42,7 +42,13 @@ namespace GameServer.Services
                 {
                     sender.Session.Response.userLogin.Result = Result.Failed;
                     sender.Session.Response.userLogin.Errormsg = "Incorrect Password!";
-                } else
+                } 
+                else if(SessionManager.Instance.IfUserOnline(user.ID))
+                {
+                    sender.Session.Response.userLogin.Result = Result.Failed;
+                    sender.Session.Response.userLogin.Errormsg = "Your Account Is Logged In Somewhere Else!";
+                } 
+                else
                 {
                     sender.Session.User = user;
 
@@ -63,6 +69,7 @@ namespace GameServer.Services
                         cInfo.ConfigId = character.TID;
                         sender.Session.Response.userLogin.Userinfo.Player.Characters.Add(cInfo);
                     }
+                    SessionManager.Instance.AddOnlineUser(user.ID);
                 }
             }
             //Send message to client
@@ -188,6 +195,7 @@ namespace GameServer.Services
 
             sender.SendResponse();
             sender.Session.Character = null;
+            SessionManager.Instance.RemoveOnlineUser(sender.Session.User.ID);
         }
 
         public void CharacterLeave(Character character)
