@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Common.Utils
 {
@@ -20,9 +17,9 @@ namespace Common.Utils
             return dateTimeStart.Add(toNow);
         }
 
-        public static double GetTimestamp(System.DateTime time)
+        public static double GetTimestamp(DateTime time)
         {
-            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
             return (time - startTime).TotalSeconds;
         }
     }
