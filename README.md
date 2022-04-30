@@ -5,9 +5,9 @@ Fantasy World is a MMORPG that I made for sake of learning how to immplement com
 
 ### Check It Out Here:
 
-[![Watch the video](/Img/FantasyWorld1.jpg)](https://youtu.be/zCu0-mWWpvc)
+[Watch the video](https://youtu.be/zCu0-mWWpvc)
 
-[![Watch the video](/Img/FantasyWorld2.jpg)](https://youtu.be/EdqBH6APfkg)
+[Watch the video](https://youtu.be/EdqBH6APfkg)
 
 ## Technical Details
 ### Overall Framework
