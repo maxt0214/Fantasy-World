@@ -9,11 +9,9 @@ Fantasy World is a MMORPG that I made for sake of learning how to immplement com
 
 [![Watch the video](/Img/FantasyWorld2.jpg)](https://youtu.be/EdqBH6APfkg)
 
-Source Code can be found: [MMORPG](/PersonalProjects/MMORPG/).
-
 ## Technical Details
 ### Overall Framework
-Deployed Manager-Model-View-Service architecture to manage the project, supporting 6 basic systems and 14 game systems
+<li> Deployed Manager-Model-View-Service architecture to manage the project, supporting 6 basic systems and 14 game systems <\li>
 Followed a data driven approach to scale production pace, avoiding programming when adding some new game contents
 Used event queue system to coordinate distinct systems, resulting a manageable software structure
 ### Network
