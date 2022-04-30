@@ -11,15 +11,15 @@ Fantasy World is a MMORPG that I made for sake of learning how to immplement com
 
 ## Technical Details
 ### Overall Framework
-<li> Deployed Manager-Model-View-Service architecture to manage the project, supporting 6 basic systems and 14 game systems <\li>
-Followed a data driven approach to scale production pace, avoiding programming when adding some new game contents
-Used event queue system to coordinate distinct systems, resulting a manageable software structure
+Markup : * Deployed Manager-Model-View-Service architecture to manage the project, supporting 6 basic systems and 14 game systems
+         * Followed a data driven approach to scale production pace, avoiding programming when adding some new game contents
+         * Used event queue system to coordinate distinct systems, resulting a manageable software structure
 ### Network
-Transferred messages using TCP/UDP and customized application protocol based on Google Protobuf
-Used thread pool to handle network messages concurrently on multiple threads, boosting number of users served simultaneously
-Optimized on Application layer by packet merging, packet delay, message queue to drop unnecessary network transitions
-Relocated some data fields from application protocol to local machine. Compressed protocol overhead by 10-20%
-Authenticated packets based on custom session management,  credential verification, and data validation to protect user account and prevent player cheating
+Markup : * Transferred messages using TCP/UDP and customized application protocol based on Google Protobuf
+         * Used thread pool to handle network messages concurrently on multiple threads, boosting number of users served simultaneously
+         * Optimized on Application layer by packet merging, packet delay, message queue to drop unnecessary network transitions
+         * Relocated some data fields from application protocol to local machine. Compressed protocol overhead by 10-20%
+         * Authenticated packets based on custom session management,  credential verification, and data validation to protect user account and prevent player cheating
 ### Database
 Pumped SQL operation performance using asynchronous DB operations and DB caching with Entity Framework
 Designed and implemented an efficient SQL data schema, and saved DB size by 20-30%
