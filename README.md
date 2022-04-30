@@ -1,5 +1,5 @@
 # MMORPG
-<div id = "Top"> </div>
+
 ## FantasyWorld:
 Fantasy World is a MMORPG that I made for sake of learning how to immplement complex game systems in a MMO game.
 
